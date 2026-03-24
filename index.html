@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ellen Chuang · ellenbuilds</title>
+<meta name="description" content="C&B Specialist & AI Builder. 10+ years HR expertise across 5 countries. Building HR tools with AI.">
+<link rel="icon" href="dino.jpg" type="image/jpeg">
+<meta property="og:title" content="Ellen Chuang · ellenbuilds">
+<meta property="og:description" content="C&B Specialist who builds HR tools with AI. 288 iterations, 6 products, 10+ years domain expertise.">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZQQVD8T8M8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZQQVD8T8M8');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:     #f5f9f6;
+  --bg2:    #ebf3ee;
+  --card:   #ffffff;
+  --line:   #d8e8de;
+  --line2:  #c0d8ca;
+  --ink:    #0b1a12;
+  --ink2:   #2a4237;
+  --ink3:   #5e7a6c;
+  --ink4:   #a8c0b2;
+  --acc:    #1a5c40;
+  --acc2:   #0f3d28;
+  --acc-l:  #e6f4ec;
+  --acc-m:  #a0cfb4;
+  --green:  #16a34a;
+  --amber:  #c47a38;
+  --f:      'Inter','Noto Sans TC',sans-serif;
+  --fm:     'JetBrains Mono',monospace;
+  --s1: 0 1px 4px rgba(11,26,18,0.06),0 1px 2px rgba(11,26,18,0.04);
+  --s2: 0 4px 20px rgba(11,26,18,0.08),0 2px 8px rgba(11,26,18,0.04);
+  --s3: 0 16px 48px rgba(11,26,18,0.12),0 4px 16px rgba(11,26,18,0.06);
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);font-size:17px;color:var(--ink);background:var(--bg);
+  line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  font-feature-settings:'kern' 1,'liga' 1,'cv11' 1}
+/* Subtle grain texture overlay */
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+  opacity:.028;mix-blend-mode:multiply;
+}
+a{text-decoration:none;color:inherit}
+button{font-family:var(--f);cursor:pointer;border:none;background:none}
+img{max-width:100%}
+
+/* ── SCROLL REVEAL ────────────────────────────────────────────── */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.up{opacity:1;transform:none}
+.reveal-d1{transition-delay:.1s}.reveal-d2{transition-delay:.2s}
+.reveal-d3{transition-delay:.3s}.reveal-d4{transition-delay:.4s}
+
+/* ── LAYOUT ───────────────────────────────────────────────────── */
+.container{max-width:1120px;margin:0 auto;padding:0 40px}
+section{padding:104px 0}
+
+/* ── NAV ──────────────────────────────────────────────────────── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(245,249,246,0.90);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--line);
+  transition:box-shadow .3s,background .3s;
+}
+nav.scrolled{box-shadow:0 1px 0 var(--line),var(--s1)}
+.nav-inner{
+  max-width:1120px;margin:0 auto;padding:0 40px;
+  display:flex;align-items:center;justify-content:space-between;height:64px;
+}
+.nav-logo{
+  font-size:16px;font-weight:700;letter-spacing:.02em;color:var(--ink);
+  display:flex;align-items:center;gap:6px;font-family:var(--fm);
+}
+.nav-logo span{color:var(--acc)}
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-link{
+  font-size:13px;font-weight:500;color:var(--ink3);padding:6px 14px;border-radius:7px;
+  transition:color .2s,background .2s;white-space:nowrap;letter-spacing:.01em;
+}
+.nav-link:hover{color:var(--ink);background:var(--bg2)}
+.nav-link.active{color:var(--acc);font-weight:600}
+.lang-select{
+  font-size:12px;font-weight:600;font-family:var(--fm);letter-spacing:.04em;
+  padding:5px 26px 5px 11px;border-radius:6px;border:1.5px solid var(--line2);
+  color:var(--ink3);cursor:pointer;transition:border-color .2s,color .2s;background:var(--card);
+  margin-left:16px;
+  -webkit-appearance:none;appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%235e7a6c' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 8px center;background-size:10px 6px;
+}
+.lang-select:focus{outline:none;border-color:var(--acc);color:var(--acc)}
+.nav-linkedin{
+  color:var(--ink3);padding:6px 8px;border-radius:7px;
+  display:flex;align-items:center;
+  transition:color .2s,background .2s;margin-left:4px;
+}
+.nav-linkedin:hover{color:#0a66c2;background:#e8f0f9}
+
+/* ── HERO ─────────────────────────────────────────────────────── */
+#hero{
+  padding:148px 0 104px;
+  background:var(--bg);
+  position:relative;overflow:hidden;
+}
+.hero-grid-bg{display:none}
+.hero-glow{
+  position:absolute;top:-140px;right:-100px;
+  width:600px;height:600px;border-radius:50%;
+  background:radial-gradient(circle,rgba(26,92,64,0.10) 0%,transparent 68%);
+  pointer-events:none;
+}
+.hero-glow2{
+  position:absolute;bottom:-80px;left:-120px;
+  width:400px;height:400px;border-radius:50%;
+  background:radial-gradient(circle,rgba(26,92,64,0.06) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero-inner{
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:1fr 400px;gap:72px;align-items:center;
+}
+.hero-left{}
+.identity-mark{
+  width:64px;height:64px;border-radius:16px;
+  overflow:hidden;margin-bottom:32px;
+  box-shadow:0 8px 28px rgba(26,92,64,.25);
+}
+.identity-mark img{width:100%;height:100%;object-fit:cover}
+.hero-eyebrow{
+  font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--acc);font-family:var(--fm);margin-bottom:22px;
+  display:flex;align-items:center;gap:10px;
+}
+.hero-eyebrow::before{content:'';display:inline-block;width:20px;height:1.5px;background:var(--acc)}
+.hero-name{
+  font-size:56px;font-weight:800;letter-spacing:-.03em;line-height:1.06;
+  color:var(--ink);margin-bottom:18px;
+}
+.hero-title{
+  font-size:20px;font-weight:500;color:var(--ink3);margin-bottom:26px;
+  line-height:1.5;
+}
+.hero-title strong{color:var(--ink2);font-weight:600}
+.hero-tagline{
+  font-size:17px;color:var(--ink2);line-height:1.75;
+  max-width:520px;margin-bottom:40px;
+  border-left:3px solid var(--acc-m);padding-left:20px;
+}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  font-size:13px;font-weight:600;padding:13px 26px;border-radius:8px;
+  transition:all .2s cubic-bezier(.16,1,.3,1);display:inline-flex;align-items:center;gap:7px;
+  white-space:nowrap;letter-spacing:.01em;
+}
+.btn-pri{background:var(--acc);color:#fff;box-shadow:0 4px 16px rgba(26,92,64,.35)}
+.btn-pri:hover{background:var(--acc2);box-shadow:0 8px 28px rgba(26,92,64,.45);transform:translateY(-2px)}
+.btn-sec{background:var(--card);color:var(--ink);border:1.5px solid var(--line2);box-shadow:var(--s1)}
+.btn-sec:hover{border-color:var(--acc);color:var(--acc);box-shadow:var(--s2);transform:translateY(-2px)}
+
+/* Hero stats */
+.hero-right{}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stat-card{
+  background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:24px 20px;box-shadow:var(--s1);
+  transition:box-shadow .25s,transform .2s;
+  position:relative;overflow:hidden;
+}
+.stat-card::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--acc),var(--acc-m));
+  opacity:0;transition:opacity .2s;
+}
+.stat-card:hover{box-shadow:var(--s2);transform:translateY(-2px)}
+.stat-card:hover::after{opacity:1}
+.stat-num{
+  font-size:38px;font-weight:800;
+  letter-spacing:-.03em;color:var(--acc);line-height:1;margin-bottom:8px;
+}
+.stat-plus{font-size:26px;font-weight:800}
+.stat-label{font-size:13px;color:var(--ink3);line-height:1.45;font-weight:500}
+
+/* ── STORY ────────────────────────────────────────────────────── */
+#story{background:var(--bg)}
+.section-label{
+  font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--acc);font-family:var(--fm);margin-bottom:14px;
+  display:flex;align-items:center;gap:10px;
+}
+.section-label::before{content:'';display:inline-block;width:20px;height:1.5px;background:var(--acc)}
+.section-title{
+  font-size:40px;font-weight:800;letter-spacing:-.025em;
+  color:var(--ink);margin-bottom:18px;line-height:1.1;
+}
+.section-sub{font-size:17px;color:var(--ink3);max-width:560px;line-height:1.7;margin-bottom:60px}
+.story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.story-card{
+  background:var(--card);padding:40px 34px;
+  transition:background .25s;
+}
+.story-card:hover{background:#f0f8f3}
+.story-num{
+  font-size:10px;font-weight:600;font-family:var(--fm);letter-spacing:.14em;
+  color:var(--acc);margin-bottom:22px;display:flex;align-items:center;gap:8px;
+  text-transform:uppercase;
+}
+.story-num::after{content:'';flex:1;height:1px;background:var(--line)}
+.story-icon{font-size:30px;margin-bottom:18px;opacity:.9}
+.story-ch{
+  font-size:19px;font-weight:700;letter-spacing:-.01em;
+  color:var(--ink);margin-bottom:14px;line-height:1.3;
+}
+.story-body{font-size:15px;color:var(--ink3);line-height:1.8}
+.story-body strong{color:var(--ink2);font-weight:600}
+.story-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:20px}
+.story-tag{
+  font-size:10px;font-weight:600;padding:3px 10px;border-radius:100px;
+  background:var(--acc-l);color:var(--acc);font-family:var(--fm);letter-spacing:.04em;
+  border:1px solid var(--acc-m);
+}
+
+/* ── PROJECTS ─────────────────────────────────────────────────── */
+#projects{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.proj-card{
+  background:var(--card);border:1px solid var(--line);border-radius:16px;
+  padding:28px;box-shadow:var(--s1);
+  transition:box-shadow .28s cubic-bezier(.16,1,.3,1),transform .28s cubic-bezier(.16,1,.3,1),border-color .2s;
+  display:flex;flex-direction:column;gap:14px;
+  position:relative;overflow:hidden;
+}
+.proj-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--ac,var(--acc)),transparent);
+  opacity:.7;
+}
+.proj-card:hover{box-shadow:var(--s3);transform:translateY(-4px);border-color:var(--acc-m)}
+.proj-header{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.proj-em{font-size:26px;line-height:1}
+.proj-badge{
+  font-size:10px;font-weight:600;padding:3px 10px;border-radius:100px;
+  white-space:nowrap;flex-shrink:0;letter-spacing:.05em;text-transform:uppercase;
+}
+.badge-live{background:#dcfce7;color:#15803d;border:1px solid #bbf7d0}
+.badge-beta{background:#fef9c3;color:#92400e;border:1px solid #fde68a}
+.badge-building{background:#f1f5f9;color:#64748b;border:1px solid #e2e8f0}
+.proj-name{font-size:17px;font-weight:700;color:var(--ink);letter-spacing:-.01em;line-height:1.3}
+.proj-desc{font-size:14px;color:var(--ink3);line-height:1.75;flex:1}
+.proj-stack{display:flex;flex-wrap:wrap;gap:5px}
+.stack-chip{
+  font-size:10px;font-family:var(--fm);padding:2px 9px;border-radius:4px;
+  background:var(--bg2);color:var(--ink3);border:1px solid var(--line);letter-spacing:.03em;
+}
+.proj-footer{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:16px;border-top:1px solid var(--line)}
+.proj-cta{
+  font-size:12px;font-weight:600;color:var(--acc);
+  display:flex;align-items:center;gap:5px;
+  padding:7px 14px;border-radius:7px;border:1.5px solid var(--acc-m);
+  background:var(--acc-l);transition:all .2s;letter-spacing:.01em;
+}
+.proj-cta:hover{background:var(--acc);color:#fff;border-color:var(--acc);transform:translateX(2px)}
+.proj-cta-soon{font-size:11px;color:var(--ink4);font-family:var(--fm);letter-spacing:.04em}
+.proj-iter{font-size:11px;color:var(--ink4);font-family:var(--fm);display:flex;align-items:center;gap:4px}
+.proj-iter span{color:var(--ink3);font-weight:600}
+
+/* Featured project (first, full width) */
+.proj-card.featured{grid-column:1/-1}
+.proj-card.featured .proj-inner{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+.proj-card.featured .proj-name{font-size:20px}
+.proj-card.featured .proj-desc{font-size:14px}
+
+/* ── SKILLS ───────────────────────────────────────────────────── */
+#skills{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.skill-group{padding:30px;background:var(--bg);border:1px solid var(--line);border-radius:16px;
+  transition:border-color .2s,box-shadow .2s;
+}
+.skill-group:hover{border-color:var(--acc-m);box-shadow:var(--s1)}
+.skill-group-title{
+  font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--acc);font-family:var(--fm);margin-bottom:18px;
+  display:flex;align-items:center;gap:10px;
+}
+.skill-group-icon{font-size:15px}
+.skill-pills{display:flex;flex-wrap:wrap;gap:7px}
+.skill-pill{
+  font-size:13px;font-weight:500;padding:6px 14px;border-radius:100px;
+  background:var(--card);border:1px solid var(--line);color:var(--ink2);
+  transition:all .2s;
+}
+.skill-pill:hover{background:var(--acc-l);border-color:var(--acc-m);color:var(--acc)}
+.skill-pill.strong{font-weight:600;background:var(--acc-l);border-color:var(--acc-m);color:var(--acc)}
+
+/* Credentials strip */
+.creds{display:flex;gap:14px;flex-wrap:wrap;margin-top:44px}
+.cred{
+  display:flex;align-items:center;gap:14px;
+  padding:16px 20px;background:var(--bg);border:1px solid var(--line);
+  border-radius:12px;font-size:13px;color:var(--ink2);
+  flex:1;min-width:220px;
+}
+.cred-icon{font-size:22px;flex-shrink:0}
+.cred-title{font-weight:600;color:var(--ink);font-size:13px;letter-spacing:.01em}
+.cred-sub{font-size:11px;color:var(--ink3);margin-top:2px}
+
+/* ── CONTACT ──────────────────────────────────────────────────── */
+#contact{
+  background:linear-gradient(160deg,#071a10 0%,#0d2a1a 100%);
+  padding:112px 0;
+  position:relative;overflow:hidden;
+}
+#contact::before{display:none}
+.contact-inner{text-align:center;max-width:640px;margin:0 auto;position:relative}
+.contact-label{
+  font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--acc-m);font-family:var(--fm);margin-bottom:24px;
+}
+.contact-headline{
+  font-size:44px;font-weight:800;letter-spacing:-.025em;color:#fff;
+  line-height:1.1;margin-bottom:22px;
+}
+.contact-sub{font-size:17px;color:rgba(255,255,255,.55);line-height:1.75;margin-bottom:48px}
+.contact-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.contact-email{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:14px;font-weight:600;letter-spacing:.02em;
+  padding:15px 30px;border-radius:10px;
+  background:rgba(26,92,64,.9);color:#fff;
+  border:1px solid rgba(160,207,180,.25);
+  box-shadow:0 4px 24px rgba(0,0,0,.3);
+  transition:all .22s cubic-bezier(.16,1,.3,1);
+}
+.contact-email:hover{background:var(--acc);border-color:rgba(160,207,180,.4);box-shadow:0 12px 40px rgba(26,92,64,.5);transform:translateY(-3px)}
+.contact-li{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:14px;font-weight:600;letter-spacing:.02em;
+  padding:15px 30px;border-radius:10px;
+  background:rgba(10,102,194,.85);color:#fff;
+  border:1px solid rgba(10,102,194,.4);
+  box-shadow:0 4px 24px rgba(0,0,0,.3);
+  transition:all .22s cubic-bezier(.16,1,.3,1);
+}
+.contact-li:hover{background:#0a66c2;box-shadow:0 12px 40px rgba(10,102,194,.45);transform:translateY(-3px)}
+
+/* ── CONTACT MODAL ────────────────────────────────────────────── */
+#contact-modal{position:fixed;inset:0;z-index:9999;display:none;
+  align-items:center;justify-content:center;
+  background:rgba(0,0,0,.5);backdrop-filter:blur(4px)}
+#contact-modal.open{display:flex}
+.modal-box{background:#fff;border-radius:16px;padding:36px 32px;
+  width:calc(100vw - 40px);max-width:480px;
+  box-shadow:0 24px 64px rgba(0,0,0,.2);position:relative}
+.modal-close{position:absolute;top:16px;right:16px;background:none;border:none;
+  font-size:18px;color:#9b9b97;cursor:pointer;line-height:1;padding:4px}
+.modal-close:hover{color:#1a1a1a}
+.modal-title{font-size:18px;font-weight:700;color:#1a1a1a;margin-bottom:6px;font-family:var(--f)}
+.modal-desc{font-size:13px;color:#787774;margin-bottom:22px;line-height:1.7;font-family:var(--f)}
+.m-form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.m-form-group{display:flex;flex-direction:column;gap:5px;margin-bottom:10px}
+.m-form-label{font-size:11px;font-weight:600;color:#787774;letter-spacing:.03em;text-transform:uppercase;font-family:var(--f)}
+.m-form-input,.m-form-textarea{font-family:var(--f);font-size:14px;color:#1a1a1a;
+  background:#f7f7f5;border:1px solid #e5e5e0;border-radius:7px;
+  padding:9px 12px;outline:none;transition:border-color .15s;width:100%}
+.m-form-input:focus,.m-form-textarea:focus{border-color:#1a1a1a;background:#fff}
+.m-form-textarea{resize:vertical;min-height:100px;line-height:1.6}
+.m-form-submit{width:100%;padding:10px;border-radius:7px;border:none;cursor:pointer;
+  background:#1a1a1a;color:#fff;font-size:14px;font-weight:600;
+  font-family:var(--f);transition:opacity .15s;margin-top:4px}
+.m-form-submit:hover{opacity:.75}
+.m-form-submit:disabled{opacity:.5;cursor:not-allowed}
+.m-form-success{display:none;background:#d3f8e8;border:1px solid #b6ecd4;
+  border-radius:7px;padding:14px;font-size:13px;color:#0a7c6c;
+  font-weight:500;text-align:center;margin-top:10px}
+@media(max-width:480px){
+  .modal-box{padding:28px 20px}
+  .m-form-row{grid-template-columns:1fr}
+}
+
+/* ── FOOTER ───────────────────────────────────────────────────── */
+footer{
+  background:#040e08;padding:28px 0 72px;
+  font-size:11px;color:rgba(255,255,255,.22);
+  font-family:var(--fm);letter-spacing:.06em;
+  position:relative;
+}
+.footer-inner{
+  max-width:1120px;margin:0 auto;padding:0 40px;
+  display:flex;align-items:center;justify-content:center;gap:16px;
+}
+.footer-dino-wrap{
+  position:absolute;bottom:14px;left:0;
+  width:100%;pointer-events:none;overflow:hidden;height:56px;
+}
+.footer-dino{
+  height:48px;width:48px;object-fit:cover;
+  border-radius:12px;opacity:.75;
+  position:absolute;bottom:0;
+  animation:dino-run 18s linear infinite;
+}
+.footer-dino:hover{opacity:1}
+@keyframes dino-run{
+  0%   { left:-60px;  transform:scaleX(1) }
+  49%  { left:calc(100% + 60px); transform:scaleX(1) }
+  50%  { left:calc(100% + 60px); transform:scaleX(-1) }
+  99%  { left:-60px;  transform:scaleX(-1) }
+  100% { left:-60px;  transform:scaleX(1) }
+}
+@media(max-width:600px){
+  .footer-inner{padding:0 20px}
+  .footer-dino{height:40px}
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────────────── */
+@media(max-width:900px){
+  .container{padding:0 28px}
+  section{padding:88px 0}
+  .hero-inner{grid-template-columns:1fr;gap:48px}
+  .hero-name{font-size:46px}
+  .hero-right{order:-1}
+  .stat-grid{grid-template-columns:repeat(4,1fr);gap:8px}
+  .stat-num{font-size:30px}
+  .stat-plus{font-size:22px}
+  .story-grid{grid-template-columns:1fr}
+  .projects-grid{grid-template-columns:repeat(2,1fr)}
+  .proj-card.featured{grid-column:auto}
+  .proj-card.featured .proj-inner{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:1fr}
+  .section-title{font-size:36px}
+  .contact-headline{font-size:36px}
+}
+
+/* ── MOBILE ── */
+@media(max-width:600px){
+  .container{padding:0 20px}
+  section{padding:72px 0}
+
+  /* Nav */
+  .nav-inner{padding:0 20px;height:58px}
+  .nav-links .nav-link{display:none}
+  .nav-link.mobile-show{display:block}
+  .lang-toggle{margin-left:8px}
+
+  /* Hero */
+  #hero{padding:110px 0 72px}
+  .hero-name{font-size:38px;letter-spacing:-.02em}
+  .hero-title{font-size:17px}
+  .hero-tagline{font-size:16px;padding-left:16px}
+  .hero-eyebrow{font-size:11px}
+  .identity-mark{width:48px;height:48px;border-radius:12px;margin-bottom:24px}
+  .hero-ctas{gap:10px}
+  .btn{font-size:14px;padding:13px 22px}
+
+  /* Stats */
+  .stat-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .stat-card{padding:20px 16px}
+  .stat-num{font-size:34px}
+  .stat-label{font-size:13px}
+
+  /* Story */
+  .story-card{padding:28px 24px}
+  .story-ch{font-size:18px}
+  .story-body{font-size:15px}
+  .section-title{font-size:32px}
+  .section-sub{font-size:16px;margin-bottom:40px}
+
+  /* Projects */
+  .projects-grid{grid-template-columns:1fr;gap:12px}
+  .proj-card{padding:24px}
+  .proj-name{font-size:17px}
+  .proj-desc{font-size:14px}
+
+  /* Skills */
+  .skill-group{padding:24px}
+  .skill-pill{font-size:13px;padding:7px 14px}
+  .creds{gap:10px}
+  .cred{padding:14px 16px;min-width:100%;flex:none}
+
+  /* Contact */
+  #contact{padding:80px 0}
+  .contact-headline{font-size:32px}
+  .contact-sub{font-size:16px}
+  .contact-btns{flex-direction:column}
+  .contact-email,.contact-li{font-size:14px;padding:14px 24px;width:100%;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══════════════════════════════════════════════════════ -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">ellen<span>builds</span></a>
+    <div class="nav-links">
+      <a href="#projects" class="nav-link" data-section="projects" id="nl-projects"></a>
+      <a href="#story"    class="nav-link" data-section="story"    id="nl-story"></a>
+      <a href="#skills"   class="nav-link" data-section="skills"   id="nl-skills"></a>
+      <a href="#contact"  class="nav-link mobile-show" data-section="contact"  id="nl-contact"></a>
+      <a href="https://www.linkedin.com/in/ellen-chuang-817178204" target="_blank" class="nav-linkedin" aria-label="LinkedIn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <select class="lang-select" id="lang-select" onchange="setLang(this.value)">
+        <option value="en">English</option>
+        <option value="zh">繁中</option>
+        <option value="sc">简中</option>
+        <option value="de">Deutsch</option>
+        <option value="fr">Français</option>
+        <option value="th">ภาษาไทย</option>
+        <option value="kr">한국어</option>
+      </select>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ HERO ══════════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="identity-mark">
+          <img src="dino.jpg" alt="ellenbuilds">
+        </div>
+        <div class="hero-eyebrow" id="h-eyebrow"></div>
+        <h1 class="hero-name">Ellen Chuang</h1>
+        <p class="hero-title" id="h-title"></p>
+        <p class="hero-tagline" id="h-tagline"></p>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-pri" id="h-cta1"></a>
+          <a href="#contact"  class="btn btn-sec" id="h-cta2"></a>
+        </div>
+      </div>
+      <div class="hero-right reveal">
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-num"><span class="count" data-target="10">0</span><span class="stat-plus">+</span></div>
+            <div class="stat-label" id="s1"></div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num"><span class="count" data-target="5">0</span></div>
+            <div class="stat-label" id="s2"></div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num"><span class="count" data-target="288">0</span></div>
+            <div class="stat-label" id="s3"></div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num"><span class="count" data-target="1000">0</span><span class="stat-plus">+</span></div>
+            <div class="stat-label" id="s4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROJECTS ══════════════════════════════════════════════════ -->
+<section id="projects">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label" id="proj-label"></div>
+      <h2 class="section-title" id="proj-title"></h2>
+      <p class="section-sub" id="proj-sub"></p>
+    </div>
+    <div class="projects-grid" id="projects-grid"></div>
+  </div>
+</section>
+
+<!-- ══ STORY ═════════════════════════════════════════════════════ -->
+<section id="story">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label" id="story-label"></div>
+      <h2 class="section-title" id="story-title"></h2>
+      <p class="section-sub" id="story-sub"></p>
+    </div>
+    <div class="story-grid reveal reveal-d1">
+      <div class="story-card">
+        <div class="story-num" id="ch1-num"></div>
+        <div class="story-icon">🎖️</div>
+        <h3 class="story-ch" id="ch1-title"></h3>
+        <p class="story-body" id="ch1-body"></p>
+        <div class="story-tags" id="ch1-tags"></div>
+      </div>
+      <div class="story-card">
+        <div class="story-num" id="ch2-num"></div>
+        <div class="story-icon">📊</div>
+        <h3 class="story-ch" id="ch2-title"></h3>
+        <p class="story-body" id="ch2-body"></p>
+        <div class="story-tags" id="ch2-tags"></div>
+      </div>
+      <div class="story-card">
+        <div class="story-num" id="ch3-num"></div>
+        <div class="story-icon">⚡</div>
+        <h3 class="story-ch" id="ch3-title"></h3>
+        <p class="story-body" id="ch3-body"></p>
+        <div class="story-tags" id="ch3-tags"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SKILLS ════════════════════════════════════════════════════ -->
+<section id="skills">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label" id="skills-label"></div>
+      <h2 class="section-title" id="skills-title"></h2>
+      <p class="section-sub" id="skills-sub"></p>
+    </div>
+    <div class="skills-grid reveal reveal-d1" id="skills-grid"></div>
+    <div class="creds reveal reveal-d2" id="creds"></div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ════════════════════════════════════════════════════ -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-inner reveal">
+      <div class="contact-label" id="c-label"></div>
+      <h2 class="contact-headline" id="c-headline"></h2>
+      <p class="contact-sub" id="c-sub"></p>
+      <div class="contact-btns">
+        <button onclick="openModal()" class="contact-email" id="c-btn">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <span id="c-btn-text"></span>
+        </button>
+        <a href="https://www.linkedin.com/in/ellen-chuang-817178204" target="_blank" class="contact-li">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT MODAL ═════════════════════════════════════════════ -->
+<div id="contact-modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-title" id="m-title">Get in Touch</div>
+    <p class="modal-desc" id="m-desc">Whether it's a C&B question, collaboration, or exploring what HR looks like with AI — feel free to reach out.</p>
+    <form id="contact-form" onsubmit="submitForm(event)">
+      <div class="m-form-row">
+        <div class="m-form-group">
+          <label class="m-form-label" id="m-label-name">Name</label>
+          <input class="m-form-input" type="text" id="f-name" required placeholder="Your name">
+        </div>
+        <div class="m-form-group">
+          <label class="m-form-label" id="m-label-email">Email</label>
+          <input class="m-form-input" type="email" id="f-email" required placeholder="your@email.com">
+        </div>
+      </div>
+      <div class="m-form-group">
+        <label class="m-form-label" id="m-label-msg">Message</label>
+        <textarea class="m-form-textarea" id="f-msg" required placeholder="Describe your question or request…"></textarea>
+      </div>
+      <button class="m-form-submit" type="submit" id="m-submit">Send →</button>
+      <div class="m-form-success" id="m-success">✓ Message sent. I'll get back to you soon.</div>
+    </form>
+  </div>
+</div>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div id="footer-text"></div>
+  </div>
+  <div class="footer-dino-wrap">
+    <img src="dino.jpg" alt="" class="footer-dino">
+  </div>
+</footer>
+
+<script>
+// ── Language ──────────────────────────────────────────────────────
+let lang = 'en';
+function t(en, zh, sc, de, fr, th, kr) {
+  if (lang === 'de') return de || en;
+  if (lang === 'fr') return fr || en;
+  if (lang === 'th') return th || en;
+  if (lang === 'kr') return kr || en;
+  if (lang === 'sc') return sc !== undefined ? sc : zh;
+  if (lang === 'zh') return zh;
+  return en;
+}
+function setLang(value) {
+  lang = value;
+  const langAttr = {en:'en',zh:'zh-TW',sc:'zh-CN',de:'de',fr:'fr',th:'th',kr:'ko'};
+  document.documentElement.lang = langAttr[lang] || 'en';
+  render();
+}
+
+// ── Data ──────────────────────────────────────────────────────────
+const PROJECTS = [
+  {
+    id: 'remote-hris',
+    emoji: '🗂️',
+    color: '#0d9488',
+    status: 'live',
+    name:   { en: 'Remote HRIS', zh: 'Remote HRIS', sc: 'Remote HRIS' },
+    desc: {
+      en: 'A multi-country HR & payroll system with custom compensation rules, mixed contract management, and multi-currency disbursement — covering the full payroll cycle from attendance to payout, built from real operational pain.',
+      zh: '多國 HR 薪資管理系統，支援自訂薪酬規則、混合合約類型管理，以及多幣種實際發放。涵蓋從考勤到發薪的完整流程，從真實工作痛點出發設計。',
+      sc: '多国 HR 薪资管理系统，支持自定义薪酬规则、混合合约类型管理，以及多币种实际发放。涵盖从考勤到发薪的完整流程，从真实工作痛点出发设计。',
+      de: 'Ein internationales HR- und Gehaltssystem mit individuellen Vergütungsregeln und Multi-Währungs-Auszahlung, entwickelt aus echten operativen Hürden.',
+      fr: 'Un système RH et paie multi-pays avec règles de rémunération personnalisées et gestion multi-devises, couvrant tout le cycle de paie.',
+      th: 'ระบบ HR และเงินเดือนนานาชาติ รองรับกฎค่าตอบแทนที่ซับซ้อนและหลายสกุลเงิน ครอบคลุมตั้งแต่การลงเวลาไปจนถึงการจ่ายเงิน',
+      kr: '다국적 HR 및 급여 관리 시스템. 커스텀 보상 규칙, 계약 관리, 다통화 지불을 지원하며 근태부터 실지급까지의 모든 과정을 실무 경험을 바탕으로 구축했습니다.'
+    },
+    stack: ['React JSX', 'Single-file', 'No Build'],
+    iterations: 28,
+    url: 'https://remote-hris.netlify.app',
+    featured: false,
+  },
+  {
+    id: 'career-health-check',
+    emoji: '🩺',
+    color: '#2563eb',
+    status: 'live',
+    name:   { en: 'Career Health Check', zh: '職涯健康檢查', sc: '职涯健康检查' },
+    desc: {
+      en: 'A free career assessment tool with 8 diagnostic modules — generates a personalized bilingual AI report with actionable insights, delivered as PDF.',
+      zh: '免費職涯健康檢查，8 個診斷模組，AI 生成個人化雙語報告並輸出 PDF。',
+      sc: '免费职涯健康检查，8 个诊断模块，AI 生成个性化双语报告并输出 PDF。',
+      de: 'Ein Tool zur Karriereanalyse mit 8 Modulen und KI-generierten Berichten als PDF.',
+      fr: "Un outil d'évaluation de carrière avec 8 modules générant un rapport IA bilingue en PDF.",
+      th: 'เครื่องมือประเมินอาชีพฟรีพร้อม 8 โมดูลการวินิจฉัย สร้างรายงาน AI สองภาษาในรูปแบบ PDF',
+      kr: '8개의 진단 모듈을 갖춘 무료 커리어 진단 도구. 인사이트를 담은 개인 맞춤형 이중 언어 AI 리포트를 PDF로 제공합니다.'
+    },
+    stack: ['React', 'Vite', 'GA4', 'Netlify Functions'],
+    iterations: 21,
+    url: 'https://career-health-check.netlify.app',
+    featured: false,
+  },
+  {
+    id: 'payband',
+    emoji: '💰',
+    color: '#7c3aed',
+    status: 'beta',
+    name:   { en: 'Payband', zh: 'Payband', sc: 'Payband' },
+    desc: {
+      en: 'A cross-border compensation benchmarking tool covering multiple countries\' labor laws and P25/P50/P75 salary bands — giving HR teams the data backbone for fair, competitive pay decisions.',
+      zh: '跨國薪酬分析工具，涵蓋多國勞動法規與 P25/P50/P75 薪資帶，讓 HR 團隊的薪酬決策有紮實的數據依據。',
+      sc: '跨国薪酬分析工具，涵盖多国劳动法规与 P25/P50/P75 薪资带，让 HR 团队的薪酬决策有扎实的数据依据。',
+      de: 'Ein internationales Tool für Gehaltsvergleiche (P25/P50/P75), das HR-Teams eine solide Datengrundlage für faire Vergütungsentscheidungen bietet.',
+      fr: "Outil d'analyse comparative des rémunérations couvrant les lois sociales et les grilles P25/P50/P75 pour des décisions paie équitables.",
+      th: 'เครื่องมือเปรียบเทียบค่าตอบแทนข้ามประเทศ ครอบคลุมกฎหมายแรงงานและเกณฑ์เงินเดือน P25/P50/P75 เพื่อการตัดสินใจที่แม่นยำ',
+      kr: '국가별 노동법과 P25/P50/P75 급여 밴드를 아우르는 글로벌 보상 벤치마킹 도구. HR 팀이 공정하고 경쟁력 있는 보상을 결정할 수 있도록 데이터 근거를 제공합니다.'
+    },
+    stack: ['React', 'Vite', 'Claude API'],
+    iterations: 50,
+    url: null,
+    featured: false,
+  },
+  {
+    id: 'claude-guide',
+    emoji: '🤖',
+    color: '#ea580c',
+    status: 'live',
+    name:   { en: 'Claude Guide', zh: 'Claude 使用指南', sc: 'Claude 使用指南' },
+    desc: {
+      en: 'A practical guide for getting the most out of Claude AI — real use cases, prompt techniques, and workflows. Bilingual, searchable, built for people who want results, not theory.',
+      zh: '給你真正用得上的 Claude AI 使用指南 — 實際場景、提示詞技巧、實用工作流。雙語，可搜尋，為想要結果的人而建。',
+      sc: '给你真正用得上的 Claude AI 使用指南 — 实际场景、提示词技巧、实用工作流。双语，可搜索，为想要结果的人而建。'
+    },
+    stack: ['Static HTML', 'GA4', 'Contact Form'],
+    iterations: 62,
+    url: 'https://claude-guide.netlify.app',
+    featured: false,
+  },
+  {
+    id: 'drift-island',
+    emoji: '🏝️',
+    color: '#0891b2',
+    status: 'live',
+    name:   { en: 'Drift Island', zh: '漂島信箱', sc: '漂岛信箱' },
+    desc: {
+      en: "Anonymous letters inspired by 'Namiya General Store.' A reminder that AI doesn't always have to be about productivity — it can also deliver warmth.",
+      zh: '匿名投信網站。靈感來自《解憂雜貨店》，由 AI 溫情回信。這是一個提醒：並非所有 AI 產物都必須為了生產力，它可以單純地傳遞溫度。',
+      sc: '匿名投信网站。灵感来自《解忧杂货店》，由 AI 温情回信。这是一个提醒：并非所有 AI 产物都必须为了生产力，它可以单纯地传递温度。',
+      de: 'Anonyme Briefe, inspiriert von „Namiya". Ein Beweis, dass KI nicht immer nur produktiv sein muss – sie kann auch Wärme spenden.',
+      fr: 'Lettres anonymes inspirées des « Miracles du bazar Namiya ». Un rappel que l\'IA n\'est pas qu\'une question de productivité — elle peut aussi transmettre de la chaleur.',
+      th: 'เว็บไซต์ส่งจดหมายนิรนาม แรงบันดาลใจจาก "ปาฏิหาริย์ร้านชำของคุณนามิยะ" ตอบกลับโดย AI — เพื่อเตือนใจว่า AI ไม่ได้มีไว้เพื่อประสิทธิภาพเสมอไป แต่ยังส่งต่อความรู้สึกได้ด้วย',
+      kr: '익명 편지 서비스. 소설 \'나미야 잡화점의 기적\'에서 영감을 얻어 AI가 따뜻한 답장을 전합니다. 모든 AI 기술이 생산성만을 위한 것은 아니며, 때로는 온기를 전달할 수도 있다는 것을 보여줍니다.'
+    },
+    stack: ['Static HTML', 'Apps Script', 'GA4', 'Google Sheets'],
+    iterations: 48,
+    url: 'https://drift-island.netlify.app',
+    featured: false,
+  },
+];
+
+const SKILLS = {
+  en: [
+    {
+      icon: '📐',
+      title: 'Compensation & Benefits',
+      pills: [
+        {label:'Cross-border Salary Structure',strong:true},
+        {label:'Market Benchmarking & Analysis',strong:true},
+        {label:'Payroll Management (1,000+ EE)',strong:true},
+        {label:'Labor Law: TW / SG / PH / MY / Dubai (UAE)'},
+        {label:'Equity & Token Compensation'},
+        {label:'Crypto Exchange C&B'},
+        {label:'Compliance Auditing'},
+        {label:'Cost Optimization'},
+      ]
+    },
+    {
+      icon: '⚡',
+      title: 'AI Partnership & Co-building',
+      pills: [
+        {label:'Human × AI Collaboration',strong:true},
+        {label:'Domain-led AI Product Design',strong:true},
+        {label:'Claude API Integration',strong:true},
+        {label:'Prompt Engineering'},
+        {label:'AI-driven HR Workflow Design'},
+        {label:'Gemini GEMs (Custom Architecture)'},
+        {label:'Telegram Bot Deployment'},
+        {label:'Process Automation'},
+      ]
+    },
+    {
+      icon: '🛠️',
+      title: 'Tech Stack',
+      pills: [
+        {label:'React + Vite',strong:true},
+        {label:'Static HTML / CSS / JS'},
+        {label:'Netlify (Deploy & Functions)'},
+        {label:'Stripe'},
+        {label:'Google Analytics 4'},
+        {label:'Google Sheets API'},
+        {label:'Apps Script'},
+      ]
+    },
+    {
+      icon: '🏢',
+      title: 'Systems & Operations',
+      pills: [
+        {label:'Bipo Payroll',strong:true},
+        {label:'ERP — Yonyou'},
+        {label:'EIP — NUEIP'},
+        {label:'Attendance & Security Systems'},
+        {label:'Multi-country Operations'},
+        {label:'Remote Team Management'},
+      ]
+    },
+  ],
+  zh: [
+    {
+      icon: '📐',
+      title: '薪酬福利',
+      pills: [
+        {label:'跨國薪資結構設計',strong:true},
+        {label:'市場薪酬調查與分析',strong:true},
+        {label:'大規模薪資管理（1,000+ 人）',strong:true},
+        {label:'勞動法規：台灣 / 新加坡 / 菲律賓 / 馬來西亞 / 阿聯酋（迪拜）'},
+        {label:'股權與代幣薪酬'},
+        {label:'加密貨幣交易所 C&B 方案'},
+        {label:'合規稽核'},
+        {label:'成本最佳化'},
+      ]
+    },
+    {
+      icon: '⚡',
+      title: 'AI 協作與共同建造',
+      pills: [
+        {label:'人 × AI 協作模式',strong:true},
+        {label:'以領域知識驅動 AI 產品設計',strong:true},
+        {label:'Claude API 整合',strong:true},
+        {label:'提示詞工程'},
+        {label:'AI 驅動 HR 工作流設計'},
+        {label:'Gemini GEMs（自訂架構設計）'},
+        {label:'Telegram Bot 部署'},
+        {label:'流程自動化'},
+      ]
+    },
+    {
+      icon: '🛠️',
+      title: '技術棧',
+      pills: [
+        {label:'React + Vite',strong:true},
+        {label:'靜態 HTML / CSS / JS'},
+        {label:'Netlify（部署 & Functions）'},
+        {label:'Stripe'},
+        {label:'Google Analytics 4'},
+        {label:'Google Sheets API'},
+        {label:'Apps Script'},
+      ]
+    },
+    {
+      icon: '🏢',
+      title: '系統與營運',
+      pills: [
+        {label:'Bipo 薪資系統',strong:true},
+        {label:'ERP — 用友'},
+        {label:'EIP — NUEIP'},
+        {label:'考勤與門禁系統整合'},
+        {label:'多國跨境營運'},
+        {label:'遠程團隊管理'},
+      ]
+    },
+  ],
+  sc: [
+    {
+      icon: '📐',
+      title: '薪酬福利',
+      pills: [
+        {label:'跨国薪资结构设计',strong:true},
+        {label:'市场薪酬调查与分析',strong:true},
+        {label:'大规模薪资管理（1,000+ 人）',strong:true},
+        {label:'劳动法规：台湾 / 新加坡 / 菲律宾 / 马来西亚 / 阿联酋（迪拜）'},
+        {label:'股权与代币薪酬'},
+        {label:'加密货币交易所 C&B 方案'},
+        {label:'合规稽核'},
+        {label:'成本优化'},
+      ]
+    },
+    {
+      icon: '⚡',
+      title: 'AI 协作与共同建造',
+      pills: [
+        {label:'人 × AI 协作模式',strong:true},
+        {label:'以领域知识驱动 AI 产品设计',strong:true},
+        {label:'Claude API 整合',strong:true},
+        {label:'提示词工程'},
+        {label:'AI 驱动 HR 工作流设计'},
+        {label:'Gemini GEMs（自定义架构设计）'},
+        {label:'Telegram Bot 部署'},
+        {label:'流程自动化'},
+      ]
+    },
+    {
+      icon: '🛠️',
+      title: '技术栈',
+      pills: [
+        {label:'React + Vite',strong:true},
+        {label:'静态 HTML / CSS / JS'},
+        {label:'Netlify（部署 & Functions）'},
+        {label:'Stripe'},
+        {label:'Google Analytics 4'},
+        {label:'Google Sheets API'},
+        {label:'Apps Script'},
+      ]
+    },
+    {
+      icon: '🏢',
+      title: '系统与运营',
+      pills: [
+        {label:'Bipo 薪资系统',strong:true},
+        {label:'ERP — 用友'},
+        {label:'EIP — NUEIP'},
+        {label:'考勤与门禁系统整合'},
+        {label:'多国跨境运营'},
+        {label:'远程团队管理'},
+      ]
+    },
+  ]
+};
+
+const CREDS = {
+  en: [
+    { icon:'🎓', title:'Executive MBA', sub:'HEC Liège, Belgium · Graduating 2026' },
+    { icon:'📜', title:'Claude 101', sub:'Anthropic · Certified' },
+    { icon:'🌐', title:'English & Mandarin', sub:'Fluent English · Native Mandarin' },
+    { icon:'🏆', title:'Annual Sales Champion', sub:'150 units in year one · Top performer' },
+  ],
+  zh: [
+    { icon:'🎓', title:'Executive MBA', sub:'比利時 HEC Liège · 2026 畢業' },
+    { icon:'📜', title:'Claude 101', sub:'Anthropic · 認證' },
+    { icon:'🌐', title:'英文 & 中文', sub:'英文流利 · 中文母語' },
+    { icon:'🏆', title:'年度銷售冠軍', sub:'首年 150 台 · 單月 50 台紀錄' },
+  ],
+  sc: [
+    { icon:'🎓', title:'Executive MBA', sub:'比利时 HEC Liège · 2026 毕业' },
+    { icon:'📜', title:'Claude 101', sub:'Anthropic · 认证' },
+    { icon:'🌐', title:'英文 & 中文', sub:'英文流利 · 中文母语' },
+    { icon:'🏆', title:'年度销售冠军', sub:'首年 150 台 · 单月 50 台记录' },
+  ]
+};
+
+// ── Contact Modal ─────────────────────────────────────────────────
+const GSCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwg87UMUjoHHVhjXQfUM3zG8u5nhnFUq4yWX-aDCAulB_9Hpe5IgkXHV0XSGpBVyHa5/exec';
+
+function openModal() {
+  updateModalLang();
+  document.getElementById('contact-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  if (typeof gtag !== 'undefined') gtag('event', 'contact_open', { page_lang: lang });
+}
+function closeModal() {
+  document.getElementById('contact-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function updateModalLang() {
+  document.getElementById('m-title').textContent    = t('Get in Touch','聯繫我','联系我');
+  document.getElementById('m-desc').textContent     = t(
+    "Whether it's a C&B question, collaboration, or exploring what HR looks like with AI — feel free to reach out.",
+    '無論是薪酬問題、合作洽談，或想探索 AI 在 HR 的可能性，歡迎直接聯繫。',
+    '无论是薪酬问题、合作洽谈，或想探索 AI 在 HR 的可能性，欢迎直接联系。',
+    'Ob C&B-Fragen, Kooperationen oder KI im HR – schreiben Sie mir.',
+    "Que ce soit pour une question C&B, une collaboration ou l'IA en RH, n'hésitez pas.",
+    'ไม่ว่าจะเป็นคำถามด้าน C&B, การร่วมงาน หรือการสำรวจ AI ในงาน HR ติดต่อเข้ามาได้เลย',
+    'C&B 관련 문의, 협업 제안, 또는 HR과 AI의 결합이 궁금하시다면 언제든 연락해 주세요.'
+  );
+  document.getElementById('m-label-name').textContent  = t('Name','姓名','姓名');
+  document.getElementById('m-label-email').textContent = t('Email','電子郵件','电子邮件');
+  document.getElementById('m-label-msg').textContent   = t('Message','訊息','消息');
+  document.getElementById('m-submit').textContent      = t('Send →','送出','发送');
+  document.getElementById('f-name').placeholder  = t('Your name','你的名字','你的名字');
+  document.getElementById('f-msg').placeholder   = t('Describe your question or request…','請說明你的問題或需求…','请说明你的问题或需求…');
+}
+function submitForm(e) {
+  e.preventDefault();
+  const btn = document.getElementById('m-submit');
+  btn.disabled = true;
+  const params = new URLSearchParams({
+    source: 'ellenbuilds',
+    name:    document.getElementById('f-name').value,
+    email:   document.getElementById('f-email').value,
+    message: document.getElementById('f-msg').value
+  });
+  const img = new Image();
+  img.src = GSCRIPT_URL + '?' + params.toString();
+  img.onload = img.onerror = function() {
+    document.getElementById('contact-form').reset();
+    const s = document.getElementById('m-success');
+    s.textContent = t("✓ Message sent. I'll get back to you soon.",'✓ 訊息已送出，我會盡快回覆你。','✓ 消息已发送，我会尽快回复你。');
+    s.style.display = 'block';
+    btn.disabled = false;
+    if (typeof gtag !== 'undefined') gtag('event', 'contact_submit', { page_lang: lang });
+  };
+}
+
+// ── Render ────────────────────────────────────────────────────────
+function render() {
+  // Nav
+  document.getElementById('nl-story').textContent    = t('My Story','我的故事','我的故事','Meine Geschichte','Mon parcours','เรื่องราวของฉัน','나의 이야기');
+  document.getElementById('nl-projects').textContent = t('Projects','作品','作品','Projekte','Projets','ผลงาน','프로젝트');
+  document.getElementById('nl-skills').textContent   = t('Skills','專業技能','专业技能','Fähigkeiten','Compétences','ทักษะ','보유 역량');
+  document.getElementById('nl-contact').textContent  = t('Contact','聯繫我','联系我','Kontakt','Contact','ติดต่อ','연락처');
+
+  // Hero
+  document.getElementById('h-eyebrow').innerHTML  = t('HR Domain Expert &nbsp;×&nbsp; AI Co-builder','HR 領域專家 &nbsp;×&nbsp; AI 共同建造者','HR 领域专家 &nbsp;×&nbsp; AI 共同建造者','HR-Experte &nbsp;×&nbsp; AI Co-Builder','Expert RH &nbsp;×&nbsp; Co-constructeur IA','ผู้เชี่ยวชาญด้าน HR &nbsp;×&nbsp; AI Co-builder','HR 도메인 전문가 &nbsp;×&nbsp; AI 공동 빌더');
+  document.getElementById('h-title').innerHTML    = t(
+    '<strong>10 Years of Domain Depth. Building Side-by-Side with AI.</strong>',
+    '<strong>以十年領域深度，與 AI 並肩建造。</strong>',
+    '<strong>以十年领域深度，与 AI 并肩建造。</strong>',
+    '<strong>10 Jahre Fachwissen. Gemeinsam mit KI erschaffen.</strong>',
+    '<strong>10 ans d\'expertise. Bâtir côte à côte avec l\'IA.</strong>',
+    '<strong>ประสบการณ์ 10 ปีในสายงาน สร้างสรรค์นวัตกรรมเคียงข้างไปกับ AI</strong>',
+    '<strong>10년의 도메인 깊이, AI와 함께 직접 만듭니다.</strong>'
+  );
+  document.getElementById('h-tagline').textContent = t(
+    "My edge is domain insight, not syntax. I know exactly which HR problems are worth solving — and AI is the most intuitive partner I've ever had. Together, we shipped 6 real products in a single month.",
+    '我的優勢在於領域洞察，而非程式語法。我深知哪些 HR 痛點值得被解決，而 AI 是我合作過最有默契的夥伴。我們在一個月內，聯手讓 6 個產品從想法變成現實。',
+    '我的优势在于领域洞察，而非程序语法。我深知哪些 HR 痛点值得被解决，而 AI 是我合作过最有默契的伙伴。我们在一个月内，联手让 6 个产品从想法变成现实。',
+    'Meine Stärke ist die Fachkenntnis, nicht die Syntax. Ich weiß genau, welche HR-Probleme gelöst werden müssen – und KI ist der intuitivste Partner, den ich je hatte. Gemeinsam haben wir 6 Produkte in einem Monat veröffentlicht.',
+    "Mon atout est l'expertise métier, pas la syntaxe. Je sais exactement quels problèmes RH méritent d'être résolus — et l'IA est le partenaire le plus intuitif que j'aie jamais eu. Ensemble, nous avons lancé 6 produits réels en un mois.",
+    'จุดแข็งของฉันคือความเข้าใจในเนื้องาน ไม่ใช่แค่การเขียนโค้ด ฉันรู้ดีว่าปัญหาไหนใน HR ที่ต้องแก้ไข และ AI คือพาร์ทเนอร์ที่รู้ใจที่สุดเท่าที่เคยมีมา เราส่งมอบ 6 ผลิตภัณฑ์จริงภายในเวลาเพียงเดือนเดียว',
+    '저의 강점은 코드 문법이 아닌 도메인 통찰력에 있습니다. 어떤 HR 문제를 해결해야 하는지 정확히 알고 있으며, AI는 제가 만난 최고의 협업 파트너입니다. 우리는 한 달 만에 6개의 실제 제품을 함께 완성했습니다.'
+  );
+  document.getElementById('h-cta1').textContent = t('View My Work ↓','看我做了什麼 ↓','看我做了什么 ↓');
+  document.getElementById('h-cta2').textContent = t('Get in Touch →','聯繫我 →','联系我 →');
+
+  // Stats
+  document.getElementById('s1').textContent = t('Years HR Experience','年 HR 經驗','年 HR 经验','Jahre HR-Erfahrung',"Années d'expérience RH",'ประสบการณ์สายงาน HR (ปี)','HR 실무 경력 (년)');
+  document.getElementById('s2').textContent = t('Countries Operated','個國家的營運經驗','个国家的运营经验','Operative Länder',"Pays d'opération",'ประเทศที่ดำเนินงาน','운영 국가 수');
+  document.getElementById('s3').textContent = t('AI Build Iterations','次 AI 迭代','次 AI 迭代','KI-Iterationen',"Itérations avec l'IA",'จำนวนการพัฒนาผ่าน AI','AI 협업 반복 횟수');
+  document.getElementById('s4').textContent = t('Employees Managed','名員工薪資管理','名员工薪资管理','Verwaltete Mitarbeiter','Employés gérés','จำนวนพนักงานที่ดูแล','급여 관리 인원');
+
+  // Story
+  document.getElementById('story-label').textContent = t('Background','個人背景','个人背景');
+  document.getElementById('story-title').textContent  = t('My Path Here','我怎麼走到這裡','我怎么走到这里');
+  document.getElementById('story-sub').textContent    = t(
+    "Three phases. Each one building toward a collaboration that changed everything.",
+    '三個階段，逐步走向一段改變了我工作方式的合作。',
+    '三个阶段，逐步走向一段改变了我工作方式的合作。',
+    'Drei Phasen. Jede führte zu einer Zusammenarbeit, die alles veränderte.',
+    'Trois phases. Chacune menant à une collaboration qui a tout changé.',
+    '3 ช่วงเวลาสำคัญ ที่หล่อหลอมสู่การทำงานร่วมกันที่เปลี่ยนทุกอย่างไปโดยสิ้นเชิง',
+    '세 번의 단계. 각각의 경험은 모든 것을 변화시킨 지금의 협업을 향해 쌓여왔습니다.'
+  );
+  document.getElementById('ch1-num').textContent  = t('01 / Foundation','01 / 基礎','01 / 基础');
+  document.getElementById('ch1-title').textContent = t('Discipline at Scale','在規模中鍛鍊紀律','在规模中锻炼纪律','Disziplin im großen Maßstab','La discipline à grande échelle','วินัยภายใต้ความกดดันและขนาดองค์กร','규모 속에서 단련된 규율');
+  document.getElementById('ch1-body').innerHTML   = t(
+    'From managing HR for <strong>2,000 personnel</strong> in the military to becoming an <strong>Annual Sales Champion</strong> with 150 deals in year one — my foundation was built in environments with no room for error and clear, measurable results.',
+    '從軍中管理 <strong>2,000 名人員</strong>的行政事務，到成為第一年 <strong>150 台的銷售年度冠軍</strong>——我的基礎在容錯率極低、結果完全透明的環境中打造。',
+    '从军中管理 <strong>2,000 名人员</strong>的行政事务，到成为第一年 <strong>150 台的销售年度冠军</strong>——我的基础在容错率极低、结果完全透明的环境中打造。'
+  );
+  document.getElementById('ch1-tags').innerHTML   = ['Military · HR','Sales Champion','Leadership','Execution'].map(x=>`<span class="story-tag">${x}</span>`).join('');
+
+  document.getElementById('ch2-num').textContent  = t('02 / Expertise','02 / 深度專業','02 / 深度专业');
+  document.getElementById('ch2-title').textContent = t('Ten Years in the Engine Room','十年深耕薪酬核心','十年深耕薪酬核心','Zehn Jahre im Herzstück des Betriebs','Dix ans au cœur du moteur','10 ปีในหัวใจสำคัญของระบบ','엔진룸에서의 10년');
+  document.getElementById('ch2-body').innerHTML   = t(
+    'As a C&amp;B Manager across <strong>5 countries</strong> — Taiwan, Philippines, Singapore, UAE, and Malaysia — I handled payroll for <strong>1,000+ employees</strong>, saved <strong>USD 35,000</strong> in cost corrections, and built compensation frameworks for industries from manufacturing to crypto exchanges.',
+    '擔任跨越 <strong>5 個國家</strong>（台灣、菲律賓、新加坡、阿聯酋、馬來西亞）的 C&amp;B 主管，管理超過 <strong>1,000 名員工</strong>的薪資，透過稽核修正節省 <strong>USD 35,000</strong> 成本，為製造業至加密貨幣交易所設計薪酬架構。',
+    '担任跨越 <strong>5 个国家</strong>（台湾、菲律宾、新加坡、阿联酋、马来西亚）的 C&amp;B 主管，管理超过 <strong>1,000 名员工</strong>的薪资，通过稽核修正节省 <strong>USD 35,000</strong> 成本，为制造业至加密货币交易所设计薪酬架构。'
+  );
+  document.getElementById('ch2-tags').innerHTML   = ['C&B Manager','Multi-country','Payroll','Compliance','Crypto'].map(x=>`<span class="story-tag">${x}</span>`).join('');
+
+  document.getElementById('ch3-num').textContent  = t('03 / The Partnership','03 / 找到夥伴','03 / 找到伙伴');
+  document.getElementById('ch3-title').textContent = t('AI: From Tool to Collaborative Partner','AI：從工具進化為合作夥伴','AI：从工具进化为合作伙伴','KI: Vom Werkzeug zum Partner','L\'IA : d\'outil à partenaire collaboratif','AI: จากเครื่องมือ สู่การเป็นพาร์ทเนอร์ผู้ร่วมสร้าง','AI: 단순한 도구에서 진정한 파트너로의 진화');
+  document.getElementById('ch3-body').innerHTML   = t(
+    "I don't write code — I give code its soul and purpose. My AI journey began in March 2023 with GPT, and in March 2026 I started building with Claude as a genuine co-builder. Not a shortcut, not a toy — a partner that executes while I think. <strong>6 products, 288 iterations</strong> — built together.",
+    '我不寫程式，我賦予程式碼靈魂與價值。2023 年 3 月，我與 GPT 展開 AI 協作的第一步；2026 年 3 月，我開始以 Claude 為真正的共同建造者。不是走捷徑的工具，也不是玩具——而是我思考時負責執行的夥伴。<strong>6 個產品，288 次迭代</strong>——一起完成的。',
+    '我不写代码，我赋予代码灵魂与价值。2023 年 3 月，我与 GPT 开启了 AI 协作的第一步；2026 年 3 月，我开始以 Claude 为真正的共同建造者。不是走捷径的工具，也不是玩具——而是我思考时负责执行的伙伴。<strong>6 个产品，288 次迭代</strong>——一起完成的。',
+    'Ich schreibe keinen Code; ich verleihe ihm Sinn und Zweck. Meine KI-Reise begann im März 2023 mit GPT, und im März 2026 begann ich mit Claude als echtem Co-Builder. Keine Abkürzung, kein Spielzeug – ein Partner, der ausführt, während ich denke. <strong>6 Produkte, 288 Iterationen</strong> – gemeinsam erschafft.',
+    'Je ne code pas ; je donne du sens et de la valeur au code. Mon parcours IA a commencé en mars 2023 avec GPT, et en mars 2026 j\'ai commencé à construire avec Claude comme véritable co-builder. Pas un raccourci, pas un jouet — un collaborateur qui exécute pendant que je réfléchis. <strong>6 produits, 288 itérations</strong> — bâtis ensemble.',
+    'ฉันไม่ได้เขียนโค้ด แต่ฉันมอบจิตวิญญาณและคุณค่าให้กับมัน เส้นทาง AI ของฉันเริ่มต้นในเดือนมีนาคม 2023 กับ GPT และในเดือนมีนาคม 2026 ฉันเริ่มสร้างกับ Claude ในฐานะคู่คิดที่แท้จริง ไม่ใช่ทางลัด ไม่ใช่ของเล่น แต่เป็นพาร์ทเนอร์ที่ลงมือทำในขณะที่ฉันคิด <strong>6 ผลิตภัณฑ์ 288 การปรับปรุง</strong> ทั้งหมดนี้คือผลงานที่เราสร้างมาด้วยกัน',
+    '저는 코드를 작성하는 것이 아니라, 코드에 영혼과 가치를 부여합니다. AI 여정은 2023년 3월 GPT와 함께 시작되었고, 2026년 3월 Claude와 진정한 공동 빌더로서 함께 만들기 시작했습니다. 지름길이나 장난감이 아닙니다 — 제가 전략을 세우는 동안 실행을 담당하는 파트너입니다. <strong>6개의 제품, 288번의 반복</strong> — 함께 완성한 결과물입니다.'
+  );
+  document.getElementById('ch3-tags').innerHTML   = ['AI Co-builder','Domain × AI','6 Products','288 Iterations'].map(x=>`<span class="story-tag">${x}</span>`).join('');
+
+  // Projects
+  document.getElementById('proj-label').textContent = t('Portfolio','作品集','作品集');
+  document.getElementById('proj-title').textContent  = t('What I Build','我做了什麼','我做了什么');
+  document.getElementById('proj-sub').textContent    = t(
+    'Built by a domain expert and her AI co-builder — every product comes from a real problem I lived through.',
+    '由一位領域專家和她的 AI 共同建造者打造——每個產品都來自我親身經歷過的真實問題。',
+    '由一位领域专家和她的 AI 共同建造者打造——每个产品都来自我亲身经历过的真实问题。'
+  );
+  renderProjects();
+
+  // Skills
+  document.getElementById('skills-label').textContent = t('Expertise','專業領域','专业领域');
+  document.getElementById('skills-title').textContent  = t('The Human + AI Stack','人 × AI 的能力組合','人 × AI 的能力组合');
+  document.getElementById('skills-sub').textContent    = t(
+    "What I bring is irreplaceable domain depth. What AI brings is relentless execution. Neither works as well alone.",
+    '我帶來的是難以複製的領域深度。AI 帶來的是不知疲倦的執行力。少了其中一方，都沒那麼有力。',
+    '我带来的是难以复制的领域深度。AI 带来的是不知疲倦的执行力。少了其中一方，都没那么有力。',
+    'Ich bringe Fachtiefe, die KI bringt Ausführung. Beides zusammen ist unschlagbar.',
+    "J'apporte une profondeur métier irremplaçable. L'IA apporte une exécution sans relâche. L'un ne va pas sans l'autre.",
+    'สิ่งที่ฉันมีคือความรู้เฉพาะทางที่ทดแทนไม่ได้ และสิ่งที่ AI มีคือการลงมือทำที่รวดเร็วและแม่นยำ ทั้งสองอย่างต้องทำงานร่วมกันจึงจะดีที่สุด',
+    '제가 가진 대체 불가능한 도메인 깊이와 AI의 지치지 않는 실행력이 만났습니다. 어느 하나만으로는 이만큼의 성과를 낼 수 없습니다.'
+  );
+  renderSkills();
+
+  // Contact
+  document.getElementById('c-label').textContent    = t('Get in Touch','聯繫我','联系我');
+  document.getElementById('c-btn-text').textContent = t('Send me an email →','寄信給我 →','发信给我 →','E-Mail senden →','M\'envoyer un e-mail →','ส่งอีเมลหาฉัน →','이메일 보내기 →');
+  document.getElementById('c-headline').textContent = t(
+    "Let's build something that actually works.",
+    '讓我們動手，建造真正解決問題的方案。',
+    '让我们动手，建造真正解决问题的方案。',
+    'Lassen Sie uns etwas bauen, das wirklich funktioniert.',
+    'Construisons quelque chose qui fonctionne vraiment.',
+    'มาสร้างสิ่งที่ใช้งานได้จริงไปด้วยกัน',
+    '실제로 작동하는 솔루션을 함께 만듭시다.'
+  );
+  document.getElementById('c-sub').textContent = t(
+    "Need a C&B consultant who builds? Exploring the future of HR with AI? I read every message personally.",
+    '需要一位能同時動手建工具的 C&B 顧問？或想探索 AI 協作在 HR 的可能性？每封訊息我都會親自閱讀。',
+    '需要一位能同时动手建工具的 C&B 顾问？或想探索 AI 协作在 HR 的可能性？每封讯息我都会亲自阅读。',
+    'Suchen Sie einen C&B-Berater, der Tools selbst baut? Ich lese jede Nachricht persönlich.',
+    "Besoin d'un consultant C&B capable de bâtir des outils ? Je lis chaque message personnellement.",
+    'กำลังมองหาที่ปรึกษา C&B ที่ลงมือสร้างเครื่องมือได้จริง หรืออยากสำรวจความเป็นไปได้ของ HR กับ AI? ฉันอ่านทุกข้อความด้วยตัวเอง',
+    '툴을 직접 빌딩할 줄 아는 C&B 컨설턴트를 찾으시나요? 보내주시는 모든 메시지는 제가 직접 확인합니다.'
+  );
+
+  // Footer
+  document.getElementById('footer-text').textContent =
+    `© 2026 Ellen Chuang · ellenbuilds · ${t('Built with Claude · Domain × AI','以 Claude 建造 · 領域 × AI','以 Claude 建造 · 领域 × AI')}`;
+}
+
+function renderProjects() {
+  const el = document.getElementById('projects-grid');
+  el.innerHTML = PROJECTS.map((p, i) => {
+    const name = p.name[lang] || p.name.en;
+    const desc = p.desc[lang] || p.desc.en;
+    const st = p.status;
+    const badgeCls = st==='live'?'badge-live':st==='beta'?'badge-beta':'badge-building';
+    const badgeTxt = st==='live'?t('Live','上線','上线'):st==='beta'?'Beta':t('Building','建置中','建置中');
+    const ctaEl = st==='live'
+      ? `<a href="${p.url}" target="_blank" class="proj-cta">${t('Use Now','立即使用','立即使用')} →</a>`
+      : st==='beta'
+      ? `<span class="proj-cta-soon">Beta</span>`
+      : `<span class="proj-cta-soon">${t('Building...','建置中…','建置中…')}</span>`;
+    const reveal = `reveal reveal-d${Math.min(i%3+1,4)}`;
+    return `
+      <div class="proj-card ${p.featured?'featured':''} ${reveal}" style="--ac:${p.color}">
+        <div class="proj-header">
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="font-size:28px">${p.emoji}</span>
+            <div>
+              <div class="proj-name">${name}</div>
+            </div>
+          </div>
+          <span class="proj-badge ${badgeCls}">${badgeTxt}</span>
+        </div>
+        <p class="proj-desc">${desc}</p>
+        <div class="proj-stack">${p.stack.map(s=>`<span class="stack-chip">${s}</span>`).join('')}</div>
+        <div class="proj-footer">
+          ${ctaEl}
+          <div class="proj-iter">✏️ <span>${p.iterations}</span> ${t('iter.','次','次')}</div>
+        </div>
+      </div>`;
+  }).join('');
+
+  // Re-observe new cards
+  el.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+}
+
+function renderSkills() {
+  const groups = SKILLS[lang] || SKILLS.en;
+  document.getElementById('skills-grid').innerHTML = groups.map((g, i) => `
+    <div class="skill-group reveal reveal-d${i%2+1}">
+      <div class="skill-group-title"><span class="skill-group-icon">${g.icon}</span>${g.title}</div>
+      <div class="skill-pills">
+        ${g.pills.map(p=>`<span class="skill-pill${p.strong?' strong':''}">${p.label}</span>`).join('')}
+      </div>
+    </div>`).join('');
+
+  const c = CREDS[lang] || CREDS.en;
+  document.getElementById('creds').innerHTML = c.map(cr=>`
+    <div class="cred">
+      <span class="cred-icon">${cr.icon}</span>
+      <div>
+        <div class="cred-title">${cr.title}</div>
+        <div class="cred-sub">${cr.sub}</div>
+      </div>
+    </div>`).join('');
+
+  document.getElementById('skills-grid').querySelectorAll('.reveal').forEach(el => observer.observe(el));
+}
+
+// ── Intersection Observer ──────────────────────────────────────────
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('up'); } });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ── Number counter ────────────────────────────────────────────────
+let counted = false;
+const counterObserver = new IntersectionObserver(entries => {
+  if (entries[0].isIntersecting && !counted) {
+    counted = true;
+    document.querySelectorAll('.count').forEach(el => {
+      const target = +el.dataset.target;
+      const duration = target > 100 ? 1800 : 900;
+      const start = Date.now();
+      const tick = () => {
+        const p = Math.min((Date.now()-start)/duration, 1);
+        const ease = 1 - Math.pow(1-p, 3);
+        el.textContent = Math.round(ease * target);
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  }
+}, { threshold: 0.3 });
+counterObserver.observe(document.querySelector('.hero-right'));
+
+// ── Nav scroll ────────────────────────────────────────────────────
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+
+  const sections = ['story','projects','skills','contact'];
+  const current = sections.filter(id => {
+    const el = document.getElementById(id);
+    return el && el.getBoundingClientRect().top <= 80;
+  }).pop();
+
+  document.querySelectorAll('.nav-link').forEach(el => {
+    el.classList.toggle('active', el.dataset.section === current);
+  });
+}, {passive:true});
+
+// ── Init ──────────────────────────────────────────────────────────
+render();
+</script>
+</body>
+</html>
