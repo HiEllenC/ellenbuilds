@@ -263,22 +263,21 @@ nav.scrolled{box-shadow:0 1px 0 var(--line),var(--s1)}
   font-size:10px;font-family:var(--fm);padding:2px 9px;border-radius:4px;
   background:var(--bg2);color:var(--ink3);border:1px solid var(--line);letter-spacing:.03em;
 }
-.proj-footer{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:14px;border-top:1px solid var(--line)}
-.proj-meta{display:flex;align-items:center;gap:10px}
+.proj-footer{display:flex;flex-direction:column;gap:10px;margin-top:auto;padding-top:14px;border-top:1px solid var(--line)}
+.proj-meta{display:flex;align-items:center;gap:6px;font-size:11px;font-family:var(--fm);color:var(--ink4)}
+.proj-meta-sep{color:var(--line2)}
+.proj-meta strong{color:var(--ink3);font-weight:600}
 .proj-cta{
   font-size:12px;font-weight:600;
-  display:flex;align-items:center;gap:5px;
-  padding:7px 14px;border-radius:7px;
-  transition:all .2s;letter-spacing:.01em;
+  display:inline-flex;align-items:center;gap:5px;
+  padding:8px 16px;border-radius:7px;
+  transition:all .2s;letter-spacing:.01em;white-space:nowrap;align-self:flex-start;
 }
 .proj-cta.live{color:var(--acc);border:1.5px solid var(--acc-m);background:var(--acc-l)}
 .proj-cta.live:hover{background:var(--acc);color:#fff;border-color:var(--acc);transform:translateX(2px)}
 .proj-cta.beta{color:#92400e;border:1.5px solid #fde68a;background:#fef9c3}
 .proj-cta.beta:hover{background:#f59e0b;color:#fff;border-color:#f59e0b;transform:translateX(2px)}
 .proj-cta-soon{font-size:11px;color:var(--ink4);font-family:var(--fm);letter-spacing:.04em}
-.proj-iter{font-size:11px;color:var(--ink4);font-family:var(--fm);display:flex;align-items:center;gap:4px}
-.proj-iter span{color:var(--ink3);font-weight:600}
-.proj-updated{font-size:10px;color:var(--ink4);font-family:var(--fm)}
 
 /* Featured project (first, full width) */
 .proj-card.featured{grid-column:1/-1}
@@ -1364,11 +1363,11 @@ function renderProjects() {
         <p class="proj-desc">${desc}</p>
         <div class="proj-stack">${p.stack.map(s=>`<span class="stack-chip">${s}</span>`).join('')}</div>
         <div class="proj-footer">
-          ${ctaEl}
           <div class="proj-meta">
-            <div class="proj-iter">✏️ <span>${p.iterations}</span> ${t('iter.','次','次')}</div>
-            ${updStr ? `<span class="proj-updated">· ${t('Updated','更新於','更新于')} ${updStr}</span>` : ''}
+            ✏️ <strong>${p.iterations}</strong> ${t('revisions','次修改','次修改')}
+            ${updStr ? `<span class="proj-meta-sep">·</span> ${t('Updated','更新','更新')} ${updStr}` : ''}
           </div>
+          ${ctaEl}
         </div>
       </div>`;
   }).join('');
