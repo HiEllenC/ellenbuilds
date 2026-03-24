@@ -388,6 +388,33 @@ nav.scrolled{box-shadow:0 1px 0 var(--line),var(--s1)}
   .m-form-row{grid-template-columns:1fr}
 }
 
+/* ── UPDATES ──────────────────────────────────────────────────── */
+#updates{background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.updates-cols{display:grid;grid-template-columns:260px 1fr;gap:56px;align-items:start}
+.updates-sticky{position:sticky;top:88px}
+.updates-count{font-size:48px;font-weight:800;letter-spacing:-.03em;color:var(--acc);line-height:1;margin-bottom:8px}
+.updates-feed{display:flex;flex-direction:column;gap:0}
+.upd-item{display:flex;gap:20px;padding:18px 0;border-bottom:1px solid var(--line);position:relative}
+.upd-item:last-child{border-bottom:none}
+.upd-date{width:88px;flex-shrink:0;padding-top:2px}
+.upd-date-d{font-size:11px;font-weight:600;font-family:var(--fm);color:var(--ink3);letter-spacing:.03em;white-space:nowrap}
+.upd-dot-col{display:flex;flex-direction:column;align-items:center;gap:0;flex-shrink:0;padding-top:4px}
+.upd-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;border:2px solid var(--bg)}
+.upd-line{width:1px;flex:1;background:var(--line);margin-top:4px;min-height:20px}
+.upd-item:last-child .upd-line{display:none}
+.upd-body{flex:1;padding-top:1px}
+.upd-proj{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:600;
+  padding:2px 8px;border-radius:4px;margin-bottom:7px;font-family:var(--fm);letter-spacing:.03em}
+.upd-title{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:4px;line-height:1.4}
+.upd-desc{font-size:13px;color:var(--ink3);line-height:1.7}
+.upd-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:8px}
+.upd-tag{font-size:10px;font-family:var(--fm);padding:2px 7px;border-radius:3px;
+  background:var(--bg2);color:var(--ink3);border:1px solid var(--line)}
+@media(max-width:768px){
+  .updates-cols{grid-template-columns:1fr}
+  .updates-sticky{position:static}
+}
+
 /* ── FOOTER ───────────────────────────────────────────────────── */
 footer{
   background:#040e08;padding:28px 0 72px;
@@ -504,6 +531,7 @@ footer{
     <a href="#hero" class="nav-logo">ellen<span>builds</span></a>
     <div class="nav-links">
       <a href="#projects" class="nav-link" data-section="projects" id="nl-projects"></a>
+      <a href="#updates"  class="nav-link" data-section="updates"  id="nl-updates"></a>
       <a href="#story"    class="nav-link" data-section="story"    id="nl-story"></a>
       <a href="#skills"   class="nav-link" data-section="skills"   id="nl-skills"></a>
       <a href="#contact"  class="nav-link mobile-show" data-section="contact"  id="nl-contact"></a>
@@ -576,6 +604,21 @@ footer{
       <p class="section-sub" id="proj-sub"></p>
     </div>
     <div class="projects-grid" id="projects-grid"></div>
+  </div>
+</section>
+
+<!-- ══ UPDATES ════════════════════════════════════════════════════ -->
+<section id="updates">
+  <div class="container">
+    <div class="updates-cols">
+      <div class="updates-sticky reveal">
+        <div class="section-label" id="upd-label"></div>
+        <div class="updates-count" id="upd-count"></div>
+        <h2 class="section-title" style="font-size:28px;margin-bottom:12px" id="upd-title"></h2>
+        <p style="font-size:15px;color:var(--ink3);line-height:1.7" id="upd-sub"></p>
+      </div>
+      <div class="updates-feed reveal reveal-d1" id="updates-feed"></div>
+    </div>
   </div>
 </section>
 
@@ -800,6 +843,72 @@ const PROJECTS = [
     iterations: 48,
     url: 'https://drift-island.netlify.app',
     featured: false,
+  },
+];
+
+const CHANGELOG = [
+  {
+    date: '2026-03-24',
+    project: 'payband',
+    emoji: '💰',
+    color: '#7c3aed',
+    title: { en: 'v1.1 — World Map & Live Market Data', zh: 'v1.1 — 世界地圖＋即時市場數據' },
+    desc:  { en: 'Replaced country list with real SVG world map (Plate Carrée projection). Connected CoinGecko + open.er-api.com for live crypto & FX rates with 2-min cache.', zh: '以真實 SVG 世界地圖取代國家列表，接入 CoinGecko 加密貨幣與即時匯率 API（2分鐘快取）。' },
+    tags: ['World Map', 'CoinGecko API', 'FX Rates', 'Dark Theme'],
+  },
+  {
+    date: '2026-03-24',
+    project: 'ellenbuilds',
+    emoji: '🌿',
+    color: '#1a5c40',
+    title: { en: 'Building / Beta / Live — New Status System', zh: '新增三階段狀態：Building / Beta / Live' },
+    desc:  { en: 'Replaced binary dev/live badges with a three-tier system across ellenbuilds and dashboard. Better reflects where each project really is.', zh: '將原本的開發中/已上線兩段式改為三階段，更清楚反映每個專案的真實進度。' },
+    tags: ['UI', 'Status Badges'],
+  },
+  {
+    date: '2026-03-22',
+    project: 'payband',
+    emoji: '💰',
+    color: '#7c3aed',
+    title: { en: 'v1.0 — Phase 1A Complete', zh: 'v1.0 — Phase 1A 完成' },
+    desc:  { en: '7 modules launched: Salary Matrix, Comp Structure, Cross-Border, Take-Home, FX & Crypto, Labor Law, Holidays. 12 countries × 12 job families × dual IC/M track.', zh: '7 大模組上線：薪資帶寬、薪酬結構、跨境調派、到手試算、匯率幣市、勞動法規、假日行事曆。12 國 × 12 職能 × IC/M 雙軌。' },
+    tags: ['Launch', '7 Modules', '12 Countries'],
+  },
+  {
+    date: '2026-03-21',
+    project: 'career-health-check',
+    emoji: '🩺',
+    color: '#2563eb',
+    title: { en: 'Launched to Production', zh: '正式上線' },
+    desc:  { en: 'Stripe live mode enabled, Resend email notifications configured. Promo codes BETA2026 and friend100 tested. PDF auto-generation confirmed.', zh: 'Stripe 正式模式啟用，Resend 郵件通知設定完成。促銷碼 BETA2026 / friend100 測試通過，PDF 自動產出確認。' },
+    tags: ['Launch', 'Stripe', 'Resend', 'PDF'],
+  },
+  {
+    date: '2026-03-20',
+    project: 'claude-guide',
+    emoji: '🤖',
+    color: '#ea580c',
+    title: { en: 'Launched — Bilingual Claude AI Guide', zh: '上線 — 雙語 Claude AI 使用指南' },
+    desc:  { en: '3 main pages + 6 topic guides. Bilingual toggle, search, contact form, GA4. Built with Static HTML in under 2 days.', zh: '3 主頁 + 6 主題手冊，雙語切換、搜尋、聯絡表單、GA4 串接。靜態 HTML，2 天完成。' },
+    tags: ['Launch', 'Bilingual', 'GA4'],
+  },
+  {
+    date: '2026-03-19',
+    project: 'drift-island',
+    emoji: '🏝️',
+    color: '#0369a1',
+    title: { en: 'Launched — Anonymous Letter Site', zh: '上線 — 漂島信箱匿名投信網站' },
+    desc:  { en: 'Anonymous letter site with AI auto-reply via Apps Script. Google Sheets backend, GA4, pastel island aesthetic. Inspired by Namiya General Store.', zh: '匿名投信網站，Apps Script AI 自動回信，Google Sheets 後端，海島粉彩風格，靈感來自解憂雜貨店。' },
+    tags: ['Launch', 'Apps Script', 'Google Sheets'],
+  },
+  {
+    date: '2026-03-18',
+    project: 'remote-hris',
+    emoji: '🗂️',
+    color: '#0d9488',
+    title: { en: 'v10 — 9-Module HRIS Complete', zh: 'v10 — 9 模組 HRIS 完成' },
+    desc:  { en: 'Full payroll engine with multi-currency, attendance, labor law rules (TW/SG/PH/MY), CSV import, and org chart. 3,447 lines, built in 2 days.', zh: '完整薪資引擎，多幣種、考勤、勞動法規（TW/SG/PH/MY）、CSV 匯入、組織架構。3,447 行，2 天完成。' },
+    tags: ['v10', 'Payroll', 'Multi-currency', '9 Modules'],
   },
 ];
 
@@ -1050,6 +1159,7 @@ function render() {
   // Nav
   document.getElementById('nl-story').textContent    = t('My Story','我的故事','我的故事','Meine Geschichte','Mon parcours','เรื่องราวของฉัน','나의 이야기');
   document.getElementById('nl-projects').textContent = t('Projects','作品','作品','Projekte','Projets','ผลงาน','프로젝트');
+  document.getElementById('nl-updates').textContent  = t('Updates','更新紀錄','更新记录','Updates','Mises à jour','อัปเดต','업데이트');
   document.getElementById('nl-skills').textContent   = t('Skills','專業技能','专业技能','Fähigkeiten','Compétences','ทักษะ','보유 역량');
   document.getElementById('nl-contact').textContent  = t('Contact','聯繫我','联系我','Kontakt','Contact','ติดต่อ','연락처');
 
@@ -1135,6 +1245,17 @@ function render() {
   );
   renderProjects();
 
+  // Updates
+  document.getElementById('upd-label').textContent  = t('Build Log','更新紀錄','更新记录');
+  document.getElementById('upd-count').textContent  = CHANGELOG.length;
+  document.getElementById('upd-title').textContent  = t('What\'s been shipping','最近在做什麼','最近在做什么');
+  document.getElementById('upd-sub').textContent    = t(
+    'A running log of what shipped, what changed, and what\'s in progress across all projects.',
+    '所有專案的上線紀錄、功能更新與進行中的開發。',
+    '所有项目的上线记录、功能更新与进行中的开发。'
+  );
+  renderUpdates();
+
   // Skills
   document.getElementById('skills-label').textContent = t('Expertise','專業領域','专业领域');
   document.getElementById('skills-title').textContent  = t('The Human + AI Stack','人 × AI 的能力組合','人 × AI 的能力组合');
@@ -1174,6 +1295,32 @@ function render() {
   // Footer
   document.getElementById('footer-text').textContent =
     `© 2026 Ellen Chuang · ellenbuilds · ${t('Built with Claude · Domain × AI','以 Claude 建造 · 領域 × AI','以 Claude 建造 · 领域 × AI')}`;
+}
+
+function renderUpdates() {
+  const el = document.getElementById('updates-feed');
+  el.innerHTML = CHANGELOG.map(u => {
+    const title = u.title[lang] || u.title.en;
+    const desc  = u.desc[lang]  || u.desc.en;
+    const d = new Date(u.date);
+    const dateStr = d.toLocaleDateString(lang==='zh'?'zh-TW':lang==='en'?'en-US':'en-US', {month:'short', day:'numeric', year:'numeric'});
+    return `
+    <div class="upd-item">
+      <div class="upd-date">
+        <div class="upd-date-d">${dateStr}</div>
+      </div>
+      <div class="upd-dot-col">
+        <div class="upd-dot" style="background:${u.color}"></div>
+        <div class="upd-line"></div>
+      </div>
+      <div class="upd-body">
+        <div class="upd-proj" style="background:${u.color}18;color:${u.color}">${u.emoji} ${u.project}</div>
+        <div class="upd-title">${title}</div>
+        <div class="upd-desc">${desc}</div>
+        <div class="upd-tags">${u.tags.map(tg=>`<span class="upd-tag">${tg}</span>`).join('')}</div>
+      </div>
+    </div>`;
+  }).join('');
 }
 
 function renderProjects() {
