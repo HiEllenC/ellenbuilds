@@ -263,17 +263,22 @@ nav.scrolled{box-shadow:0 1px 0 var(--line),var(--s1)}
   font-size:10px;font-family:var(--fm);padding:2px 9px;border-radius:4px;
   background:var(--bg2);color:var(--ink3);border:1px solid var(--line);letter-spacing:.03em;
 }
-.proj-footer{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:16px;border-top:1px solid var(--line)}
+.proj-footer{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:14px;border-top:1px solid var(--line)}
+.proj-meta{display:flex;align-items:center;gap:10px}
 .proj-cta{
-  font-size:12px;font-weight:600;color:var(--acc);
+  font-size:12px;font-weight:600;
   display:flex;align-items:center;gap:5px;
-  padding:7px 14px;border-radius:7px;border:1.5px solid var(--acc-m);
-  background:var(--acc-l);transition:all .2s;letter-spacing:.01em;
+  padding:7px 14px;border-radius:7px;
+  transition:all .2s;letter-spacing:.01em;
 }
-.proj-cta:hover{background:var(--acc);color:#fff;border-color:var(--acc);transform:translateX(2px)}
+.proj-cta.live{color:var(--acc);border:1.5px solid var(--acc-m);background:var(--acc-l)}
+.proj-cta.live:hover{background:var(--acc);color:#fff;border-color:var(--acc);transform:translateX(2px)}
+.proj-cta.beta{color:#92400e;border:1.5px solid #fde68a;background:#fef9c3}
+.proj-cta.beta:hover{background:#f59e0b;color:#fff;border-color:#f59e0b;transform:translateX(2px)}
 .proj-cta-soon{font-size:11px;color:var(--ink4);font-family:var(--fm);letter-spacing:.04em}
 .proj-iter{font-size:11px;color:var(--ink4);font-family:var(--fm);display:flex;align-items:center;gap:4px}
 .proj-iter span{color:var(--ink3);font-weight:600}
+.proj-updated{font-size:10px;color:var(--ink4);font-family:var(--fm)}
 
 /* Featured project (first, full width) */
 .proj-card.featured{grid-column:1/-1}
@@ -765,6 +770,7 @@ const PROJECTS = [
     },
     stack: ['React JSX', 'Single-file', 'No Build'],
     iterations: 28,
+    updatedAt: '2026-03-19',
     url: 'https://remote-hris.netlify.app',
     featured: false,
   },
@@ -785,6 +791,7 @@ const PROJECTS = [
     },
     stack: ['React', 'Vite', 'GA4', 'Netlify Functions'],
     iterations: 21,
+    updatedAt: '2026-03-22',
     url: 'https://career-health-check.netlify.app',
     featured: false,
   },
@@ -805,6 +812,7 @@ const PROJECTS = [
     },
     stack: ['React', 'Vite', 'Claude API'],
     iterations: 50,
+    updatedAt: '2026-03-24',
     url: 'https://payband-app.netlify.app',
     featured: false,
   },
@@ -821,6 +829,7 @@ const PROJECTS = [
     },
     stack: ['Static HTML', 'GA4', 'Contact Form'],
     iterations: 62,
+    updatedAt: '2026-03-22',
     url: 'https://claude-guide.netlify.app',
     featured: false,
   },
@@ -841,6 +850,7 @@ const PROJECTS = [
     },
     stack: ['Static HTML', 'Apps Script', 'GA4', 'Google Sheets'],
     iterations: 48,
+    updatedAt: '2026-03-22',
     url: 'https://drift-island.netlify.app',
     featured: false,
   },
@@ -1332,21 +1342,22 @@ function renderProjects() {
     const badgeCls = st==='live'?'badge-live':st==='beta'?'badge-beta':'badge-building';
     const badgeTxt = st==='live'?t('Live','上線','上线'):st==='beta'?'Beta':t('Building','建置中','建置中');
     const ctaEl = st==='live'
-      ? `<a href="${p.url}" target="_blank" class="proj-cta">${t('Use Now','立即使用','立即使用')} →</a>`
+      ? `<a href="${p.url}" target="_blank" class="proj-cta live">${t('Use Now','立即使用','立即使用')} →</a>`
       : st==='beta' && p.url
-      ? `<a href="${p.url}" target="_blank" class="proj-cta" style="opacity:.75">${t('In Progress','進行中','进行中')} →</a>`
+      ? `<a href="${p.url}" target="_blank" class="proj-cta beta">${t('In Progress','進行中','进行中')} →</a>`
       : st==='beta'
       ? `<span class="proj-cta-soon">Beta</span>`
       : `<span class="proj-cta-soon">${t('Building...','建置中…','建置中…')}</span>`;
+    const updStr = p.updatedAt
+      ? new Date(p.updatedAt).toLocaleDateString(lang==='zh'?'zh-TW':'en-US',{month:'short',day:'numeric'})
+      : '';
     const reveal = `reveal reveal-d${Math.min(i%3+1,4)}`;
     return `
       <div class="proj-card ${p.featured?'featured':''} ${reveal}" style="--ac:${p.color}">
         <div class="proj-header">
           <div style="display:flex;align-items:center;gap:10px">
             <span style="font-size:28px">${p.emoji}</span>
-            <div>
-              <div class="proj-name">${name}</div>
-            </div>
+            <div class="proj-name">${name}</div>
           </div>
           <span class="proj-badge ${badgeCls}">${badgeTxt}</span>
         </div>
@@ -1354,7 +1365,10 @@ function renderProjects() {
         <div class="proj-stack">${p.stack.map(s=>`<span class="stack-chip">${s}</span>`).join('')}</div>
         <div class="proj-footer">
           ${ctaEl}
-          <div class="proj-iter">✏️ <span>${p.iterations}</span> ${t('iter.','次','次')}</div>
+          <div class="proj-meta">
+            <div class="proj-iter">✏️ <span>${p.iterations}</span> ${t('iter.','次','次')}</div>
+            ${updStr ? `<span class="proj-updated">· ${t('Updated','更新於','更新于')} ${updStr}</span>` : ''}
+          </div>
         </div>
       </div>`;
   }).join('');
