@@ -709,7 +709,7 @@ const PROJECTS = [
     id: 'remote-hris',
     emoji: '🗂️',
     color: '#0d9488',
-    status: 'live',
+    status: 'beta',
     name:   { en: 'Remote HRIS', zh: 'Remote HRIS', sc: 'Remote HRIS' },
     desc: {
       en: 'A multi-country HR & payroll system with custom compensation rules, mixed contract management, and multi-currency disbursement — covering the full payroll cycle from attendance to payout, built from real operational pain.',
@@ -762,7 +762,7 @@ const PROJECTS = [
     },
     stack: ['React', 'Vite', 'Claude API'],
     iterations: 50,
-    url: null,
+    url: 'https://payband-app.netlify.app',
     featured: false,
   },
   {
@@ -1186,6 +1186,8 @@ function renderProjects() {
     const badgeTxt = st==='live'?t('Live','上線','上线'):st==='beta'?'Beta':t('Building','建置中','建置中');
     const ctaEl = st==='live'
       ? `<a href="${p.url}" target="_blank" class="proj-cta">${t('Use Now','立即使用','立即使用')} →</a>`
+      : st==='beta' && p.url
+      ? `<a href="${p.url}" target="_blank" class="proj-cta" style="opacity:.75">${t('In Progress','進行中','进行中')} →</a>`
       : st==='beta'
       ? `<span class="proj-cta-soon">Beta</span>`
       : `<span class="proj-cta-soon">${t('Building...','建置中…','建置中…')}</span>`;
