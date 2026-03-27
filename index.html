@@ -1789,7 +1789,7 @@ function submitForm(e) {
     .then(function() {
       document.getElementById('contact-form').reset();
       const s = document.getElementById('m-success');
-      s.textContent = t("✓ Message sent. I'll get back to you soon.",'✓ 訊息已送出，我會盡快回覆你。','✓ 消息已发送，我会尽快回复你。');
+      s.textContent = t("✓ Message sent. I'll get back to you soon.",'✓ 訊息已送出，我會盡快回覆你。','✓ 消息已发送，我会尽快回复你。','✓ Nachricht gesendet. Ich melde mich bald.','✓ Message envoyé. Je vous répondrai bientôt.','✓ ส่งข้อความแล้ว ฉันจะตอบกลับเร็วๆ นี้','✓ 메시지가 전송되었습니다. 곧 답변 드리겠습니다.','✓ メッセージを送信しました。近日中にご連絡します。');
       s.style.display = 'block';
       btn.disabled = false;
       if (typeof gtag !== 'undefined') gtag('event', 'contact_submit', { page_lang: lang });
@@ -1841,7 +1841,7 @@ function render() {
   const _latestUpdate = PROJECTS.map(p=>p.updatedAt).filter(Boolean).sort().reverse()[0];
   const _updDate = _latestUpdate ? new Date(_latestUpdate) : new Date();
   const _updFmt = _updDate.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
-  document.getElementById('s3-updated').textContent = t(`updated ${_updFmt}`,`更新於 ${_updDate.getMonth()+1}/${_updDate.getDate()}/${_updDate.getFullYear()}`,`更新于 ${_updDate.getMonth()+1}/${_updDate.getDate()}/${_updDate.getFullYear()}`);
+  document.getElementById('s3-updated').textContent = t(`updated ${_updFmt}`,`更新於 ${_updDate.getMonth()+1}/${_updDate.getDate()}/${_updDate.getFullYear()}`,`更新于 ${_updDate.getMonth()+1}/${_updDate.getDate()}/${_updDate.getFullYear()}`,`aktualisiert ${_updFmt}`,`mis à jour ${_updFmt}`,`อัปเดต ${_updFmt}`,`업데이트 ${_updFmt}`,`更新 ${_updFmt}`);
   document.getElementById('s4').textContent = t('Employees Managed','名員工薪資管理','名员工薪资管理','Verwaltete Mitarbeiter','Employés gérés','จำนวนพนักงานที่ดูแล','급여 관리 인원','名の給与管理実績');
 
   // Story
@@ -1857,7 +1857,7 @@ function render() {
     '세 번의 단계. 각각의 경험은 모든 것을 변화시킨 지금의 협업을 향해 쌓여왔습니다.',
     '3つのフェーズ。その一つひとつが、すべてを変えるコラボレーションへと繋がっていきました。'
   );
-  document.getElementById('ch1-num').textContent  = t('01 / Foundation','01 / 基礎','01 / 基础');
+  document.getElementById('ch1-num').textContent  = t('01 / Foundation','01 / 基礎','01 / 基础','01 / Fundament','01 / Fondation','01 / รากฐาน','01 / 기초','01 / 基礎');
   document.getElementById('ch1-title').textContent = t('Discipline at Scale','在規模中鍛鍊紀律','在规模中锻炼纪律','Disziplin im großen Maßstab','La discipline à grande échelle','วินัยภายใต้ความกดดันและขนาดองค์กร','규모 속에서 단련된 규율','規模の中で鍛えられた規律');
   document.getElementById('ch1-body').innerHTML   = t(
     'From managing HR for <strong>2,000 personnel</strong> in the military to becoming an <strong>Annual Sales Champion</strong> with 150 deals in year one — that\'s how I learned to build systems that hold under pressure.',
@@ -1870,7 +1870,7 @@ function render() {
     '軍での<strong>2,000名の人事管理</strong>から、入社1年目に150件の契約を達成した<strong>年間販売チャンピオン</strong>まで——プレッシャーの下でも機能するシステムの構築方法を学びました。'
   );
 
-  document.getElementById('ch2-num').textContent  = t('02 / Expertise','02 / 深度專業','02 / 深度专业');
+  document.getElementById('ch2-num').textContent  = t('02 / Expertise','02 / 深度專業','02 / 深度专业','02 / Expertise','02 / Expertise','02 / ความเชี่ยวชาญ','02 / 전문성','02 / 専門性');
   document.getElementById('ch2-title').textContent = t('Ten Years in the Engine Room','十年深耕薪酬核心','十年深耕薪酬核心','Zehn Jahre im Herzstück des Betriebs','Dix ans au cœur du moteur','10 ปีในหัวใจสำคัญของระบบ','엔진룸에서의 10년','エンジンルームでの10年');
   document.getElementById('ch2-body').innerHTML   = t(
     'As a C&amp;B Manager across <strong>5 countries</strong> — Taiwan, Philippines, Singapore, UAE, and Malaysia — I handled payroll for <strong>1,000+ employees</strong>, saved <strong>USD 35,000</strong> in cost corrections, and built compensation frameworks for industries from manufacturing to crypto exchanges. I can read your comp structure and spot the gaps in minutes.',
@@ -1883,7 +1883,7 @@ function render() {
     '<strong>5カ国</strong>（台湾、フィリピン、シンガポール、UAE、マレーシア）のC&amp;Bマネージャーとして<strong>1,000名以上</strong>の給与管理を担当し、<strong>USD 35,000</strong>のコスト削減を実現、製造業から仮想通貨取引所まで報酬体系を構築してきました。'
   );
 
-  document.getElementById('ch3-num').textContent  = t('03 / The Partnership','03 / 找到夥伴','03 / 找到伙伴');
+  document.getElementById('ch3-num').textContent  = t('03 / The Partnership','03 / 找到夥伴','03 / 找到伙伴','03 / Partnerschaft','03 / Le Partenariat','03 / พาร์ทเนอร์ชิพ','03 / 파트너십','03 / パートナーシップ');
   document.getElementById('ch3-title').textContent = t('AI: From Tool to Collaborative Partner','AI：從工具進化為合作夥伴','AI：从工具进化为合作伙伴','KI: Vom Werkzeug zum Partner','L\'IA : d\'outil à partenaire collaboratif','AI: จากเครื่องมือ สู่การเป็นพาร์ทเนอร์ผู้ร่วมสร้าง','AI: 단순한 도구에서 진정한 파트너로의 진화','AI：ツールから真の協力パートナーへ');
   document.getElementById('ch3-body').innerHTML   = t(
     "I don't write code — I give code its soul and purpose. My AI journey began in March 2023 with GPT, and in March 2026 I started building with Claude as a genuine co-builder. Not a shortcut, not a toy — a partner that executes while I think. <strong>6 products, 1235 optimizations</strong> — built together.",
@@ -1897,8 +1897,8 @@ function render() {
   );
 
   // Projects
-  document.getElementById('proj-label').textContent = t('Portfolio','作品集','作品集');
-  document.getElementById('proj-title').textContent  = t('What I Build','我做了什麼','我做了什么');
+  document.getElementById('proj-label').textContent = t('Portfolio','作品集','作品集','Portfolio','Portfolio','ผลงาน','포트폴리오','ポートフォリオ');
+  document.getElementById('proj-title').textContent  = t('What I Build','我做了什麼','我做了什么','Was ich baue','Ce que je crée','สิ่งที่ฉันสร้าง','내가 만드는 것들','私が作るもの');
   document.getElementById('proj-sub').textContent    = t(
     'Not random products — a collection built from 10 years of real HR pain. Every tool solves a problem I personally lived through.',
     '不是隨機的產品組合，而是十年 HR 現場痛點的集合。每個工具，都源自我親身經歷過的問題。',
