@@ -788,7 +788,7 @@ footer{
 <div id="contact-modal" onclick="if(event.target===this)closeModal()">
   <div class="modal-box">
     <button class="modal-close" onclick="closeModal()">✕</button>
-    <div class="modal-title" id="m-title">Let's Work Together</div>
+    <div class="modal-title" id="m-title">Let's Make It Happen</div>
     <p class="modal-desc" id="m-desc">Whether it's a C&B question, collaboration, or exploring what HR looks like with AI — feel free to reach out.</p>
     <form id="contact-form" onsubmit="submitForm(event)">
       <div class="hp-field" aria-hidden="true">
@@ -1744,7 +1744,7 @@ function closeModal() {
   document.body.style.overflow = '';
 }
 function updateModalLang() {
-  document.getElementById('m-title').textContent    = t('Let\'s Work Together','一起合作','一起合作','Lass uns zusammenarbeiten','Travaillons ensemble','มาทำงานร่วมกัน','함께 일해요','一緒に仕事しましょう');
+  document.getElementById('m-title').textContent    = t('Let\'s Make It Happen','讓我們一起完成吧','让我们一起完成吧','Lass es uns zusammen angehen','Faisons-le ensemble','มาลงมือทำด้วยกันเลย','같이 만들어봐요','一緒にやり遂げましょう');
   document.getElementById('m-desc').textContent     = t(
     "Whether it's a C&B question, collaboration, or exploring what HR looks like with AI — feel free to reach out.",
     '無論是薪酬問題、合作洽談，或想探索 AI 在 HR 的可能性，歡迎直接聯繫。',
@@ -1832,7 +1832,7 @@ function render() {
     '私の強みはコーディングの知識ではなく、専門領域への深い知見です。解決すべきHRの課題が何かを的確に把握しており、AIはこれまでで最も直感的なパートナーです。AIと共に、わずか1ヶ月で6つもの製品をリリースしました。'
   );
   document.getElementById('h-cta1').textContent = t('See My Projects ↓','看我做了什麼 ↓','看我做了什么 ↓','Meine Projekte ansehen ↓','Voir mes projets ↓','ดูโปรเจกต์ของฉัน ↓','내 프로젝트 보기 ↓','私のプロジェクトを見る ↓');
-  document.getElementById('h-cta2').textContent = t('Let\'s Work Together →','一起合作 →','一起合作 →','Zusammenarbeiten →','Travaillons ensemble →','มาทำงานด้วยกัน →','함께 일해요 →','一緒に仕事しよう →');
+  document.getElementById('h-cta2').textContent = t('Let\'s Make It Happen →','讓我們一起完成吧 →','让我们一起完成吧 →','Lass es uns angehen →','Faisons-le ensemble →','มาลงมือทำด้วยกัน →','같이 만들어봐요 →','一緒にやり遂げよう →');
 
   // Stats
   document.getElementById('s1').textContent = t('Years HR Experience','年 HR 經驗','年 HR 经验','Jahre HR-Erfahrung',"Années d'expérience RH",'ประสบการณ์สายงาน HR (ปี)','HR 실무 경력 (년)','年間のHR経験');
@@ -1933,17 +1933,17 @@ function render() {
   renderSkills();
 
   // Contact
-  document.getElementById('c-label').textContent    = t('Let\'s Work Together','一起合作','一起合作','Lass uns zusammenarbeiten','Travaillons ensemble','มาทำงานร่วมกัน','함께 일해요','一緒に仕事しましょう');
+  document.getElementById('c-label').textContent    = t('Let\'s Make It Happen','讓我們一起完成吧','让我们一起完成吧','Lass es uns zusammen angehen','Faisons-le ensemble','มาลงมือทำด้วยกันเลย','같이 만들어봐요','一緒にやり遂げましょう');
   document.getElementById('c-btn-text').textContent = t('Contact Me →','聯絡我 →','联络我 →','Kontakt →','Me contacter →','ติดต่อฉัน →','연락하기 →','連絡する →');
   document.getElementById('c-headline').textContent = t(
-    "Have an HR problem worth solving?",
-    '有個 HR 痛點值得被好好解決嗎？',
-    '有个 HR 痛点值得被好好解决吗？',
-    'Haben Sie ein HR-Problem, das es wert ist, gelöst zu werden?',
-    "Vous avez un problème RH qui mérite d'être résolu?",
-    'มีปัญหาด้าน HR ที่อยากแก้อย่างจริงจังไหม?',
-    '해결할 가치가 있는 HR 문제가 있으신가요?',
-    '解決すべきHRの課題はございませんか？'
+    "Tired of the same repetitive HR work?",
+    '工作重複的問題困擾你了嗎？',
+    '工作重复的问题困扰你了吗？',
+    'Genug von immer wiederkehrender HR-Arbeit?',
+    'Fatigué du travail RH répétitif?',
+    'เบื่อกับงาน HR ที่ซ้ำซากจำเจแล้วใช่ไหม?',
+    '반복되는 HR 업무에 지치셨나요?',
+    '同じHR業務の繰り返しにうんざりしていませんか？'
   );
   document.getElementById('c-sub').textContent = t(
     "Whether it's a collaboration, a C&B question, or just wanting to connect — just reach out.",
