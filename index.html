@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ellen Chuang · ellenbuilds</title>
+<title>Ellen Chuang | HR &amp; AI Builder</title>
 <meta name="description" content="C&B Specialist & AI Builder. 10+ years HR expertise across 5 countries. Building HR tools with AI.">
 <link rel="icon" href="dino.jpg" type="image/jpeg">
 <meta property="og:title" content="Ellen Chuang · ellenbuilds">
@@ -15,6 +15,15 @@
 <meta name="twitter:title" content="Ellen Chuang · ellenbuilds">
 <meta name="twitter:description" content="C&B Specialist who builds HR tools with AI. 1235 optimizations, 6 products, 10+ years domain expertise.">
 <link rel="canonical" href="https://ellenbuilds.com">
+<link rel="alternate" hreflang="x-default" href="https://ellenbuilds.com/">
+<link rel="alternate" hreflang="en"    href="https://ellenbuilds.com/">
+<link rel="alternate" hreflang="zh-TW" href="https://ellenbuilds.com/?lang=zh">
+<link rel="alternate" hreflang="zh-CN" href="https://ellenbuilds.com/?lang=sc">
+<link rel="alternate" hreflang="ja"    href="https://ellenbuilds.com/?lang=ja">
+<link rel="alternate" hreflang="de"    href="https://ellenbuilds.com/?lang=de">
+<link rel="alternate" hreflang="fr"    href="https://ellenbuilds.com/?lang=fr">
+<link rel="alternate" hreflang="th"    href="https://ellenbuilds.com/?lang=th">
+<link rel="alternate" hreflang="ko"    href="https://ellenbuilds.com/?lang=kr">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZQQVD8T8M8"></script>
 <script>
@@ -208,23 +217,23 @@ nav.scrolled{box-shadow:0 1px 0 var(--line),var(--s1)}
 }
 .section-label::before{content:'';display:inline-block;width:20px;height:1.5px;background:var(--acc)}
 .section-title{
-  font-size:40px;font-weight:800;letter-spacing:-.025em;
-  color:var(--ink);margin-bottom:18px;line-height:1.1;
+  font-size:36px;font-weight:800;letter-spacing:-.025em;
+  color:var(--ink);margin-bottom:14px;line-height:1.1;
 }
-.section-sub{font-size:17px;color:var(--ink3);max-width:560px;line-height:1.7;margin-bottom:60px}
+.section-sub{font-size:17px;color:var(--ink3);max-width:560px;line-height:1.7;margin-bottom:40px}
 .story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden}
 .story-card{
-  background:var(--card);padding:40px 34px;
+  background:var(--card);padding:30px 28px;
   transition:background .25s;
 }
 .story-card:hover{background:#f0f8f3}
 .story-num{
   font-size:10px;font-weight:600;font-family:var(--fm);letter-spacing:.14em;
-  color:var(--acc);margin-bottom:22px;display:flex;align-items:center;gap:8px;
+  color:var(--acc);margin-bottom:14px;display:flex;align-items:center;gap:8px;
   text-transform:uppercase;
 }
 .story-num::after{content:'';flex:1;height:1px;background:var(--line)}
-.story-icon{font-size:30px;margin-bottom:18px;opacity:.9}
+.story-icon{font-size:26px;margin-bottom:12px;opacity:.9}
 .story-ch{
   font-size:19px;font-weight:700;letter-spacing:-.01em;
   color:var(--ink);margin-bottom:14px;line-height:1.3;
@@ -240,6 +249,15 @@ nav.scrolled{box-shadow:0 1px 0 var(--line),var(--s1)}
 
 /* ── PROJECTS ─────────────────────────────────────────────────── */
 #projects{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.proj-filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+.proj-filter-btn{
+  font-size:12px;font-weight:500;font-family:var(--fm);
+  padding:6px 16px;border-radius:100px;border:1px solid var(--line);
+  background:transparent;color:var(--ink3);cursor:pointer;
+  transition:all .18s;letter-spacing:.04em;
+}
+.proj-filter-btn:hover{border-color:var(--acc-m);color:var(--acc)}
+.proj-filter-btn.active{background:var(--acc);border-color:var(--acc);color:#fff}
 .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .proj-card{
   background:var(--card);border:1px solid var(--line);border-radius:16px;
@@ -293,15 +311,25 @@ nav.scrolled{box-shadow:0 1px 0 var(--line),var(--s1)}
 .proj-card.featured .proj-desc{font-size:14px}
 
 /* ── SKILLS ───────────────────────────────────────────────────── */
-#skills{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.skills-divider{
+  display:flex;align-items:center;gap:16px;
+  margin:48px 0 32px;
+}
+.skills-divider::before,.skills-divider::after{
+  content:'';flex:1;height:1px;background:var(--line);
+}
+.skills-divider span{
+  font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--acc);font-family:var(--fm);white-space:nowrap;
+}
 .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
-.skill-group{padding:30px;background:var(--bg);border:1px solid var(--line);border-radius:16px;
+.skill-group{padding:24px 26px;background:var(--bg);border:1px solid var(--line);border-radius:16px;
   transition:border-color .2s,box-shadow .2s;
 }
 .skill-group:hover{border-color:var(--acc-m);box-shadow:var(--s1)}
 .skill-group-title{
   font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--acc);font-family:var(--fm);margin-bottom:18px;
+  color:var(--acc);font-family:var(--fm);margin-bottom:14px;
   display:flex;align-items:center;gap:10px;
 }
 .skill-group-icon{font-size:15px}
@@ -315,16 +343,13 @@ nav.scrolled{box-shadow:0 1px 0 var(--line),var(--s1)}
 .skill-pill.strong{font-weight:600;background:var(--acc-l);border-color:var(--acc-m);color:var(--acc)}
 
 /* Credentials strip */
-.creds{display:flex;gap:14px;flex-wrap:wrap;margin-top:44px}
-.cred{
-  display:flex;align-items:center;gap:14px;
-  padding:16px 20px;background:var(--bg);border:1px solid var(--line);
-  border-radius:12px;font-size:13px;color:var(--ink2);
-  flex:1;min-width:220px;
-}
-.cred-icon{font-size:22px;flex-shrink:0}
-.cred-title{font-weight:600;color:var(--ink);font-size:13px;letter-spacing:.01em}
-.cred-sub{font-size:11px;color:var(--ink3);margin-top:2px}
+.creds{display:flex;flex-wrap:wrap;align-items:center;gap:0;margin-top:32px;
+  font-size:13px;color:var(--ink3);}
+#story{padding:80px 0 72px}
+.cred{display:inline-flex;align-items:center;gap:0;}
+.cred-title{font-weight:500;color:var(--ink2);font-size:13px;}
+.cred-sep{margin:0 12px;color:var(--ink4);user-select:none;}
+.cred-sub,.cred-icon{display:none;}
 
 /* ── CONTACT ──────────────────────────────────────────────────── */
 #contact{
@@ -522,8 +547,7 @@ footer{
   /* Skills */
   .skill-group{padding:24px}
   .skill-pill{font-size:13px;padding:7px 14px}
-  .creds{gap:10px}
-  .cred{padding:14px 16px;min-width:100%;flex:none}
+  .creds{gap:0}
 
   /* Contact */
   #contact{padding:80px 0}
@@ -532,9 +556,58 @@ footer{
   .contact-btns{flex-direction:column}
   .contact-email,.contact-li{font-size:14px;padding:14px 24px;width:100%;justify-content:center}
 }
+/* ── BUILD LOG CARDS ─────────────────────────────────────────── */
+.upd-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;box-shadow:var(--s1);transition:box-shadow .2s}
+.upd-card:hover{box-shadow:var(--s2)}
+.upd-projs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.upd-day-title{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:4px;line-height:1.4}
+.upd-day-sub{font-size:13px;color:var(--ink3);margin-bottom:10px;line-height:1.6}
+.upd-stats-strip{font-size:12px;color:var(--ink3);font-family:var(--fm);margin:8px 0 12px}
+.upd-expand-btn{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;color:var(--acc);background:var(--acc-l);border:none;border-radius:6px;padding:6px 12px;cursor:pointer;transition:background .2s;margin-top:4px}
+.upd-expand-btn:hover{background:var(--acc-m)}
+.upd-full{display:none;margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
+.upd-full.open{display:block}
+.upd-full h2{font-size:15px;font-weight:700;color:var(--ink);margin:18px 0 7px}
+.upd-full h2:first-child{margin-top:0}
+.upd-full h3{font-size:13px;font-weight:600;color:var(--ink2);margin:12px 0 5px}
+.upd-full p{font-size:13px;color:var(--ink2);margin-bottom:8px;line-height:1.7}
+.upd-full ul,.upd-full ol{font-size:13px;color:var(--ink2);padding-left:18px;margin-bottom:10px}
+.upd-full li{margin-bottom:4px;line-height:1.6}
+.upd-full code{font-family:var(--fm);font-size:11px;background:var(--bg2);padding:2px 5px;border-radius:4px;color:var(--ink2)}
+.log-callout{border-radius:6px;padding:10px 14px;font-size:13px;margin:10px 0;border-left:3px solid;line-height:1.6}
+.log-callout-green{background:#f0fdf4;border-color:#16a34a;color:#166534}
+.log-callout-blue{background:#eff6ff;border-color:#2563eb;color:#1e40af}
+.log-callout-yellow{background:#fffbeb;border-color:#d97706;color:#92400e}
+.log-callout-gray{background:var(--bg2);border-color:var(--ink4);color:var(--ink2)}
+.log-table{width:100%;border-collapse:collapse;font-size:12px;margin:10px 0}
+.log-table th,.log-table td{padding:7px 10px;border:1px solid var(--line);text-align:left}
+.log-table th{background:var(--bg2);font-weight:600;color:var(--ink2)}
+.log-stats{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.log-stat{flex:1;min-width:70px;background:var(--bg2);border-radius:8px;padding:10px;text-align:center}
+.log-stat-n{display:block;font-size:22px;font-weight:800;color:var(--acc);font-family:var(--fm)}
+.log-stat-l{display:block;font-size:11px;color:var(--ink3);margin-top:2px}
+.log-quote{background:var(--acc-l);border-left:3px solid var(--acc);border-radius:0 6px 6px 0;padding:12px 14px;margin:14px 0;font-size:13px;color:var(--ink2);font-style:italic;line-height:1.7}
+/* ── HONEYPOT ─────────────────────────────────────────────────── */
+.hp-field{position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden}
+/* ── SKIP NAV ─────────────────────────────────────────────────── */
+.skip-link{position:absolute;top:-40px;left:0;background:var(--acc);color:#fff;padding:8px 16px;font-size:14px;font-weight:600;z-index:9999;border-radius:0 0 6px 0;transition:top .2s}
+.skip-link:focus{top:0}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ellen Chuang",
+  "url": "https://ellenbuilds.com",
+  "jobTitle": "C&B Specialist & AI Builder",
+  "description": "10+ years HR expertise across 5 countries. Building HR tools with AI.",
+  "knowsAbout": ["Compensation & Benefits","Payroll","HR Technology","AI Co-building"],
+  "sameAs": ["https://www.linkedin.com/in/ellen-chuang-817178204"]
+}
+</script>
 </head>
 <body>
+<a href="#projects" class="skip-link">Skip to main content</a>
 
 <!-- ══ NAV ══════════════════════════════════════════════════════ -->
 <nav id="nav">
@@ -553,6 +626,7 @@ footer{
         <option value="en">English</option>
         <option value="zh">繁中</option>
         <option value="sc">简中</option>
+        <option value="ja">日本語</option>
         <option value="de">Deutsch</option>
         <option value="fr">Français</option>
         <option value="th">ภาษาไทย</option>
@@ -578,8 +652,8 @@ footer{
         <p class="hero-title" id="h-title"></p>
         <p class="hero-tagline" id="h-tagline"></p>
         <div class="hero-ctas">
-          <a href="#projects" class="btn btn-pri" id="h-cta1"></a>
-          <a href="#contact"  class="btn btn-sec" id="h-cta2"></a>
+          <a href="#contact"  class="btn btn-pri" id="h-cta2"></a>
+          <a href="#projects" class="btn btn-sec" id="h-cta1"></a>
         </div>
       </div>
       <div class="hero-right reveal">
@@ -614,6 +688,7 @@ footer{
       <h2 class="section-title" id="proj-title"></h2>
       <p class="section-sub" id="proj-sub"></p>
     </div>
+    <div class="proj-filters" id="proj-filters"></div>
     <div class="projects-grid" id="projects-grid"></div>
   </div>
 </section>
@@ -647,36 +722,22 @@ footer{
         <div class="story-icon">🎖️</div>
         <h3 class="story-ch" id="ch1-title"></h3>
         <p class="story-body" id="ch1-body"></p>
-        <div class="story-tags" id="ch1-tags"></div>
       </div>
       <div class="story-card">
         <div class="story-num" id="ch2-num"></div>
         <div class="story-icon">📊</div>
         <h3 class="story-ch" id="ch2-title"></h3>
         <p class="story-body" id="ch2-body"></p>
-        <div class="story-tags" id="ch2-tags"></div>
       </div>
       <div class="story-card">
         <div class="story-num" id="ch3-num"></div>
         <div class="story-icon">⚡</div>
         <h3 class="story-ch" id="ch3-title"></h3>
         <p class="story-body" id="ch3-body"></p>
-        <div class="story-tags" id="ch3-tags"></div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ══ SKILLS ════════════════════════════════════════════════════ -->
-<section id="skills">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label" id="skills-label"></div>
-      <h2 class="section-title" id="skills-title"></h2>
-      <p class="section-sub" id="skills-sub"></p>
-    </div>
+    <div class="skills-divider reveal" id="skills"><span id="skills-label"></span></div>
     <div class="skills-grid reveal reveal-d1" id="skills-grid"></div>
-    <div class="creds reveal reveal-d2" id="creds"></div>
   </div>
 </section>
 
@@ -708,6 +769,10 @@ footer{
     <div class="modal-title" id="m-title">Get in Touch</div>
     <p class="modal-desc" id="m-desc">Whether it's a C&B question, collaboration, or exploring what HR looks like with AI — feel free to reach out.</p>
     <form id="contact-form" onsubmit="submitForm(event)">
+      <div class="hp-field" aria-hidden="true">
+        <label for="hp-website">Website</label>
+        <input type="text" id="hp-website" name="website" tabindex="-1" autocomplete="off">
+      </div>
       <div class="m-form-row">
         <div class="m-form-group">
           <label class="m-form-label" id="m-label-name">Name</label>
@@ -741,7 +806,8 @@ footer{
 <script>
 // ── Language ──────────────────────────────────────────────────────
 let lang = 'en';
-function t(en, zh, sc, de, fr, th, kr) {
+function t(en, zh, sc, de, fr, th, kr, ja) {
+  if (lang === 'ja') return ja || en;
   if (lang === 'de') return de || en;
   if (lang === 'fr') return fr || en;
   if (lang === 'th') return th || en;
@@ -752,7 +818,7 @@ function t(en, zh, sc, de, fr, th, kr) {
 }
 function setLang(value) {
   lang = value;
-  const langAttr = {en:'en',zh:'zh-TW',sc:'zh-CN',de:'de',fr:'fr',th:'th',kr:'ko'};
+  const langAttr = {en:'en',zh:'zh-TW',sc:'zh-CN',de:'de',fr:'fr',th:'th',kr:'ko',ja:'ja'};
   document.documentElement.lang = langAttr[lang] || 'en';
   render();
 }
@@ -760,55 +826,14 @@ function setLang(value) {
 // ── Data ──────────────────────────────────────────────────────────
 const PROJECTS = [
   {
-    id: 'remote-hris',
-    emoji: '🗂️',
-    color: '#0d9488',
-    status: 'beta',
-    name:   { en: 'Remote HRIS', zh: 'Remote HRIS', sc: 'Remote HRIS' },
-    desc: {
-      en: 'A multi-country HR & payroll system with custom compensation rules, mixed contract management, and multi-currency disbursement — covering the full payroll cycle from attendance to payout, built from real operational pain.',
-      zh: '多國 HR 薪資管理系統，支援自訂薪酬規則、混合合約類型管理，以及多幣種實際發放。涵蓋從考勤到發薪的完整流程，從真實工作痛點出發設計。',
-      sc: '多国 HR 薪资管理系统，支持自定义薪酬规则、混合合约类型管理，以及多币种实际发放。涵盖从考勤到发薪的完整流程，从真实工作痛点出发设计。',
-      de: 'Ein internationales HR- und Gehaltssystem mit individuellen Vergütungsregeln und Multi-Währungs-Auszahlung, entwickelt aus echten operativen Hürden.',
-      fr: 'Un système RH et paie multi-pays avec règles de rémunération personnalisées et gestion multi-devises, couvrant tout le cycle de paie.',
-      th: 'ระบบ HR และเงินเดือนนานาชาติ รองรับกฎค่าตอบแทนที่ซับซ้อนและหลายสกุลเงิน ครอบคลุมตั้งแต่การลงเวลาไปจนถึงการจ่ายเงิน',
-      kr: '다국적 HR 및 급여 관리 시스템. 커스텀 보상 규칙, 계약 관리, 다통화 지불을 지원하며 근태부터 실지급까지의 모든 과정을 실무 경험을 바탕으로 구축했습니다.'
-    },
-    stack: ['React JSX', 'Single-file', 'No Build'],
-    iterations: 227,
-    updatedAt: '2026-03-25',
-    url: 'https://remote-hris.netlify.app',
-    featured: false,
-  },
-  {
-    id: 'career-health-check',
-    emoji: '🩺',
-    color: '#2563eb',
-    status: 'live',
-    name:   { en: 'Career Health Check', zh: '職涯健康檢查', sc: '职涯健康检查' },
-    desc: {
-      en: 'A free career assessment tool with 8 diagnostic modules — generates a personalized bilingual AI report with actionable insights, delivered as PDF.',
-      zh: '免費職涯健康檢查，8 個診斷模組，AI 生成個人化雙語報告並輸出 PDF。',
-      sc: '免费职涯健康检查，8 个诊断模块，AI 生成个性化双语报告并输出 PDF。',
-      de: 'Ein Tool zur Karriereanalyse mit 8 Modulen und KI-generierten Berichten als PDF.',
-      fr: "Un outil d'évaluation de carrière avec 8 modules générant un rapport IA bilingue en PDF.",
-      th: 'เครื่องมือประเมินอาชีพฟรีพร้อม 8 โมดูลการวินิจฉัย สร้างรายงาน AI สองภาษาในรูปแบบ PDF',
-      kr: '8개의 진단 모듈을 갖춘 무료 커리어 진단 도구. 인사이트를 담은 개인 맞춤형 이중 언어 AI 리포트를 PDF로 제공합니다.'
-    },
-    stack: ['React', 'Vite', 'GA4', 'Netlify Functions'],
-    iterations: 180,
-    updatedAt: '2026-03-24',
-    url: 'https://career-health-check.netlify.app',
-    featured: false,
-  },
-  {
     id: 'payband',
+    category: 'hr',
     emoji: '💰',
     color: '#7c3aed',
     status: 'beta',
-    name:   { en: 'Payband', zh: 'Payband', sc: 'Payband' },
+    name:   { en: 'iPayband', zh: 'iPayband', sc: 'iPayband' },
     desc: {
-      en: 'A cross-border compensation benchmarking tool covering multiple countries\' labor laws and P25/P50/P75 salary bands — giving HR teams the data backbone for fair, competitive pay decisions.',
+      en: 'Making comp decisions without real market data? iPayband covers P25/P50/P75 salary bands across multiple countries with built-in labor law context — giving HR teams the data backbone for fair, defensible offers.',
       zh: '跨國薪酬分析工具，涵蓋多國勞動法規與 P25/P50/P75 薪資帶，讓 HR 團隊的薪酬決策有紮實的數據依據。',
       sc: '跨国薪酬分析工具，涵盖多国劳动法规与 P25/P50/P75 薪资带，让 HR 团队的薪酬决策有扎实的数据依据。',
       de: 'Ein internationales Tool für Gehaltsvergleiche (P25/P50/P75), das HR-Teams eine solide Datengrundlage für faire Vergütungsentscheidungen bietet.',
@@ -817,13 +842,58 @@ const PROJECTS = [
       kr: '국가별 노동법과 P25/P50/P75 급여 밴드를 아우르는 글로벌 보상 벤치마킹 도구. HR 팀이 공정하고 경쟁력 있는 보상을 결정할 수 있도록 데이터 근거를 제공합니다.'
     },
     stack: ['React', 'Vite', 'Claude API'],
-    iterations: 226,
+    iterations: 244,
     updatedAt: '2026-03-25',
     url: 'https://ipayband.netlify.app',
     featured: false,
   },
   {
+    id: 'remote-hris',
+    category: 'hr',
+    emoji: '🗂️',
+    color: '#0d9488',
+    status: 'beta',
+    name:   { en: 'Remote HRIS', zh: 'Remote HRIS', sc: 'Remote HRIS' },
+    desc: {
+      en: 'Managing payroll across multiple countries still in spreadsheets? Remote HRIS handles custom compensation rules, mixed contract types, and multi-currency disbursement — built from real operational pain, covering the full cycle from attendance to payout.',
+      zh: '多國 HR 薪資管理系統，支援自訂薪酬規則、混合合約類型管理，以及多幣種實際發放。涵蓋從考勤到發薪的完整流程，從真實工作痛點出發設計。',
+      sc: '多国 HR 薪资管理系统，支持自定义薪酬规则、混合合约类型管理，以及多币种实际发放。涵盖从考勤到发薪的完整流程，从真实工作痛点出发设计。',
+      de: 'Ein internationales HR- und Gehaltssystem mit individuellen Vergütungsregeln und Multi-Währungs-Auszahlung, entwickelt aus echten operativen Hürden.',
+      fr: 'Un système RH et paie multi-pays avec règles de rémunération personnalisées et gestion multi-devises, couvrant tout le cycle de paie.',
+      th: 'ระบบ HR และเงินเดือนนานาชาติ รองรับกฎค่าตอบแทนที่ซับซ้อนและหลายสกุลเงิน ครอบคลุมตั้งแต่การลงเวลาไปจนถึงการจ่ายเงิน',
+      kr: '다국적 HR 및 급여 관리 시스템. 커스텀 보상 규칙, 계약 관리, 다통화 지불을 지원하며 근태부터 실지급까지의 모든 과정을 실무 경험을 바탕으로 구축했습니다.'
+    },
+    stack: ['React JSX', 'Single-file', 'No Build'],
+    iterations: 230,
+    updatedAt: '2026-03-25',
+    url: 'https://remote-hris.netlify.app',
+    featured: false,
+  },
+  {
+    id: 'career-health-check',
+    category: 'hr',
+    emoji: '🩺',
+    color: '#2563eb',
+    status: 'beta',
+    name:   { en: 'Career Health Check', zh: '職涯健康檢查', sc: '职涯健康检查' },
+    desc: {
+      en: 'Unsure if your career is heading the right way? This free 8-module diagnostic generates a personalized bilingual AI report with actionable insights — delivered as PDF in minutes.',
+      zh: '免費職涯健康檢查，8 個診斷模組，AI 生成個人化雙語報告並輸出 PDF。',
+      sc: '免费职涯健康检查，8 个诊断模块，AI 生成个性化双语报告并输出 PDF。',
+      de: 'Ein Tool zur Karriereanalyse mit 8 Modulen und KI-generierten Berichten als PDF.',
+      fr: "Un outil d'évaluation de carrière avec 8 modules générant un rapport IA bilingue en PDF.",
+      th: 'เครื่องมือประเมินอาชีพฟรีพร้อม 8 โมดูลการวินิจฉัย สร้างรายงาน AI สองภาษาในรูปแบบ PDF',
+      kr: '8개의 진단 모듈을 갖춘 무료 커리어 진단 도구. 인사이트를 담은 개인 맞춤형 이중 언어 AI 리포트를 PDF로 제공합니다.'
+    },
+    stack: ['React', 'Vite', 'GA4', 'Netlify Functions'],
+    iterations: 181,
+    updatedAt: '2026-03-24',
+    url: 'https://career-health-check.netlify.app',
+    featured: false,
+  },
+  {
     id: 'claude-guide',
+    category: 'ai',
     emoji: '🤖',
     color: '#ea580c',
     status: 'live',
@@ -841,6 +911,7 @@ const PROJECTS = [
   },
   {
     id: 'drift-island',
+    category: 'creative',
     emoji: '🏝️',
     color: '#0891b2',
     status: 'live',
@@ -855,76 +926,122 @@ const PROJECTS = [
       kr: '익명 편지 서비스. 소설 \'나미야 잡화점의 기적\'에서 영감을 얻어 점장이 직접 따뜻하게 답장을 전합니다. 모든 것이 생산성을 위한 것일 필요는 없습니다 — 때로는 그저 온기를 전달하는 것만으로도 충분합니다.'
     },
     stack: ['Static HTML', 'Apps Script', 'GA4', 'Google Sheets'],
-    iterations: 131,
+    iterations: 132,
     updatedAt: '2026-03-25',
     url: 'https://drift-island.netlify.app',
+    featured: false,
+  },
+  {
+    id: 'resume-ai',
+    category: 'ai',
+    emoji: '📄',
+    color: '#db2777',
+    status: 'building',
+    name: { en: 'Resume AI', zh: 'Resume AI', sc: 'Resume AI' },
+    desc: {
+      en: 'Your resume is getting screened by AI before a human ever reads it. Resume AI helps you write one that passes both — tailored, bilingual, and built around what actually gets interviews.',
+      zh: '你的履歷在被人看到之前，已先被 AI 篩掉了。Resume AI 幫你寫出能過兩關的履歷——個人化、雙語、以真正能獲得面試的方式撰寫。',
+      sc: '你的简历在被人看到之前，已先被 AI 筛掉了。Resume AI 帮你写出能过两关的简历——个性化、双语、以真正能获得面试的方式撰写。',
+    },
+    stack: ['Claude API', 'React', 'Vite'],
+    iterations: 1,
+    updatedAt: null,
+    url: null,
+    featured: false,
+  },
+  {
+    id: 'content-distributor',
+    category: 'ai',
+    emoji: '📡',
+    color: '#d97706',
+    status: 'building',
+    name: { en: 'Content Distributor', zh: 'Content Distributor', sc: 'Content Distributor' },
+    desc: {
+      en: 'One post, every platform. Content Distributor takes your raw idea and reformats it for LinkedIn, Twitter/X, Instagram, and more — matching the tone and format each audience expects.',
+      zh: '一篇原稿，多平台分發。Content Distributor 把你的內容想法重新包裝成 LinkedIn、Twitter/X、Instagram 各自的語氣與格式，省去重複撰寫的時間。',
+      sc: '一篇原稿，多平台分发。Content Distributor 把你的内容想法重新包装成 LinkedIn、Twitter/X、Instagram 各自的语气与格式，省去重复撰写的时间。',
+    },
+    stack: ['Claude API', 'React', 'Vite'],
+    iterations: 1,
+    updatedAt: null,
+    url: null,
     featured: false,
   },
 ];
 
 const CHANGELOG = [
   {
-    date: '2026-03-24',
-    project: 'payband',
-    emoji: '💰',
-    color: '#7c3aed',
-    title: { en: 'v1.1 — World Map & Live Market Data', zh: 'v1.1 — 世界地圖＋即時市場數據' },
-    desc:  { en: 'Replaced country list with real SVG world map (Plate Carrée projection). Connected CoinGecko + open.er-api.com for live crypto & FX rates with 2-min cache.', zh: '以真實 SVG 世界地圖取代國家列表，接入 CoinGecko 加密貨幣與即時匯率 API（2分鐘快取）。' },
-    tags: ['World Map', 'CoinGecko API', 'FX Rates', 'Dark Theme'],
+    date: '2026-03-25',
+    projects: [{ emoji: '📊', label: 'dashboard', color: '#1a5c40' }],
+    title: { en: 'Dashboard Consolidation', zh: 'Dashboard 大整合', sc: 'Dashboard 大整合' },
+    subtitle: { en: 'Diary merge · Project rename · Filter system · Logo', zh: '日記合併 · 專案重命名 · 篩選系統 · Logo 取代 Emoji', sc: '日记合并 · 项目重命名 · 筛选系统 · Logo 替代 Emoji' },
+    tags: ['Ellen Daily Dashboard', '架構優化', '整合'],
+    statsLine: { en: '49 optimizations · 4 major changes', zh: '49 次優化 · 4 項大改動', sc: '49 次优化 · 4 项大改动' },
+    body: {
+      zh: `<div class='log-callout log-callout-green'><strong>這天的核心：</strong>不是做新產品，而是讓工作中心本身更完善。把散落在各處的工具整合成一個檔案，從今天起所有更新只需要動一個地方。</div><h2>一、diary.html 完整合併</h2><p>日記原本是獨立的 <code>diary.html</code>，今天把 9 篇日記全部搬入 Ellen Daily Dashboard。</p><ul><li>日記 section 加入左側 nav，可直接跳轉</li><li>日期下拉選單取代橫向 chip，一鍵切換篇章，預設顯示最新篇</li><li>單一事實來源——維護兩個檔案的認知負擔不值得</li></ul><div class='log-callout log-callout-blue'>「後續更新調整都在這裡進行，你也會記得。」——維護兩個檔案的認知負擔不值得。單一檔案，單一事實來源。</div><h2>二、專案命名重整</h2><table class='log-table'><tr><th>之前</th><th>現在</th><th>原因</th></tr><tr><td>Claude Guide（混淆）</td><td>Claude Guide（公開）+ Ellen Daily Dashboard（本機）</td><td>兩個不同東西被混在一筆</td></tr><tr><td>每日工作指令卡</td><td>Ellen Daily Dashboard</td><td>英文命名更清楚</td></tr></table><h2>三、專案狀態篩選 + 已關閉狀態</h2><ul><li>表格上方加入篩選按鈕：全部 / 上線中 / 開發中 / 已關閉</li><li>已關閉的專案在表格裡以灰色顯示，附上關閉原因</li><li>Claude 建議和待辦自動排除已關閉專案</li></ul><h2>四、Logo 取代 Emoji</h2><p>專案列表改用真實 logo 圖片，沒有 logo 的用白色方塊佔位。漂島信箱和 Claude Guide 已有 favicon，其他等有 logo 時補上。</p><div class='log-stats'><div class='log-stat'><span class='log-stat-n'>1</span><span class='log-stat-l'>檔案整合</span></div><div class='log-stat'><span class='log-stat-n'>9</span><span class='log-stat-l'>日記篇章</span></div><div class='log-stat'><span class='log-stat-n'>10</span><span class='log-stat-l'>追蹤專案</span></div><div class='log-stat'><span class='log-stat-n'>49</span><span class='log-stat-l'>今日優化</span></div></div><div class='log-quote'>「最好的工具是你每天都會打開、而且不需要解釋的那一個。」<br><em>— Ellen，2026-03-25</em></div><h3>這天學到的</h3><ol><li><strong>單一事實來源</strong> — 維護兩個地方的成本遠高於整合的成本</li><li><strong>命名要精準</strong> — 一個模糊的名字會造成長期的認知混亂</li><li><strong>關閉也是一種決策</strong> — 不是每個舊檔案都需要繼續存在，標記已關閉比刪除更有記憶價值</li><li><strong>篩選比隱藏更好</strong> — 資料都在，只是根據狀態顯示，任何時候都可以找回</li></ol>`,
+      en: `<div class='log-callout log-callout-green'><strong>Core of the day:</strong> Not building something new — making the workspace itself better. Consolidated scattered tools into one file. One source of truth from here on.</div><h2>1. Diary Fully Merged</h2><p>The diary was a separate <code>diary.html</code>. Today, all 9 entries were moved into the Ellen Daily Dashboard.</p><ul><li>Diary section added to left nav with direct jump links</li><li>Date dropdown replaces horizontal chips — defaults to latest entry</li><li>Single source of truth — maintaining two files costs too much cognitive overhead</li></ul><h2>2. Project Naming Cleanup</h2><table class='log-table'><tr><th>Before</th><th>After</th><th>Why</th></tr><tr><td>Claude Guide (ambiguous)</td><td>Claude Guide (public site) + Ellen Daily Dashboard (local)</td><td>Two different things counted as one</td></tr></table><h2>3. Status Filters + Closed State</h2><ul><li>Filter buttons: All / Live / Building / Closed</li><li>Closed projects shown in gray with closure reason</li><li>Claude suggestions automatically exclude closed projects</li></ul><div class='log-stats'><div class='log-stat'><span class='log-stat-n'>1</span><span class='log-stat-l'>File merged</span></div><div class='log-stat'><span class='log-stat-n'>9</span><span class='log-stat-l'>Diary entries</span></div><div class='log-stat'><span class='log-stat-n'>10</span><span class='log-stat-l'>Projects tracked</span></div><div class='log-stat'><span class='log-stat-n'>49</span><span class='log-stat-l'>Optimizations</span></div></div><div class='log-quote'>"The best tool is the one you open every day — and never need to explain."<br><em>— Ellen, 2026-03-25</em></div><h3>Key Lessons</h3><ol><li><strong>Single source of truth</strong> — The cost of maintaining two places far exceeds the cost of merging</li><li><strong>Precise naming matters</strong> — A vague name creates long-term cognitive confusion</li><li><strong>Closing is a decision too</strong> — Not every old file needs to keep existing</li><li><strong>Filtering beats hiding</strong> — Data stays accessible, just shown by status</li></ol>`
+    }
   },
   {
     date: '2026-03-24',
-    project: 'ellenbuilds',
-    emoji: '🌿',
-    color: '#1a5c40',
-    title: { en: 'Building / Beta / Live — New Status System', zh: '新增三階段狀態：Building / Beta / Live' },
-    desc:  { en: 'Replaced binary dev/live badges with a three-tier system across ellenbuilds and dashboard. Better reflects where each project really is.', zh: '將原本的開發中/已上線兩段式改為三階段，更清楚反映每個專案的真實進度。' },
-    tags: ['UI', 'Status Badges'],
+    projects: [
+      { emoji: '💰', label: 'payband', color: '#7c3aed' },
+      { emoji: '🌿', label: 'ellenbuilds', color: '#1a5c40' },
+      { emoji: '🗂️', label: 'remote-hris', color: '#0d9488' },
+    ],
+    title: { en: 'All Five Projects Upgraded in One Day', zh: '五個專案全面優化', sc: '五个专案全面优化' },
+    subtitle: { en: 'Payband v1.1 × ellenbuilds brand × Remote HRIS v11 × 202 optimizations', zh: 'Payband v1.1 × ellenbuilds 品牌升級 × Remote HRIS v11 × 單日 202 次優化', sc: 'Payband v1.1 × ellenbuilds 品牌升级 × Remote HRIS v11 × 单日 202 次优化' },
+    tags: ['Payband', 'Remote HRIS', 'ellenbuilds', '全面優化'],
+    statsLine: { en: '14 commits · 202 optimizations · 23 bugs fixed', zh: '14 commits · 202 次優化 · 修復 23 個 bug', sc: '14 commits · 202 次优化 · 修复 23 个 bug' },
+    body: {
+      zh: `<div class='log-callout log-callout-blue'><strong>這天的核心：</strong>沒有開新專案，而是把已有的全部提升一個層次。14 個 commits、202 次優化、修復 23 個 bug — 這是目前為止最密集的一天。</div><h2>一、Payband — 從 v1.0 跨越到 v1.1</h2><p>3/23 做出核心薪資帶功能（v1.0），今天的目標：讓它看起來像一個真正的產品，而不是原型。</p><ul><li><strong>互動式世界地圖</strong>：點擊國家直接切換，不再只是下拉選單</li><li><strong>即時市場數據整合</strong>：接上外部 API，薪資帶數字有了市場依據</li><li><strong>深色主題</strong>：加班到深夜也不傷眼，同時讓產品更有科技感</li><li><strong>幣別自動換算</strong>：USD / EUR / TWD / SGD 等多幣種即時轉換</li></ul><div class='log-callout log-callout-yellow'>今天 Payband 優化了 <strong>141 次</strong>——目前為止單日優化次數最多的一天。</div><h2>二、ellenbuilds — 個人品牌的視覺升級</h2><ul><li><strong>Live / Beta / Building 狀態徽章</strong>：讓訪客一眼知道哪個是完成品、哪個是 work in progress</li><li><strong>Build Log 時間軸</strong>：展示每個版本做了什麼，讓訪客看到你在持續進步</li><li><strong>CTA 顏色區分</strong>：Live 用綠色，Beta 用黃色</li></ul><div class='log-callout log-callout-green'><strong>Build Log 是信任建立工具：</strong>讓訪客看到你在進步，比靜態作品集更有說服力。今天 ellenbuilds 優化了 42 次。</div><h2>三、Remote HRIS v11 — 多國法規 + 考勤模組</h2><ul><li><strong>RULESET_SEED</strong>：TW 台灣勞基法、SG 新加坡、PH 菲律賓、MY 馬來西亞</li><li><strong>考勤模組</strong>：請假/遲到/缺勤記錄，關帳同步薪資，不能再改</li><li><strong>calcSettlement()</strong>：離職結算（資遣費/預告工資/未休年假）</li></ul><h2>四、全面稽核 — 20 個問題一次解決</h2><table class='log-table'><tr><th>類別</th><th>問題數</th><th>代表問題</th></tr><tr><td>資料準確性</td><td>8</td><td>TW 社會保險費率算錯</td></tr><tr><td>安全漏洞</td><td>5</td><td>XSS 未防護的輸入點</td></tr><tr><td>雙語 i18n</td><td>7</td><td>新增欄位只有英文，中文缺漏</td></tr></table><div class='log-stats'><div class='log-stat'><span class='log-stat-n'>14</span><span class='log-stat-l'>Git commits</span></div><div class='log-stat'><span class='log-stat-n'>202</span><span class='log-stat-l'>今日優化</span></div><div class='log-stat'><span class='log-stat-n'>23</span><span class='log-stat-l'>修復 bug 數</span></div><div class='log-stat'><span class='log-stat-n'>5</span><span class='log-stat-l'>上線中專案</span></div></div><div class='log-quote'>「最好的狀態不是同時開很多新東西，而是把已有的每一個都推進一步。」<br><em>— Ellen，2026-03-24</em></div><h3>這天學到的</h3><ol><li><strong>全面稽核的價值</strong> — 20 個問題一次找出來，比之後零散修快很多</li><li><strong>Build Log 是信任建立工具</strong> — 讓訪客看到你在進步，比靜態作品集更有說服力</li><li><strong>安全問題不要等</strong> — test.html 那個洞，一行 redirect 就能堵住</li><li><strong>考勤關帳需要硬鎖定</strong> — 軟提醒不夠，關帳後的資料必須技術層面無法修改</li></ol>`,
+      en: `<div class='log-callout log-callout-blue'><strong>Core of the day:</strong> No new projects. Just leveled up everything that already existed. 14 commits, 202 optimizations, 23 bugs fixed — the most intense single day so far.</div><h2>1. Payband — v1.0 → v1.1</h2><p>v1.0 built the core salary band logic. Today: make it feel like a real product, not a prototype.</p><ul><li><strong>Interactive world map</strong> — Click a country to switch, no more dropdowns</li><li><strong>Live market data</strong> — Connected to external APIs for real salary context</li><li><strong>Dark theme</strong> — Late-night friendly, adds a tech feel</li><li><strong>Multi-currency conversion</strong> — USD / EUR / TWD / SGD in real-time</li></ul><div class='log-callout log-callout-yellow'>Payband saw <strong>141 optimizations</strong> today — most in a single day so far.</div><h2>2. ellenbuilds — Brand Visual Upgrade</h2><ul><li><strong>Live / Beta / Building badges</strong> — Visitors know at a glance which projects are done</li><li><strong>Build Log timeline</strong> — Shows iteration history, a trust-building tool</li><li><strong>CTA color split</strong> — Green for Live, amber for Beta</li></ul><h2>3. Remote HRIS v11 — Multi-country Rules + Attendance</h2><ul><li><strong>Labor law rulesets</strong>: TW / SG / PH / MY built in</li><li><strong>Attendance module</strong>: Leave/late/absent tracking, locked on period close</li><li><strong>Termination calculator</strong>: Severance, notice pay, unused leave payout</li></ul><h2>4. Full Audit — 20 Issues at Once</h2><table class='log-table'><tr><th>Category</th><th>Count</th><th>Example</th></tr><tr><td>Data accuracy</td><td>8</td><td>TW social insurance rate formula was wrong</td></tr><tr><td>Security</td><td>5</td><td>XSS unprotected input points</td></tr><tr><td>i18n gaps</td><td>7</td><td>New fields with no Chinese translation</td></tr></table><div class='log-stats'><div class='log-stat'><span class='log-stat-n'>14</span><span class='log-stat-l'>Commits</span></div><div class='log-stat'><span class='log-stat-n'>202</span><span class='log-stat-l'>Optimizations</span></div><div class='log-stat'><span class='log-stat-n'>23</span><span class='log-stat-l'>Bugs fixed</span></div><div class='log-stat'><span class='log-stat-n'>5</span><span class='log-stat-l'>Live projects</span></div></div><div class='log-quote'>"The best state is not starting many new things at once — it's pushing every existing one forward."<br><em>— Ellen, 2026-03-24</em></div><h3>Key Lessons</h3><ol><li><strong>Full audit value</strong> — Finding 20 issues at once beats fixing them one by one later</li><li><strong>Build Log as trust builder</strong> — Showing iteration history is more persuasive than a static portfolio</li><li><strong>Security can't wait</strong> — A one-line fix should never be postponed</li><li><strong>Attendance lock must be hard</strong> — Soft warnings aren't enough; closed periods must be technically immutable</li></ol>`
+    }
   },
   {
     date: '2026-03-22',
-    project: 'payband',
-    emoji: '💰',
-    color: '#7c3aed',
-    title: { en: 'v1.0 — Phase 1A Complete', zh: 'v1.0 — Phase 1A 完成' },
-    desc:  { en: '7 modules launched: Salary Matrix, Comp Structure, Cross-Border, Take-Home, FX & Crypto, Labor Law, Holidays. 12 countries × 12 job families × dual IC/M track.', zh: '7 大模組上線：薪資帶寬、薪酬結構、跨境調派、到手試算、匯率幣市、勞動法規、假日行事曆。12 國 × 12 職能 × IC/M 雙軌。' },
+    projects: [{ emoji: '💰', label: 'payband', color: '#7c3aed' }],
+    title: { en: 'Payband v1.0 — Phase 1A Complete', zh: 'Payband v1.0 — Phase 1A 完成', sc: 'Payband v1.0 — Phase 1A 完成' },
+    subtitle: { en: '7 modules · 12 countries × 12 job families · IC/M dual track', zh: '7 大模組上線 · 12 國 × 12 職能 · IC/M 雙軌', sc: '7 大模块上线 · 12 国 × 12 职能 · IC/M 双轨' },
     tags: ['Launch', '7 Modules', '12 Countries'],
+    statsLine: null,
+    body: null,
   },
   {
     date: '2026-03-21',
-    project: 'career-health-check',
-    emoji: '🩺',
-    color: '#2563eb',
-    title: { en: 'Launched to Production', zh: '正式上線' },
-    desc:  { en: 'Stripe live mode enabled, Resend email notifications configured. Promo codes BETA2026 and friend100 tested. PDF auto-generation confirmed.', zh: 'Stripe 正式模式啟用，Resend 郵件通知設定完成。促銷碼 BETA2026 / friend100 測試通過，PDF 自動產出確認。' },
+    projects: [{ emoji: '🩺', label: 'career-health-check', color: '#2563eb' }],
+    title: { en: 'Career Health Check — Launched to Production', zh: 'Career Health Check 正式上線', sc: 'Career Health Check 正式上线' },
+    subtitle: { en: 'Stripe live mode · Resend email · PDF auto-generation confirmed', zh: 'Stripe 正式模式啟用 · Resend 郵件 · PDF 自動產出確認', sc: 'Stripe 正式模式启用 · Resend 邮件 · PDF 自动产出确认' },
     tags: ['Launch', 'Stripe', 'Resend', 'PDF'],
+    statsLine: null,
+    body: null,
   },
   {
     date: '2026-03-20',
-    project: 'claude-guide',
-    emoji: '🤖',
-    color: '#ea580c',
-    title: { en: 'Launched — Bilingual Claude AI Guide', zh: '上線 — 雙語 Claude AI 使用指南' },
-    desc:  { en: '3 main pages + 6 topic guides. Bilingual toggle, search, contact form, GA4. Built with Static HTML in under 2 days.', zh: '3 主頁 + 6 主題手冊，雙語切換、搜尋、聯絡表單、GA4 串接。靜態 HTML，2 天完成。' },
+    projects: [{ emoji: '🤖', label: 'claude-guide', color: '#ea580c' }],
+    title: { en: 'Claude Guide — Bilingual AI Guide Launched', zh: 'Claude Guide 雙語 AI 使用指南上線', sc: 'Claude Guide 双语 AI 使用指南上线' },
+    subtitle: { en: '3 main pages + 6 topic guides · Bilingual · Built in under 2 days', zh: '3 主頁 + 6 主題手冊 · 雙語切換 · 2 天完成', sc: '3 主页 + 6 主题手册 · 双语切换 · 2 天完成' },
     tags: ['Launch', 'Bilingual', 'GA4'],
+    statsLine: null,
+    body: null,
   },
   {
     date: '2026-03-19',
-    project: 'drift-island',
-    emoji: '🏝️',
-    color: '#0369a1',
-    title: { en: 'Launched — Anonymous Letter Site', zh: '上線 — 漂島信箱匿名投信網站' },
-    desc:  { en: 'Anonymous letter site with AI auto-reply via Apps Script. Google Sheets backend, GA4, pastel island aesthetic. Inspired by Namiya General Store.', zh: '匿名投信網站，Apps Script AI 自動回信，Google Sheets 後端，海島粉彩風格，靈感來自解憂雜貨店。' },
+    projects: [{ emoji: '🏝️', label: 'drift-island', color: '#0891b2' }],
+    title: { en: 'Drift Island — Anonymous Letter Site Launched', zh: '漂島信箱 — 匿名投信網站上線', sc: '漂岛信箱 — 匿名投信网站上线' },
+    subtitle: { en: 'AI auto-reply via Apps Script · Inspired by Namiya General Store', zh: 'Apps Script AI 自動回信 · 靈感來自解憂雜貨店', sc: 'Apps Script AI 自动回信 · 灵感来自解忧杂货店' },
     tags: ['Launch', 'Apps Script', 'Google Sheets'],
+    statsLine: null,
+    body: null,
   },
   {
     date: '2026-03-18',
-    project: 'remote-hris',
-    emoji: '🗂️',
-    color: '#0d9488',
-    title: { en: 'v10 — 9-Module HRIS Complete', zh: 'v10 — 9 模組 HRIS 完成' },
-    desc:  { en: 'Full payroll engine with multi-currency, attendance, labor law rules (TW/SG/PH/MY), CSV import, and org chart. 3,447 lines, built in 2 days.', zh: '完整薪資引擎，多幣種、考勤、勞動法規（TW/SG/PH/MY）、CSV 匯入、組織架構。3,447 行，2 天完成。' },
+    projects: [{ emoji: '🗂️', label: 'remote-hris', color: '#0d9488' }],
+    title: { en: 'Remote HRIS v10 — 9-Module HRIS Complete', zh: 'Remote HRIS v10 — 9 模組 HRIS 完成', sc: 'Remote HRIS v10 — 9 模块 HRIS 完成' },
+    subtitle: { en: 'Full payroll engine · Multi-currency · Labor law (TW/SG/PH/MY) · 3,447 lines in 2 days', zh: '完整薪資引擎 · 多幣種 · 勞動法規（TW/SG/PH/MY）· 3,447 行 · 2 天完成', sc: '完整薪资引擎 · 多币种 · 劳动法规（TW/SG/PH/MY）· 3,447 行 · 2 天完成' },
     tags: ['v10', 'Payroll', 'Multi-currency', '9 Modules'],
+    statsLine: null,
+    body: null,
   },
 ];
 
@@ -937,7 +1054,7 @@ const SKILLS = {
         {label:'Cross-border Salary Structure',strong:true},
         {label:'Market Benchmarking & Analysis',strong:true},
         {label:'Payroll Management (1,000+ EE)',strong:true},
-        {label:'Labor Law: TW / SG / PH / MY / Dubai (UAE)'},
+        {label:'Multi-country Labor Law (5 jurisdictions)'},
         {label:'Equity & Token Compensation'},
         {label:'Crypto Exchange C&B'},
         {label:'Compliance Auditing'},
@@ -958,31 +1075,6 @@ const SKILLS = {
         {label:'Process Automation'},
       ]
     },
-    {
-      icon: '🛠️',
-      title: 'Tech Stack',
-      pills: [
-        {label:'React + Vite',strong:true},
-        {label:'Static HTML / CSS / JS'},
-        {label:'Netlify (Deploy & Functions)'},
-        {label:'Stripe'},
-        {label:'Google Analytics 4'},
-        {label:'Google Sheets API'},
-        {label:'Apps Script'},
-      ]
-    },
-    {
-      icon: '🏢',
-      title: 'Systems & Operations',
-      pills: [
-        {label:'Bipo Payroll',strong:true},
-        {label:'ERP — Yonyou'},
-        {label:'EIP — NUEIP'},
-        {label:'Attendance & Security Systems'},
-        {label:'Multi-country Operations'},
-        {label:'Remote Team Management'},
-      ]
-    },
   ],
   zh: [
     {
@@ -992,7 +1084,7 @@ const SKILLS = {
         {label:'跨國薪資結構設計',strong:true},
         {label:'市場薪酬調查與分析',strong:true},
         {label:'大規模薪資管理（1,000+ 人）',strong:true},
-        {label:'勞動法規：台灣 / 新加坡 / 菲律賓 / 馬來西亞 / 阿聯酋（迪拜）'},
+        {label:'多國勞動法規（5 國）'},
         {label:'股權與代幣薪酬'},
         {label:'加密貨幣交易所 C&B 方案'},
         {label:'合規稽核'},
@@ -1013,31 +1105,6 @@ const SKILLS = {
         {label:'流程自動化'},
       ]
     },
-    {
-      icon: '🛠️',
-      title: '技術棧',
-      pills: [
-        {label:'React + Vite',strong:true},
-        {label:'靜態 HTML / CSS / JS'},
-        {label:'Netlify（部署 & Functions）'},
-        {label:'Stripe'},
-        {label:'Google Analytics 4'},
-        {label:'Google Sheets API'},
-        {label:'Apps Script'},
-      ]
-    },
-    {
-      icon: '🏢',
-      title: '系統與營運',
-      pills: [
-        {label:'Bipo 薪資系統',strong:true},
-        {label:'ERP — 用友'},
-        {label:'EIP — NUEIP'},
-        {label:'考勤與門禁系統整合'},
-        {label:'多國跨境營運'},
-        {label:'遠程團隊管理'},
-      ]
-    },
   ],
   sc: [
     {
@@ -1047,7 +1114,7 @@ const SKILLS = {
         {label:'跨国薪资结构设计',strong:true},
         {label:'市场薪酬调查与分析',strong:true},
         {label:'大规模薪资管理（1,000+ 人）',strong:true},
-        {label:'劳动法规：台湾 / 新加坡 / 菲律宾 / 马来西亚 / 阿联酋（迪拜）'},
+        {label:'多国劳动法规（5 国）'},
         {label:'股权与代币薪酬'},
         {label:'加密货币交易所 C&B 方案'},
         {label:'合规稽核'},
@@ -1066,31 +1133,6 @@ const SKILLS = {
         {label:'Gemini GEMs（自定义架构设计）'},
         {label:'Telegram Bot 部署'},
         {label:'流程自动化'},
-      ]
-    },
-    {
-      icon: '🛠️',
-      title: '技术栈',
-      pills: [
-        {label:'React + Vite',strong:true},
-        {label:'静态 HTML / CSS / JS'},
-        {label:'Netlify（部署 & Functions）'},
-        {label:'Stripe'},
-        {label:'Google Analytics 4'},
-        {label:'Google Sheets API'},
-        {label:'Apps Script'},
-      ]
-    },
-    {
-      icon: '🏢',
-      title: '系统与运营',
-      pills: [
-        {label:'Bipo 薪资系统',strong:true},
-        {label:'ERP — 用友'},
-        {label:'EIP — NUEIP'},
-        {label:'考勤与门禁系统整合'},
-        {label:'多国跨境运营'},
-        {label:'远程团队管理'},
       ]
     },
   ]
@@ -1150,6 +1192,8 @@ function updateModalLang() {
 }
 function submitForm(e) {
   e.preventDefault();
+  // Honeypot: bots fill this, humans don't
+  if (document.getElementById('hp-website').value) return;
   const name    = document.getElementById('f-name').value.trim();
   const email   = document.getElementById('f-email').value.trim();
   const message = document.getElementById('f-msg').value.trim();
@@ -1187,16 +1231,16 @@ function submitForm(e) {
 // ── Render ────────────────────────────────────────────────────────
 function render() {
   // Nav
-  document.getElementById('nl-story').textContent    = t('My Story','我的故事','我的故事','Meine Geschichte','Mon parcours','เรื่องราวของฉัน','나의 이야기');
-  document.getElementById('nl-projects').textContent = t('Projects','作品','作品','Projekte','Projets','ผลงาน','프로젝트');
-  document.getElementById('nl-updates').textContent  = t('Updates','更新紀錄','更新记录','Updates','Mises à jour','อัปเดต','업데이트');
-  document.getElementById('nl-skills').textContent   = t('Skills','專業技能','专业技能','Fähigkeiten','Compétences','ทักษะ','보유 역량');
-  document.getElementById('nl-contact').textContent  = t('Contact','聯繫我','联系我','Kontakt','Contact','ติดต่อ','연락처');
+  document.getElementById('nl-story').textContent    = t('My Story','我的故事','我的故事','Meine Geschichte','Mon parcours','เรื่องราวของฉัน','나의 이야기','私について');
+  document.getElementById('nl-projects').textContent = t('Projects','作品','作品','Projekte','Projets','ผลงาน','프로젝트','プロジェクト');
+  document.getElementById('nl-updates').textContent  = t('Updates','更新紀錄','更新记录','Updates','Mises à jour','อัปเดต','업데이트','更新履歴');
+  document.getElementById('nl-skills').textContent   = t('Skills','專業技能','专业技能','Fähigkeiten','Compétences','ทักษะ','보유 역량','スキル');
+  document.getElementById('nl-contact').textContent  = t('Contact','聯繫我','联系我','Kontakt','Contact','ติดต่อ','연락처','お問い合わせ');
 
   // Hero
-  document.getElementById('h-eyebrow').innerHTML  = t('HR Domain Expert &nbsp;×&nbsp; AI Co-builder','HR 領域專家 &nbsp;×&nbsp; AI 共同建造者','HR 领域专家 &nbsp;×&nbsp; AI 共同建造者','HR-Experte &nbsp;×&nbsp; AI Co-Builder','Expert RH &nbsp;×&nbsp; Co-constructeur IA','ผู้เชี่ยวชาญด้าน HR &nbsp;×&nbsp; AI Co-builder','HR 도메인 전문가 &nbsp;×&nbsp; AI 공동 빌더');
+  document.getElementById('h-eyebrow').innerHTML  = t('HR Domain Expert &nbsp;×&nbsp; AI Co-builder','HR 領域專家 &nbsp;×&nbsp; AI 共同建造者','HR 领域专家 &nbsp;×&nbsp; AI 共同建造者','HR-Experte &nbsp;×&nbsp; AI Co-Builder','Expert RH &nbsp;×&nbsp; Co-constructeur IA','ผู้เชี่ยวชาญด้าน HR &nbsp;×&nbsp; AI Co-builder','HR 도메인 전문가 &nbsp;×&nbsp; AI 공동 빌더','HRドメインエキスパート &nbsp;×&nbsp; AI コビルダー');
   document.getElementById('h-title').innerHTML    = t(
-    '<strong>10 Years of Domain Depth. Building Side-by-Side with AI.</strong>',
+    '<strong>I Build the HR Tools You Always Wished Existed — Backed by 10 Years of C&amp;B Experience.</strong>',
     '<strong>以十年領域深度，與 AI 並肩建造。</strong>',
     '<strong>以十年领域深度，与 AI 并肩建造。</strong>',
     '<strong>10 Jahre Fachwissen. Gemeinsam mit KI erschaffen.</strong>',
@@ -1213,14 +1257,14 @@ function render() {
     'จุดแข็งของฉันคือความเข้าใจในเนื้องาน ไม่ใช่แค่การเขียนโค้ด ฉันรู้ดีว่าปัญหาไหนใน HR ที่ต้องแก้ไข และ AI คือพาร์ทเนอร์ที่รู้ใจที่สุดเท่าที่เคยมีมา เราส่งมอบ 6 ผลิตภัณฑ์จริงภายในเวลาเพียงเดือนเดียว',
     '저의 강점은 코드 문법이 아닌 도메인 통찰력에 있습니다. 어떤 HR 문제를 해결해야 하는지 정확히 알고 있으며, AI는 제가 만난 최고의 협업 파트너입니다. 우리는 한 달 만에 6개의 실제 제품을 함께 완성했습니다.'
   );
-  document.getElementById('h-cta1').textContent = t('View My Work ↓','看我做了什麼 ↓','看我做了什么 ↓');
+  document.getElementById('h-cta1').textContent = t('See My Projects ↓','看我做了什麼 ↓','看我做了什么 ↓');
   document.getElementById('h-cta2').textContent = t('Get in Touch →','聯繫我 →','联系我 →');
 
   // Stats
-  document.getElementById('s1').textContent = t('Years HR Experience','年 HR 經驗','年 HR 经验','Jahre HR-Erfahrung',"Années d'expérience RH",'ประสบการณ์สายงาน HR (ปี)','HR 실무 경력 (년)');
-  document.getElementById('s2').textContent = t('Countries Operated','個國家的營運經驗','个国家的运营经验','Operative Länder',"Pays d'opération",'ประเทศที่ดำเนินงาน','운영 국가 수');
-  document.getElementById('s3').textContent = t('AI Optimizations','次 AI 優化','次 AI 优化','KI-Optimierungen',"Optimisations avec l'IA",'จำนวนการปรับปรุงผ่าน AI','AI 최적화 횟수');
-  document.getElementById('s4').textContent = t('Employees Managed','名員工薪資管理','名员工薪资管理','Verwaltete Mitarbeiter','Employés gérés','จำนวนพนักงานที่ดูแล','급여 관리 인원');
+  document.getElementById('s1').textContent = t('Years HR Experience','年 HR 經驗','年 HR 经验','Jahre HR-Erfahrung',"Années d'expérience RH",'ประสบการณ์สายงาน HR (ปี)','HR 실무 경력 (년)','年間のHR経験');
+  document.getElementById('s2').textContent = t('Countries Operated','個國家的營運經驗','个国家的运营经验','Operative Länder',"Pays d'opération",'ประเทศที่ดำเนินงาน','운영 국가 수','カ国での業務経験');
+  document.getElementById('s3').textContent = t('AI Optimizations','次 AI 優化','次 AI 优化','KI-Optimierungen',"Optimisations avec l'IA",'จำนวนการปรับปรุงผ่าน AI','AI 최적화 횟수','回のAI最適化');
+  document.getElementById('s4').textContent = t('Employees Managed','名員工薪資管理','名员工薪资管理','Verwaltete Mitarbeiter','Employés gérés','จำนวนพนักงานที่ดูแล','급여 관리 인원','名の給与管理実績');
 
   // Story
   document.getElementById('story-label').textContent = t('Background','個人背景','个人背景');
@@ -1237,20 +1281,18 @@ function render() {
   document.getElementById('ch1-num').textContent  = t('01 / Foundation','01 / 基礎','01 / 基础');
   document.getElementById('ch1-title').textContent = t('Discipline at Scale','在規模中鍛鍊紀律','在规模中锻炼纪律','Disziplin im großen Maßstab','La discipline à grande échelle','วินัยภายใต้ความกดดันและขนาดองค์กร','규모 속에서 단련된 규율');
   document.getElementById('ch1-body').innerHTML   = t(
-    'From managing HR for <strong>2,000 personnel</strong> in the military to becoming an <strong>Annual Sales Champion</strong> with 150 deals in year one — my foundation was built in environments with no room for error and clear, measurable results.',
+    'From managing HR for <strong>2,000 personnel</strong> in the military to becoming an <strong>Annual Sales Champion</strong> with 150 deals in year one — that\'s how I learned to build systems that hold under pressure.',
     '從軍中管理 <strong>2,000 名人員</strong>的行政事務，到成為第一年 <strong>150 台的銷售年度冠軍</strong>——我的基礎在容錯率極低、結果完全透明的環境中打造。',
     '从军中管理 <strong>2,000 名人员</strong>的行政事务，到成为第一年 <strong>150 台的销售年度冠军</strong>——我的基础在容错率极低、结果完全透明的环境中打造。'
   );
-  document.getElementById('ch1-tags').innerHTML   = ['Military · HR','Sales Champion','Leadership','Execution'].map(x=>`<span class="story-tag">${x}</span>`).join('');
 
   document.getElementById('ch2-num').textContent  = t('02 / Expertise','02 / 深度專業','02 / 深度专业');
   document.getElementById('ch2-title').textContent = t('Ten Years in the Engine Room','十年深耕薪酬核心','十年深耕薪酬核心','Zehn Jahre im Herzstück des Betriebs','Dix ans au cœur du moteur','10 ปีในหัวใจสำคัญของระบบ','엔진룸에서의 10년');
   document.getElementById('ch2-body').innerHTML   = t(
-    'As a C&amp;B Manager across <strong>5 countries</strong> — Taiwan, Philippines, Singapore, UAE, and Malaysia — I handled payroll for <strong>1,000+ employees</strong>, saved <strong>USD 35,000</strong> in cost corrections, and built compensation frameworks for industries from manufacturing to crypto exchanges.',
+    'As a C&amp;B Manager across <strong>5 countries</strong> — Taiwan, Philippines, Singapore, UAE, and Malaysia — I handled payroll for <strong>1,000+ employees</strong>, saved <strong>USD 35,000</strong> in cost corrections, and built compensation frameworks for industries from manufacturing to crypto exchanges. I can read your comp structure and spot the gaps in minutes.',
     '擔任跨越 <strong>5 個國家</strong>（台灣、菲律賓、新加坡、阿聯酋、馬來西亞）的 C&amp;B 主管，管理超過 <strong>1,000 名員工</strong>的薪資，透過稽核修正節省 <strong>USD 35,000</strong> 成本，為製造業至加密貨幣交易所設計薪酬架構。',
     '担任跨越 <strong>5 个国家</strong>（台湾、菲律宾、新加坡、阿联酋、马来西亚）的 C&amp;B 主管，管理超过 <strong>1,000 名员工</strong>的薪资，通过稽核修正节省 <strong>USD 35,000</strong> 成本，为制造业至加密货币交易所设计薪酬架构。'
   );
-  document.getElementById('ch2-tags').innerHTML   = ['C&B Manager','Multi-country','Payroll','Compliance','Crypto'].map(x=>`<span class="story-tag">${x}</span>`).join('');
 
   document.getElementById('ch3-num').textContent  = t('03 / The Partnership','03 / 找到夥伴','03 / 找到伙伴');
   document.getElementById('ch3-title').textContent = t('AI: From Tool to Collaborative Partner','AI：從工具進化為合作夥伴','AI：从工具进化为合作伙伴','KI: Vom Werkzeug zum Partner','L\'IA : d\'outil à partenaire collaboratif','AI: จากเครื่องมือ สู่การเป็นพาร์ทเนอร์ผู้ร่วมสร้าง','AI: 단순한 도구에서 진정한 파트너로의 진화');
@@ -1263,7 +1305,6 @@ function render() {
     'ฉันไม่ได้เขียนโค้ด แต่ฉันมอบจิตวิญญาณและคุณค่าให้กับมัน เส้นทาง AI ของฉันเริ่มต้นในเดือนมีนาคม 2023 กับ GPT และในเดือนมีนาคม 2026 ฉันเริ่มสร้างกับ Claude ในฐานะคู่คิดที่แท้จริง ไม่ใช่ทางลัด ไม่ใช่ของเล่น แต่เป็นพาร์ทเนอร์ที่ลงมือทำในขณะที่ฉันคิด <strong>6 ผลิตภัณฑ์ 1235 ครั้งการปรับปรุง</strong> ทั้งหมดนี้คือผลงานที่เราสร้างมาด้วยกัน',
     '저는 코드를 작성하는 것이 아니라, 코드에 영혼과 가치를 부여합니다. AI 여정은 2023년 3월 GPT와 함께 시작되었고, 2026년 3월 Claude와 진정한 공동 빌더로서 함께 만들기 시작했습니다. 지름길이나 장난감이 아닙니다 — 제가 전략을 세우는 동안 실행을 담당하는 파트너입니다. <strong>6개의 제품, 1235번의 최적화</strong> — 함께 완성한 결과물입니다.'
   );
-  document.getElementById('ch3-tags').innerHTML   = ['AI Co-builder','Domain × AI','6 Products','1235 Optimizations'].map(x=>`<span class="story-tag">${x}</span>`).join('');
 
   // Projects
   document.getElementById('proj-label').textContent = t('Portfolio','作品集','作品集');
@@ -1273,44 +1314,35 @@ function render() {
     '由一位領域專家和她的 AI 共同建造者打造——每個產品都來自我親身經歷過的真實問題。',
     '由一位领域专家和她的 AI 共同建造者打造——每个产品都来自我亲身经历过的真实问题。'
   );
+  renderProjFilters();
   renderProjects();
 
   // Updates
-  document.getElementById('upd-label').textContent  = t('Build Log','更新紀錄','更新记录');
+  document.getElementById('upd-label').textContent  = t('Build Log','開發日誌','开发日志');
   document.getElementById('upd-count').textContent  = CHANGELOG.length;
-  document.getElementById('upd-title').textContent  = t('What\'s been shipping','最近在做什麼','最近在做什么');
+  document.getElementById('upd-title').textContent  = t('Building in Public','公開建造紀錄','公开建造纪录');
   document.getElementById('upd-sub').textContent    = t(
-    'A running log of what shipped, what changed, and what\'s in progress across all projects.',
-    '所有專案的上線紀錄、功能更新與進行中的開發。',
-    '所有项目的上线记录、功能更新与进行中的开发。'
+    'A real log of what shipped, what broke, and what I learned — across all projects. Click any entry to read the full day.',
+    '真實記錄每天上線了什麼、修了什麼、學到了什麼。點擊任何一筆可以展開完整日誌。',
+    '真实记录每天上线了什么、修了什么、学到了什么。点击任意一条可以展开完整日志。'
   );
   renderUpdates();
 
   // Skills
   document.getElementById('skills-label').textContent = t('Expertise','專業領域','专业领域');
-  document.getElementById('skills-title').textContent  = t('The Human + AI Stack','人 × AI 的能力組合','人 × AI 的能力组合');
-  document.getElementById('skills-sub').textContent    = t(
-    "What I bring is irreplaceable domain depth. What AI brings is relentless execution. Neither works as well alone.",
-    '我帶來的是難以複製的領域深度。AI 帶來的是不知疲倦的執行力。少了其中一方，都沒那麼有力。',
-    '我带来的是难以复制的领域深度。AI 带来的是不知疲倦的执行力。少了其中一方，都没那么有力。',
-    'Ich bringe Fachtiefe, die KI bringt Ausführung. Beides zusammen ist unschlagbar.',
-    "J'apporte une profondeur métier irremplaçable. L'IA apporte une exécution sans relâche. L'un ne va pas sans l'autre.",
-    'สิ่งที่ฉันมีคือความรู้เฉพาะทางที่ทดแทนไม่ได้ และสิ่งที่ AI มีคือการลงมือทำที่รวดเร็วและแม่นยำ ทั้งสองอย่างต้องทำงานร่วมกันจึงจะดีที่สุด',
-    '제가 가진 대체 불가능한 도메인 깊이와 AI의 지치지 않는 실행력이 만났습니다. 어느 하나만으로는 이만큼의 성과를 낼 수 없습니다.'
-  );
   renderSkills();
 
   // Contact
   document.getElementById('c-label').textContent    = t('Get in Touch','聯繫我','联系我');
   document.getElementById('c-btn-text').textContent = t('Send me an email →','寄信給我 →','发信给我 →','E-Mail senden →','M\'envoyer un e-mail →','ส่งอีเมลหาฉัน →','이메일 보내기 →');
   document.getElementById('c-headline').textContent = t(
-    "Let's build something that actually works.",
-    '讓我們動手，建造真正解決問題的方案。',
-    '让我们动手，建造真正解决问题的方案。',
-    'Lassen Sie uns etwas bauen, das wirklich funktioniert.',
-    'Construisons quelque chose qui fonctionne vraiment.',
-    'มาสร้างสิ่งที่ใช้งานได้จริงไปด้วยกัน',
-    '실제로 작동하는 솔루션을 함께 만듭시다.'
+    "Have an HR problem worth solving?",
+    '有個 HR 痛點值得被好好解決嗎？',
+    '有个 HR 痛点值得被好好解决吗？',
+    'Haben Sie ein HR-Problem, das es wert ist, gelöst zu werden?',
+    "Vous avez un problème RH qui mérite d'être résolu?",
+    'มีปัญหาด้าน HR ที่อยากแก้อย่างจริงจังไหม?',
+    '해결할 가치가 있는 HR 문제가 있으신가요?'
   );
   document.getElementById('c-sub').textContent = t(
     "Need a C&B consultant who builds? Exploring the future of HR with AI? I read every message personally.",
@@ -1324,38 +1356,84 @@ function render() {
 
   // Footer
   document.getElementById('footer-text').textContent =
-    `© 2026 Ellen Chuang · ellenbuilds · ${t('Built with Claude · Domain × AI','以 Claude 建造 · 領域 × AI','以 Claude 建造 · 领域 × AI')}`;
+    `© ${new Date().getFullYear()} Ellen Chuang · ellenbuilds · ${t('Built with Claude · Domain × AI','以 Claude 建造 · 領域 × AI','以 Claude 建造 · 领域 × AI')}`;
 }
 
 function renderUpdates() {
   const el = document.getElementById('updates-feed');
-  el.innerHTML = CHANGELOG.map(u => {
-    const title = u.title[lang] || u.title.en;
-    const desc  = u.desc[lang]  || u.desc.en;
+  el.innerHTML = CHANGELOG.map((u, i) => {
+    const title    = u.title[lang]    || u.title.en;
+    const subtitle = u.subtitle[lang] || u.subtitle.en;
+    const statsLine = u.statsLine ? (u.statsLine[lang] || u.statsLine.en) : null;
+    const body = u.body ? (u.body[lang] || u.body.zh || u.body.en) : null;
     const d = new Date(u.date);
-    const dateStr = d.toLocaleDateString(lang==='zh'?'zh-TW':lang==='en'?'en-US':'en-US', {month:'short', day:'numeric', year:'numeric'});
+    const dateStr = d.toLocaleDateString(lang==='zh'?'zh-TW':'en-US', {month:'short', day:'numeric', year:'numeric'});
+    const projBadges = u.projects.map(p =>
+      `<span class="upd-proj" style="background:${p.color}18;color:${p.color}">${p.emoji} ${p.label}</span>`
+    ).join('');
+    const expandLbl = t('Read full log ▾','閱讀完整日誌 ▾','阅读完整日志 ▾');
+    const expandBtn = body
+      ? `<button class="upd-expand-btn" id="upd-btn-${i}" onclick="toggleLog(${i})">${expandLbl}</button>`
+      : '';
+    const bodyDiv = body ? `<div class="upd-full" id="upd-full-${i}">${body}</div>` : '';
     return `
     <div class="upd-item">
       <div class="upd-date">
         <div class="upd-date-d">${dateStr}</div>
       </div>
       <div class="upd-dot-col">
-        <div class="upd-dot" style="background:${u.color}"></div>
+        <div class="upd-dot" style="background:${u.projects[0].color}"></div>
         <div class="upd-line"></div>
       </div>
       <div class="upd-body">
-        <div class="upd-proj" style="background:${u.color}18;color:${u.color}">${u.emoji} ${u.project}</div>
-        <div class="upd-title">${title}</div>
-        <div class="upd-desc">${desc}</div>
-        <div class="upd-tags">${u.tags.map(tg=>`<span class="upd-tag">${tg}</span>`).join('')}</div>
+        <div class="upd-card">
+          <div class="upd-projs">${projBadges}</div>
+          <div class="upd-day-title">${title}</div>
+          <div class="upd-day-sub">${subtitle}</div>
+          <div class="upd-tags">${u.tags.map(tg=>`<span class="upd-tag">${tg}</span>`).join('')}</div>
+          ${statsLine ? `<div class="upd-stats-strip">${statsLine}</div>` : ''}
+          ${expandBtn}
+          ${bodyDiv}
+        </div>
       </div>
     </div>`;
   }).join('');
 }
 
+window.toggleLog = function(i) {
+  const full = document.getElementById('upd-full-' + i);
+  const btn  = document.getElementById('upd-btn-' + i);
+  const isOpen = full.classList.contains('open');
+  full.classList.toggle('open');
+  btn.textContent = isOpen
+    ? t('Read full log ▾','閱讀完整日誌 ▾','阅读完整日志 ▾')
+    : t('Collapse ▴','收起 ▴','收起 ▴');
+};
+
+let activeFilter = 'all';
+
+function renderProjFilters() {
+  const filters = [
+    { key: 'all',      label: t('All','全部','全部') },
+    { key: 'hr',       label: 'C&B' },
+    { key: 'ai',       label: t('AI Tools','AI 工具','AI 工具') },
+    { key: 'creative', label: t('Creative','創意','创意') },
+  ];
+  document.getElementById('proj-filters').innerHTML = filters.map(f=>`
+    <button class="proj-filter-btn${activeFilter===f.key?' active':''}" onclick="setFilter('${f.key}')">${f.label}</button>
+  `).join('');
+}
+
+window.setFilter = function(key) {
+  activeFilter = key;
+  renderProjFilters();
+  renderProjects();
+};
+
 function renderProjects() {
+  const list = activeFilter === 'all' ? PROJECTS : PROJECTS.filter(p => p.category === activeFilter);
   const el = document.getElementById('projects-grid');
-  el.innerHTML = PROJECTS.map((p, i) => {
+  el.innerHTML = list.map((p, i) => {
     const name = p.name[lang] || p.name.en;
     const desc = p.desc[lang] || p.desc.en;
     const st = p.status;
@@ -1393,7 +1471,6 @@ function renderProjects() {
       </div>`;
   }).join('');
 
-  // Re-observe new cards
   el.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 }
 
@@ -1407,15 +1484,6 @@ function renderSkills() {
       </div>
     </div>`).join('');
 
-  const c = CREDS[lang] || CREDS.en;
-  document.getElementById('creds').innerHTML = c.map(cr=>`
-    <div class="cred">
-      <span class="cred-icon">${cr.icon}</span>
-      <div>
-        <div class="cred-title">${cr.title}</div>
-        <div class="cred-sub">${cr.sub}</div>
-      </div>
-    </div>`).join('');
 
   document.getElementById('skills-grid').querySelectorAll('.reveal').forEach(el => observer.observe(el));
 }
