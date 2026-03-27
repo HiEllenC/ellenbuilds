@@ -1049,6 +1049,51 @@ const PROJECTS = [
 
 const CHANGELOG = [
   {
+    "date": "2026-03-26",
+    "projects": [
+      {
+        "emoji": "💰",
+        "label": "payband",
+        "color": "#1a5c40"
+      },
+      {
+        "emoji": "📢",
+        "label": "content-distributor",
+        "color": "#ea580c"
+      },
+      {
+        "emoji": "📄",
+        "label": "resume-ai",
+        "color": "#2563eb"
+      }
+    ],
+    "title": {
+      "en": "Payband × Gemini Design Audit + 2 New Product Ideas",
+      "zh": "Payband × Gemini 設計審查 + 新產品發想",
+      "sc": "Payband × Gemini 设计审查 + 新产品发想"
+    },
+    "subtitle": {
+      "en": "Gemini 2.5 Pro design review · AI tool scripts · Content Distributor & Resume AI conceived",
+      "zh": "Gemini 2.5 Pro 設計審查 · AI 工具腳本建設 · Content Distributor & Resume AI 發想",
+      "sc": "Gemini 2.5 Pro 设计审查 · AI 工具脚本建设 · Content Distributor & Resume AI 发想"
+    },
+    "tags": [
+      "Payband",
+      "Gemini",
+      "Content Distributor",
+      "Resume AI"
+    ],
+    "statsLine": {
+      "en": "Payband +18 iterations · 5 new scripts · 3 AI ideation sessions · 4 projects touched",
+      "zh": "Payband +18 次迭代 · 5 支新腳本 · 3 輪 AI 發想 · 觸及 4 個專案",
+      "sc": "Payband +18 次迭代 · 5 支新脚本 · 3 轮 AI 发想 · 触及 4 个项目"
+    },
+    "body": {
+      "zh": "<div class='log-callout log-callout-green'><strong>這天的核心：</strong>讓 AI 幫忙做更多判斷——不管是設計評分還是產品發想。</div><h2>一、Payband — Gemini 設計審查</h2><p>把 Payband 的程式碼丟給 Gemini 2.5 Pro 當設計顧問審查。<strong>評分：7.5 / 10</strong></p><div class='log-quote'>「風格強烈，但專業性與易讀性有待提升。」</div><p>5 大問題：DM Mono 用太廣偏開發者風格、薪資矩陣配色太花俏、hover 動效不一致、數字對齊有改善空間、行動呼籲不夠清晰。</p><h2>二、AI 工具腳本建設</h2><p>建了一批新腳本放在 <code>payband/scripts/</code>：Gemini 設計審查、Grok Vision 批評、Veo 2 影片生成、薪資數據爬取。這些是 AI 團隊的基礎設施。</p><h2>三、新產品發想</h2><p>晚上切換到創意模式，從「開會發想庫」延伸出兩個更有感覺的方向：</p><ul><li>📢 <strong>Content Distributor</strong> — 一篇文章一鍵分發六個平台</li><li>📄 <strong>Resume AI</strong> — 履歷 AI 評分 + JD 匹配 + 改寫建議</li></ul><div class='log-stats'><div class='log-stat'><span class='log-stat-n'>7.5</span><span class='log-stat-l'>Gemini 設計評分</span></div><div class='log-stat'><span class='log-stat-n'>5</span><span class='log-stat-l'>新腳本</span></div><div class='log-stat'><span class='log-stat-n'>2</span><span class='log-stat-l'>新產品發想</span></div></div><div class='log-quote'>「不是所有的工作都要有 commit，有些最重要的事是讓自己看清楚下一步。」<br><em>— Ellen，2026-03-26</em></div>",
+      "en": "<div class='log-callout log-callout-green'><strong>Core of the day:</strong> Let AI do more of the judging — from design scores to product ideation.</div><h2>1. Payband — Gemini Design Audit</h2><p>Sent Payband's codebase to Gemini 2.5 Pro for a design review. <strong>Score: 7.5 / 10</strong></p><div class='log-quote'>\"Strong aesthetic, but professionalism and readability need work.\"</div><p>5 key issues: DM Mono overused (feels like dev tool, not exec tool), salary matrix too colorful, hover animations inconsistent, number alignment improvable, CTA unclear.</p><h2>2. AI Tool Scripts</h2><p>Built a batch of new scripts under <code>payband/scripts/</code>: Gemini design consultant, Grok Vision critique, Veo 2 video generation, salary scraper. Foundation for the AI team's infrastructure.</p><h2>3. New Product Ideation</h2><p>Switched to creative mode in the evening. Two stronger directions emerged:</p><ul><li>📢 <strong>Content Distributor</strong> — one post, six platforms, bilingual</li><li>📄 <strong>Resume AI</strong> — AI scoring + JD matching + rewrite suggestions</li></ul><div class='log-stats'><div class='log-stat'><span class='log-stat-n'>7.5</span><span class='log-stat-l'>Design Score</span></div><div class='log-stat'><span class='log-stat-n'>5</span><span class='log-stat-l'>New Scripts</span></div><div class='log-stat'><span class='log-stat-n'>2</span><span class='log-stat-l'>New Products</span></div></div><div class='log-quote'>\"Not all work needs a commit. Sometimes the most important thing is seeing your next step clearly.\"<br><em>— Ellen, 2026-03-26</em></div>"
+    }
+  },
+  {
     "date": "2026-03-25",
     "projects": [
       {
@@ -1815,7 +1860,7 @@ function renderUpdates() {
     const commentUrl = `comment.html?date=${encodeURIComponent(u.date)}&title=${encodeURIComponent(title)}`;
     const commentBtn = `<a href="${commentUrl}" target="_blank" class="upd-comment-btn">💬 ${t('Leave a comment','留言這篇','留言这篇')}</a>`;
     return `
-    <div class="upd-item" id="upd-item-${i}">
+    <div class="upd-item" id="upd-item-${i}"${i >= 3 ? ' style="display:none"' : ''}>
       <div class="upd-date">
         <div class="upd-date-d">${dateStr}</div>
       </div>
@@ -1845,6 +1890,7 @@ window.jumpToLog = function(idx) {
   if (idx === '') return;
   const el = document.getElementById('upd-item-' + idx);
   if (!el) return;
+  el.style.display = '';
   el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   el.style.transition = 'background .3s';
   el.style.background = 'var(--acc-l)';
