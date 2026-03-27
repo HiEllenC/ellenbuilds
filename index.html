@@ -211,6 +211,7 @@ nav.scrolled{box-shadow:0 1px 0 var(--line),var(--s1)}
 
 /* ── STORY ────────────────────────────────────────────────────── */
 #story{background:var(--bg)}
+#story .section-title{font-size:22px;font-weight:700;margin-bottom:8px}
 .section-label{
   font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
   color:var(--acc);font-family:var(--fm);margin-bottom:14px;
@@ -1048,51 +1049,6 @@ const PROJECTS = [
 
 const CHANGELOG = [
   {
-    "date": "2026-03-27",
-    "projects": [
-      {
-        "emoji": "🌐",
-        "label": "ellenbuilds",
-        "color": "#1a5c40"
-      },
-      {
-        "emoji": "📢",
-        "label": "content-distributor",
-        "color": "#ea580c"
-      },
-      {
-        "emoji": "📄",
-        "label": "resume-ai",
-        "color": "#2563eb"
-      }
-    ],
-    "title": {
-      "en": "Portfolio Deep Audit + 2 New Products",
-      "zh": "個人品牌深度優化 + 2 個新產品發想",
-      "sc": "个人品牌深度优化 + 2 个新产品发想"
-    },
-    "subtitle": {
-      "en": "Multi-agent audit · Badge system · Build log with comments · Content Distributor & Resume AI",
-      "zh": "多 Agent 深度審查 · Badge 系統 · 建造紀錄留言 · Content Distributor & Resume AI",
-      "sc": "多 Agent 深度审查 · Badge 系统 · 建造记录留言 · Content Distributor & Resume AI"
-    },
-    "tags": [
-      "ellenbuilds",
-      "Content Distributor",
-      "Resume AI",
-      "多 Agent"
-    ],
-    "statsLine": {
-      "en": "4-agent audit · Badge system · Comment feature · 2 new products",
-      "zh": "4 Agent 審查 · Badge 系統 · 留言功能 · 2 個新產品",
-      "sc": "4 Agent 审查 · Badge 系统 · 留言功能 · 2 个新产品"
-    },
-    "body": {
-      "zh": "<div class='log-callout log-callout-green'><strong>這天的核心：</strong>個人品牌不只是作品集，它是你對外溝通的第一個產品。今天召喚了 4 個 Agent 從不同角度深度審查，然後全面升級。</div><h2>一、多 Agent 深度審查</h2><p>同時召喚 UX、SEO、設計、競品分析四個 Agent，每個從不同維度給出評估與建議。</p><ul><li><strong>UX Agent</strong>：Section 順序不對，Updates 放太前、Contact 說明不夠清楚</li><li><strong>SEO Agent</strong>：標題缺乏關鍵字、OG Image 還是 dino.jpg</li><li><strong>設計 Agent</strong>：Hero 文案太平淡，需要更有說服力的痛點敍事</li><li><strong>競品 Agent</strong>：缺乏社會證明，和其他 C&amp;B 專家的差異化不夠清晰</li></ul><h2>二、全面升級</h2><ul><li><strong>Hero 文案重寫</strong>：「痛點出發，與 AI 協作打造專屬解決方案。」</li><li><strong>Section 順序</strong>：Projects → Story/Skills → Updates → Contact（說服邏輯更清晰）</li><li><strong>New / Updated Badge</strong>：自動判斷（30 天內新建 = New，7 天內更新 = Updated）</li><li><strong>Tagline</strong>：強調 HR 痛點 + AI 夥伴感，不只說資歷</li></ul><h2>三、建造紀錄全面升級</h2><ul><li>7 篇日誌全部補齊完整 body 內容</li><li>每篇加「留言這篇」按鈕，直接開留言頁面</li><li>日期下拉選單，可跳轉到任何一篇</li></ul><h2>四、Content Distributor + Resume AI</h2><p>兩個新產品同日發想完成，Landing page 上線，等待 MVP 開發。</p><div class='log-stats'><div class='log-stat'><span class='log-stat-n'>4</span><span class='log-stat-l'>Agent 審查</span></div><div class='log-stat'><span class='log-stat-n'>7</span><span class='log-stat-l'>日誌條目</span></div><div class='log-stat'><span class='log-stat-n'>2</span><span class='log-stat-l'>新產品</span></div></div><div class='log-quote'>「個人品牌是你對外說話的聲音，它值得你用同樣的認真去打磨。」<br><em>— Ellen，2026-03-27</em></div>",
-      "en": "<div class='log-callout log-callout-green'><strong>Core of the day:</strong> A personal brand isn't just a portfolio — it's your first product. Today: a 4-agent deep audit from multiple angles, followed by a comprehensive upgrade.</div><h2>1. Multi-Agent Audit</h2><p>Four agents ran simultaneously — UX, SEO, Design, Competitive — each from a different angle.</p><ul><li><strong>UX</strong>: Section order was wrong; Updates placed too early; Contact lacked context</li><li><strong>SEO</strong>: Title missing keywords; OG image still dino.jpg</li><li><strong>Design</strong>: Hero copy was too flat — needed stronger pain-point narrative</li><li><strong>Competitive</strong>: Missing social proof; differentiation from other C&amp;B specialists unclear</li></ul><h2>2. Full Upgrade</h2><ul><li><strong>Hero rewrite</strong>: \"Starting from real HR pain points — building tailored solutions through AI collaboration.\"</li><li><strong>Section order</strong>: Projects → Story/Skills → Updates → Contact</li><li><strong>New / Updated Badge</strong>: Auto-detected (new within 30 days = New; updated within 7 days = Updated)</li><li><strong>Tagline</strong>: Emphasizes HR pain + AI partnership</li></ul><h2>3. Build Log Upgrade</h2><ul><li>All 7 log entries now have full body content</li><li>Comment button on each entry</li><li>Date jump dropdown</li></ul><h2>4. Two New Products</h2><p>Content Distributor and Resume AI both conceived and landing pages launched same day.</p><div class='log-stats'><div class='log-stat'><span class='log-stat-n'>4</span><span class='log-stat-l'>Agents</span></div><div class='log-stat'><span class='log-stat-n'>7</span><span class='log-stat-l'>Log entries</span></div><div class='log-stat'><span class='log-stat-n'>2</span><span class='log-stat-l'>New products</span></div></div><div class='log-quote'>\"Your personal brand is your first product — it deserves the same polish.\"<br><em>— Ellen, 2026-03-27</em></div>"
-    }
-  },
-  {
     "date": "2026-03-25",
     "projects": [
       {
@@ -1689,7 +1645,7 @@ function render() {
   document.getElementById('nl-contact').textContent  = t('Contact','聯繫我','联系我','Kontakt','Contact','ติดต่อ','연락처','お問い合わせ');
 
   // Hero
-  document.getElementById('h-eyebrow').innerHTML  = t('Asia-Pacific &nbsp;·&nbsp; 5 Countries &nbsp;·&nbsp; C&amp;B Specialist','亞太地區 &nbsp;·&nbsp; 5 個國家 &nbsp;·&nbsp; 薪酬福利專家','亚太地区 &nbsp;·&nbsp; 5 个国家 &nbsp;·&nbsp; 薪酬福利专家','Asien-Pazifik &nbsp;·&nbsp; 5 Länder &nbsp;·&nbsp; C&amp;B-Spezialistin','Asie-Pacifique &nbsp;·&nbsp; 5 pays &nbsp;·&nbsp; Spécialiste C&amp;B','เอเชียแปซิฟิก &nbsp;·&nbsp; 5 ประเทศ &nbsp;·&nbsp; ผู้เชี่ยวชาญ C&amp;B','아시아태평양 &nbsp;·&nbsp; 5개국 &nbsp;·&nbsp; C&amp;B 전문가','アジア太平洋 &nbsp;·&nbsp; 5カ国 &nbsp;·&nbsp; C&amp;Bスペシャリスト');
+  document.getElementById('h-eyebrow').innerHTML  = t('Asia-Pacific &nbsp;·&nbsp; C&amp;B Structure Specialist','亞太地區 &nbsp;·&nbsp; 薪酬架構福利專家','亚太地区 &nbsp;·&nbsp; 薪酬架构福利专家','Asien-Pazifik &nbsp;·&nbsp; C&amp;B-Strukturspezialistin','Asie-Pacifique &nbsp;·&nbsp; Spécialiste Structure C&amp;B','เอเชียแปซิฟิก &nbsp;·&nbsp; ผู้เชี่ยวชาญโครงสร้าง C&amp;B','아시아태평양 &nbsp;·&nbsp; C&amp;B 구조 전문가','アジア太平洋 &nbsp;·&nbsp; C&amp;B構造スペシャリスト');
   document.getElementById('h-title').innerHTML    = t(
     '<strong>Starting from real HR pain points — building tailored solutions through AI collaboration.</strong>',
     '<strong>痛點出發，與 AI 協作打造專屬解決方案。</strong>',
