@@ -1070,12 +1070,14 @@ const CHANGELOG = [
     "title": {
       "en": "Payband × Gemini Design Audit + 2 New Product Ideas",
       "zh": "Payband × Gemini 設計審查 + 新產品發想",
-      "sc": "Payband × Gemini 设计审查 + 新产品发想"
+      "sc": "Payband × Gemini 设计审查 + 新产品发想",
+      "ja": "Payband × Geminiデザイン審査 + 新製品アイデア2件"
     },
     "subtitle": {
       "en": "Gemini 2.5 Pro design review · AI tool scripts · Content Distributor & Resume AI conceived",
       "zh": "Gemini 2.5 Pro 設計審查 · AI 工具腳本建設 · Content Distributor & Resume AI 發想",
-      "sc": "Gemini 2.5 Pro 设计审查 · AI 工具脚本建设 · Content Distributor & Resume AI 发想"
+      "sc": "Gemini 2.5 Pro 设计审查 · AI 工具脚本建设 · Content Distributor & Resume AI 发想",
+      "ja": "Gemini 2.5 Proデザインレビュー · AIツールスクリプト · Content Distributor & Resume AI 発想"
     },
     "tags": [
       "Payband",
@@ -1086,7 +1088,8 @@ const CHANGELOG = [
     "statsLine": {
       "en": "Payband +18 iterations · 5 new scripts · 3 AI ideation sessions · 4 projects touched",
       "zh": "Payband +18 次迭代 · 5 支新腳本 · 3 輪 AI 發想 · 觸及 4 個專案",
-      "sc": "Payband +18 次迭代 · 5 支新脚本 · 3 轮 AI 发想 · 触及 4 个项目"
+      "sc": "Payband +18 次迭代 · 5 支新脚本 · 3 轮 AI 发想 · 触及 4 个项目",
+      "ja": "Payband +18回 · 新スクリプト5本 · AIアイデア3セッション · 4プロジェクト"
     },
     "body": {
       "zh": "<div class='log-callout log-callout-green'><strong>這天的核心：</strong>讓 AI 幫忙做更多判斷——不管是設計評分還是產品發想。</div><h2>今日概況</h2><p>今天是一個橫跨多個方向的密集日。上午把 Payband 送去讓 Gemini 2.5 Pro 做設計審查，收到了一份很紮實的報告。下午花了時間建立 AI 工具腳本基礎設施。晚上切換頻道，用 AI 團隊多角度發想新產品——從「開會發想庫」延伸出了 Content Distributor 和 Resume AI 這兩個更有感覺的方向。</p><h2>一、Payband — Gemini 設計審查</h2><p>今天嘗試了一件新事：把 Payband 的 React 程式碼丟給 Gemini 2.5 Pro，當設計顧問來審。<strong>評分：7.5 / 10</strong></p><div class='log-quote'>「風格強烈，但專業性與易讀性有待提升。」</div><p>Gemini 指出的 5 大問題：</p><ul><li>DM Mono 用太廣，標題、按鈕都用等寬字，氣質偏「開發者工具」而非「高階主管決策工具」</li><li>薪資矩陣的儲存格配色太花俏，視覺噪音高</li><li>卡片 hover 動效過度，按鈕 hover 卻沒有回饋 — 不一致</li><li>數字對齊與資訊層次有改善空間</li><li>行動呼籲不夠清晰</li></ul><h2>二、AI 工具腳本建設</h2><p>今天建了一批新腳本放在 <code>payband/scripts/</code>：</p><ul><li><code>design-consultant.cjs</code> — 呼叫 Gemini 做設計審查</li><li><code>grok-design-critique.cjs</code> — Grok Vision 設計批評</li><li><code>create-video-gemini.cjs</code> — Gemini Veo 2 影片生成</li><li><code>create-video-grok.cjs</code> — Grok Video 生成</li><li><code>scrape-salary.cjs</code> — 薪資數據爬取</li></ul><p>這些腳本是 AI 團隊的基礎設施，未來 agent 執行任務會用到。</p><h2>三、新產品發想</h2><p>晚上切換到創意模式，用 AI 團隊做了多輪發想。從「開會發想庫」延伸出兩個更有感覺的方向：</p><ul><li>📢 <strong>Content Distributor</strong> — 一篇文章一鍵分發六個平台，附雙語適配</li><li>📄 <strong>Resume AI</strong> — 履歷 AI 評分 + JD 匹配 + 改寫建議</li></ul><p>這兩個比「開會發想庫」更貼近 Ellen 自己的使用場景，也有更清楚的商業模式。</p><div class='log-stats'><div class='log-stat'><span class='log-stat-n'>7.5</span><span class='log-stat-l'>Gemini 設計評分</span></div><div class='log-stat'><span class='log-stat-n'>5</span><span class='log-stat-l'>新腳本</span></div><div class='log-stat'><span class='log-stat-n'>3</span><span class='log-stat-l'>AI 發想輪次</span></div><div class='log-stat'><span class='log-stat-n'>4</span><span class='log-stat-l'>觸及專案</span></div></div><div class='log-quote'>「不是所有的工作都要有 commit，有些最重要的事是讓自己看清楚下一步。」<br><em>— Ellen，2026-03-26</em></div>",
@@ -1105,12 +1108,14 @@ const CHANGELOG = [
     "title": {
       "en": "Dashboard Consolidation",
       "zh": "Dashboard 大整合",
-      "sc": "Dashboard 大整合"
+      "sc": "Dashboard 大整合",
+      "ja": "Dashboard 大統合"
     },
     "subtitle": {
       "en": "Diary merge · Project rename · Filter system · Logo",
       "zh": "日記合併 · 專案重命名 · 篩選系統 · Logo 取代 Emoji",
-      "sc": "日记合并 · 项目重命名 · 筛选系统 · Logo 替代 Emoji"
+      "sc": "日记合并 · 项目重命名 · 筛选系统 · Logo 替代 Emoji",
+      "ja": "日記統合 · プロジェクト名変更 · フィルターシステム · ロゴ"
     },
     "tags": [
       "Ellen Daily Dashboard",
@@ -1120,7 +1125,8 @@ const CHANGELOG = [
     "statsLine": {
       "en": "49 optimizations · 4 major changes",
       "zh": "49 次優化 · 4 項大改動",
-      "sc": "49 次优化 · 4 项大改动"
+      "sc": "49 次优化 · 4 项大改动",
+      "ja": "49回最適化 · 4つの主な変更"
     },
     "body": {
       "zh": "<div class='log-callout log-callout-green'><strong>這天的核心：</strong>不是做新產品，而是讓工作中心本身更完善。把散落在各處的工具整合成一個檔案，從今天起所有更新只需要動一個地方。</div><h2>一、diary.html 完整合併</h2><p>日記原本是獨立的 <code>diary.html</code>，今天把 9 篇日記全部搬入 Ellen Daily Dashboard。</p><ul><li>日記 section 加入左側 nav，可直接跳轉</li><li>日期下拉選單取代橫向 chip，一鍵切換篇章，預設顯示最新篇</li><li>單一事實來源——維護兩個檔案的認知負擔不值得</li></ul><div class='log-callout log-callout-blue'>「後續更新調整都在這裡進行，你也會記得。」——維護兩個檔案的認知負擔不值得。單一檔案，單一事實來源。</div><h2>二、專案命名重整</h2><table class='log-table'><tr><th>之前</th><th>現在</th><th>原因</th></tr><tr><td>Claude Guide（混淆）</td><td>Claude Guide（公開）+ Ellen Daily Dashboard（本機）</td><td>兩個不同東西被混在一筆</td></tr><tr><td>每日工作指令卡</td><td>Ellen Daily Dashboard</td><td>英文命名更清楚</td></tr></table><h2>三、專案狀態篩選 + 已關閉狀態</h2><ul><li>表格上方加入篩選按鈕：全部 / 上線中 / 開發中 / 已關閉</li><li>已關閉的專案在表格裡以灰色顯示，附上關閉原因</li><li>Claude 建議和待辦自動排除已關閉專案</li></ul><h2>四、Logo 取代 Emoji</h2><p>專案列表改用真實 logo 圖片，沒有 logo 的用白色方塊佔位。漂島信箱和 Claude Guide 已有 favicon，其他等有 logo 時補上。</p><div class='log-stats'><div class='log-stat'><span class='log-stat-n'>1</span><span class='log-stat-l'>檔案整合</span></div><div class='log-stat'><span class='log-stat-n'>9</span><span class='log-stat-l'>日記篇章</span></div><div class='log-stat'><span class='log-stat-n'>10</span><span class='log-stat-l'>追蹤專案</span></div><div class='log-stat'><span class='log-stat-n'>49</span><span class='log-stat-l'>今日優化</span></div></div><div class='log-quote'>「最好的工具是你每天都會打開、而且不需要解釋的那一個。」<br><em>— Ellen，2026-03-25</em></div><h3>這天學到的</h3><ol><li><strong>單一事實來源</strong> — 維護兩個地方的成本遠高於整合的成本</li><li><strong>命名要精準</strong> — 一個模糊的名字會造成長期的認知混亂</li><li><strong>關閉也是一種決策</strong> — 不是每個舊檔案都需要繼續存在，標記已關閉比刪除更有記憶價值</li><li><strong>篩選比隱藏更好</strong> — 資料都在，只是根據狀態顯示，任何時候都可以找回</li></ol>",
@@ -1149,12 +1155,14 @@ const CHANGELOG = [
     "title": {
       "en": "All Five Projects Upgraded in One Day",
       "zh": "五個專案全面優化",
-      "sc": "五个专案全面优化"
+      "sc": "五个专案全面优化",
+      "ja": "1日で5プロジェクト全面アップグレード"
     },
     "subtitle": {
       "en": "Payband v1.1 × ellenbuilds brand × Remote HRIS v11 × 202 optimizations",
       "zh": "Payband v1.1 × ellenbuilds 品牌升級 × Remote HRIS v11 × 單日 202 次優化",
-      "sc": "Payband v1.1 × ellenbuilds 品牌升级 × Remote HRIS v11 × 单日 202 次优化"
+      "sc": "Payband v1.1 × ellenbuilds 品牌升级 × Remote HRIS v11 × 单日 202 次优化",
+      "ja": "Payband v1.1 × ellenbuildsブランド × Remote HRIS v11 × 202回最適化"
     },
     "tags": [
       "Payband",
@@ -1165,7 +1173,8 @@ const CHANGELOG = [
     "statsLine": {
       "en": "14 commits · 202 optimizations · 23 bugs fixed",
       "zh": "14 commits · 202 次優化 · 修復 23 個 bug",
-      "sc": "14 commits · 202 次优化 · 修复 23 个 bug"
+      "sc": "14 commits · 202 次优化 · 修复 23 个 bug",
+      "ja": "14コミット · 202回最適化 · バグ23件修正"
     },
     "body": {
       "zh": "<div class='log-callout log-callout-blue'><strong>這天的核心：</strong>沒有開新專案，而是把已有的全部提升一個層次。14 個 commits、202 次優化、修復 23 個 bug — 這是目前為止最密集的一天。</div><h2>一、Payband — 從 v1.0 跨越到 v1.1</h2><p>3/23 做出核心薪資帶功能（v1.0），今天的目標：讓它看起來像一個真正的產品，而不是原型。</p><ul><li><strong>互動式世界地圖</strong>：點擊國家直接切換，不再只是下拉選單</li><li><strong>即時市場數據整合</strong>：接上外部 API，薪資帶數字有了市場依據</li><li><strong>深色主題</strong>：加班到深夜也不傷眼，同時讓產品更有科技感</li><li><strong>幣別自動換算</strong>：USD / EUR / TWD / SGD 等多幣種即時轉換</li></ul><div class='log-callout log-callout-yellow'>今天 Payband 優化了 <strong>141 次</strong>——目前為止單日優化次數最多的一天。</div><h2>二、ellenbuilds — 個人品牌的視覺升級</h2><ul><li><strong>Live / Beta / Building 狀態徽章</strong>：讓訪客一眼知道哪個是完成品、哪個是 work in progress</li><li><strong>Build Log 時間軸</strong>：展示每個版本做了什麼，讓訪客看到你在持續進步</li><li><strong>CTA 顏色區分</strong>：Live 用綠色，Beta 用黃色</li></ul><div class='log-callout log-callout-green'><strong>Build Log 是信任建立工具：</strong>讓訪客看到你在進步，比靜態作品集更有說服力。今天 ellenbuilds 優化了 42 次。</div><h2>三、Remote HRIS v11 — 多國法規 + 考勤模組</h2><ul><li><strong>RULESET_SEED</strong>：TW 台灣勞基法、SG 新加坡、PH 菲律賓、MY 馬來西亞</li><li><strong>考勤模組</strong>：請假/遲到/缺勤記錄，關帳同步薪資，不能再改</li><li><strong>calcSettlement()</strong>：離職結算（資遣費/預告工資/未休年假）</li></ul><h2>四、全面稽核 — 20 個問題一次解決</h2><table class='log-table'><tr><th>類別</th><th>問題數</th><th>代表問題</th></tr><tr><td>資料準確性</td><td>8</td><td>TW 社會保險費率算錯</td></tr><tr><td>安全漏洞</td><td>5</td><td>XSS 未防護的輸入點</td></tr><tr><td>雙語 i18n</td><td>7</td><td>新增欄位只有英文，中文缺漏</td></tr></table><div class='log-stats'><div class='log-stat'><span class='log-stat-n'>14</span><span class='log-stat-l'>Git commits</span></div><div class='log-stat'><span class='log-stat-n'>202</span><span class='log-stat-l'>今日優化</span></div><div class='log-stat'><span class='log-stat-n'>23</span><span class='log-stat-l'>修復 bug 數</span></div><div class='log-stat'><span class='log-stat-n'>5</span><span class='log-stat-l'>上線中專案</span></div></div><div class='log-quote'>「最好的狀態不是同時開很多新東西，而是把已有的每一個都推進一步。」<br><em>— Ellen，2026-03-24</em></div><h3>這天學到的</h3><ol><li><strong>全面稽核的價值</strong> — 20 個問題一次找出來，比之後零散修快很多</li><li><strong>Build Log 是信任建立工具</strong> — 讓訪客看到你在進步，比靜態作品集更有說服力</li><li><strong>安全問題不要等</strong> — test.html 那個洞，一行 redirect 就能堵住</li><li><strong>考勤關帳需要硬鎖定</strong> — 軟提醒不夠，關帳後的資料必須技術層面無法修改</li></ol>",
@@ -1184,12 +1193,14 @@ const CHANGELOG = [
     "title": {
       "en": "Payband v1.0 — Phase 1A Complete",
       "zh": "Payband v1.0 — Phase 1A 完成",
-      "sc": "Payband v1.0 — Phase 1A 完成"
+      "sc": "Payband v1.0 — Phase 1A 完成",
+      "ja": "Payband v1.0 — Phase 1A完成"
     },
     "subtitle": {
       "en": "7 modules · 12 countries × 12 job families · IC/M dual track",
       "zh": "7 大模組上線 · 12 國 × 12 職能 · IC/M 雙軌",
-      "sc": "7 大模块上线 · 12 国 × 12 职能 · IC/M 双轨"
+      "sc": "7 大模块上线 · 12 国 × 12 职能 · IC/M 双轨",
+      "ja": "7モジュール · 12カ国 × 12職種 · IC/M双軌"
     },
     "tags": [
       "Launch",
@@ -1199,7 +1210,8 @@ const CHANGELOG = [
     "statsLine": {
       "en": "7 modules · 12 countries · IC/M dual track",
       "zh": "7 模組 · 12 國 · IC/M 雙軌",
-      "sc": "7 模块 · 12 国 · IC/M 双轨"
+      "sc": "7 模块 · 12 国 · IC/M 双轨",
+      "ja": "7モジュール · 12カ国 · IC/M双軌"
     },
     "body": {
       "zh": "<div class='log-callout log-callout-blue'><strong>這天的核心：</strong>Payband 的起點不是「HR 通用薪酬工具」，而是更精準的切入點 — 虛擬貨幣交易所的薪資對比。這是一個別人沒有做過、市場需求又真實存在的細分市場。</div><h2>一、產品概念</h2><p>目標：對比各個國家的薪資，主要聚焦虛擬貨幣交易所。台灣公司雇用菲律賓、印尼、馬來西亞工程師，薪資該怎麼訂？</p><h3>設計風格要求</h3><ul><li>有科技感質感，但不要黑色底</li><li>賽博 + 數碼的感覺</li><li>顏色不要太鮮艷（避免免費套件感）</li><li>地圖視覺化 — 讓用戶可以點擊地圖選取國家</li></ul><h2>二、首頁設計</h2><p>加入首頁讓訪客理解網站定位 — 以「薪酬策略跨國專家」作為品牌形象，不只是資料查詢工具。</p><h2>三、深度擴展方向</h2><p>145 則對話裡，用 C&amp;B 專業知識定義了這個工具的深度：</p><table><tr><th>優先順序</th><th>功能</th><th>說明</th></tr><tr><td>#1</td><td>Total Comp 結構拆解</td><td>底薪 / 獎金 / Token / 津貼 / 福利價值</td></tr><tr><td>#2</td><td>Token / Equity 薪酬</td><td>代幣授予、歸屬期、稅務處理</td></tr><tr><td>#3</td><td>Gross-to-Net 試算器</td><td>稅前→稅後實拿，各國稅級與扣繳</td></tr><tr><td>#4</td><td>僱主法定成本</td><td>社保 / 公積金 / 勞保雇主提撥比例</td></tr><tr><td>加碼</td><td>福利基準 Benefits Benchmark</td><td>醫療、牙科、退休金匹配比例</td></tr></table><h2>四、各國法規對比</h2><ul><li>各國節假日、特休、婚假、病假</li><li>資遣費法規</li><li>各國行事曆</li><li>法規串接政府公開 API + AI 摘要更新</li></ul><div class='log-callout log-callout-yellow'><strong>職位分級：</strong>薪資數據要區分職等（Junior / Senior / Lead / Manager）和工作內容（Engineering / Product / Operations 等），不能只是國家平均薪資。</div><div class='log-stats'><div class='log-stat'><span class='log-stat-n'>145</span><span class='log-stat-l'>對話則數</span></div><div class='log-stat'><span class='log-stat-n'>71</span><span class='log-stat-l'>優化次數</span></div><div class='log-stat'><span class='log-stat-n'>5+</span><span class='log-stat-l'>目標國家</span></div><div class='log-stat'><span class='log-stat-n'>4</span><span class='log-stat-l'>核心薪酬模組</span></div></div><div class='log-quote'>「薪酬數據 + 法規對比 + Token 薪酬 — 這是傳統 HR 工具做不到的組合。」</div>",
@@ -1218,12 +1230,14 @@ const CHANGELOG = [
     "title": {
       "en": "Career Health Check — Launched to Production",
       "zh": "Career Health Check 正式上線",
-      "sc": "Career Health Check 正式上线"
+      "sc": "Career Health Check 正式上线",
+      "ja": "Career Health Check — 本番リリース"
     },
     "subtitle": {
       "en": "Stripe live mode · Resend email · PDF auto-generation confirmed",
       "zh": "Stripe 正式模式啟用 · Resend 郵件 · PDF 自動產出確認",
-      "sc": "Stripe 正式模式启用 · Resend 邮件 · PDF 自动产出确认"
+      "sc": "Stripe 正式模式启用 · Resend 邮件 · PDF 自动产出确认",
+      "ja": "Stripe本番モード · Resendメール · PDF自動生成確認"
     },
     "tags": [
       "Launch",
@@ -1234,7 +1248,8 @@ const CHANGELOG = [
     "statsLine": {
       "en": "8 modules · 3 integrations · Production live",
       "zh": "8 模組 · 3 個整合 · 正式上線",
-      "sc": "8 模块 · 3 个整合 · 正式上线"
+      "sc": "8 模块 · 3 个整合 · 正式上线",
+      "ja": "8モジュール · 3インテグレーション · 本番稼働"
     },
     "body": {
       "zh": "<div class='log-callout log-callout-blue'><strong>這天的核心：</strong>三個第三方整合在同一天全部上線——從 beta 進入正式 production 的關鍵一天。</div><h2>上線前最後三關</h2><ul><li><strong>Stripe 正式模式</strong>：從測試卡切換到真實刷卡，第一筆真實付款成功</li><li><strong>Resend 郵件</strong>：付款完成後自動發送報告，延遲測試在 3 秒內</li><li><strong>PDF 自動產出</strong>：AI 報告生成完成後立即轉成 PDF，附件寄出確認</li></ul><div class='log-callout log-callout-yellow'>這個工具的初衷：很多人在職涯某個節點會感覺「哪裡不對」，但說不清楚。Career Health Check 想做的，就是幫你說清楚。</div><div class='log-stats'><div class='log-stat'><span class='log-stat-n'>8</span><span class='log-stat-l'>診斷模組</span></div><div class='log-stat'><span class='log-stat-n'>3</span><span class='log-stat-l'>整合服務</span></div><div class='log-stat'><span class='log-stat-n'>1</span><span class='log-stat-l'>正式上線</span></div></div>",
@@ -1253,12 +1268,14 @@ const CHANGELOG = [
     "title": {
       "en": "Claude Guide — Bilingual AI Guide Launched",
       "zh": "Claude Guide 雙語 AI 使用指南上線",
-      "sc": "Claude Guide 双语 AI 使用指南上线"
+      "sc": "Claude Guide 双语 AI 使用指南上线",
+      "ja": "漂島信箱 — 24バージョンでたどり着いた感覚"
     },
     "subtitle": {
       "en": "3 main pages + 6 topic guides · Bilingual · Built in under 2 days",
       "zh": "3 主頁 + 6 主題手冊 · 雙語切換 · 2 天完成",
-      "sc": "3 主页 + 6 主题手册 · 双语切换 · 2 天完成"
+      "sc": "3 主页 + 6 主题手册 · 双语切换 · 2 天完成",
+      "ja": "v8からv24へ · 感情体験のデザイン言語 · 正式版リリース"
     },
     "tags": [
       "Launch",
@@ -1268,7 +1285,8 @@ const CHANGELOG = [
     "statsLine": {
       "en": "3 pages + 6 guides · Bilingual · 2 days to launch",
       "zh": "3 主頁 + 6 手冊 · 雙語 · 2 天完成",
-      "sc": "3 主页 + 6 手册 · 双语 · 2 天完成"
+      "sc": "3 主页 + 6 手册 · 双语 · 2 天完成",
+      "ja": "24バージョン · 121回最適化 · 1時間でv8→v24"
     },
     "body": {
       "zh": "<div class='log-callout log-callout-green'><strong>這天的挑戰：</strong>漂島不是功能性產品，是情感體驗。這讓設計的驗證標準從「有沒有 bug」變成「感覺對不對」。量化指標在這裡無效。</div><h2>一、迭代的痕跡</h2><p>桌面上留下的版本快照：</p><ul><li><code>drift-island-v8.html</code>（34,821 bytes，17:40）</li><li><code>drift-island-v24.html</code>（41,696 bytes，18:34）</li><li><code>drift-island/index.html</code>（42,504 bytes，19:53）— 正式版</li></ul><p>v8 到 v24，一個小時內，增加了約 7,000 bytes 的動畫和細節。</p><h2>二、情感類產品的設計語言</h2><p>和 Notion 風格（極簡、白底、留白）完全不同，漂島需要的是：</p><table><tr><th>設計維度</th><th>漂島的選擇</th></tr><tr><td>色調</td><td>海洋藍、夜空深藍、月光白 — 有「遠方」的感覺</td></tr><tr><td>文字語氣</td><td>輕柔，沒有行銷感，讓人感到被理解</td></tr><tr><td>動態效果</td><td>緩慢漂浮、水面波紋、信件消失動畫</td></tr><tr><td>互動設計</td><td>打開 → 寫字 → 送出 → 離開。不留副本。</td></tr><tr><td>功能密度</td><td>越少越好，每個功能都是對氛圍的打擾</td></tr></table><h2>三、最終版上線</h2><ul><li>URL：drift-island.netlify.app</li><li>GA4：G-BPHSB3CTVN</li><li>聯絡方式：Google Apps Script</li></ul><p>這是所有專案裡唯一不是「功能性」的 — 它是「體驗性」的。</p><div class='log-stats'><div class='log-stat'><span class='log-stat-n'>24</span><span class='log-stat-l'>版本數</span></div><div class='log-stat'><span class='log-stat-n'>121</span><span class='log-stat-l'>優化次數</span></div><div class='log-stat'><span class='log-stat-n'>1hr</span><span class='log-stat-l'>v8→v24 時間</span></div><div class='log-stat'><span class='log-stat-n'>42KB</span><span class='log-stat-l'>最終檔案</span></div></div><div class='log-quote'>「有些東西做 24 個版本還不夠，因為感覺對了才算對。」<br><em>— 功能性產品用指標驗證，情感類產品靠直覺</em></div>",
@@ -1287,12 +1305,14 @@ const CHANGELOG = [
     "title": {
       "en": "Drift Island — Anonymous Letter Site Launched",
       "zh": "漂島信箱 — 匿名投信網站上線",
-      "sc": "漂岛信箱 — 匿名投信网站上线"
+      "sc": "漂岛信箱 — 匿名投信网站上线",
+      "ja": "1日で3プロジェクト誕生"
     },
     "subtitle": {
       "en": "AI auto-reply via Apps Script · Inspired by Namiya General Store",
       "zh": "Apps Script AI 自動回信 · 靈感來自解憂雜貨店",
-      "sc": "Apps Script AI 自动回信 · 灵感来自解忧杂货店"
+      "sc": "Apps Script AI 自动回信 · 灵感来自解忧杂货店",
+      "ja": "Career Health Check + 漂島信箱 + Claude指南 — 767+回の対話"
     },
     "tags": [
       "Launch",
@@ -1302,7 +1322,8 @@ const CHANGELOG = [
     "statsLine": {
       "en": "Anonymous letters · AI-assisted replies · 0 templates",
       "zh": "匿名投信 · AI 協助回覆 · 0 個模板",
-      "sc": "匿名投信 · AI 协助回复 · 0 个模板"
+      "sc": "匿名投信 · AI 协助回复 · 0 个模板",
+      "ja": "匿名投信 · AIアシスト返信 · テンプレートなし"
     },
     "body": {
       "zh": "<div class='log-callout log-callout-yellow'><strong>這一天有三條平行的創作線同時進行，</strong>合計超過 767 則對話。每個專案都是完全不同的類型：一個是互動式問卷工具，一個是情感體驗網站，一個是技術指南。</div><h2>Chapter 1｜Career Health Check（122 則對話）</h2><p>概念來源：做 HR 多年，見過很多人不清楚自己的職涯問題出在哪裡。有人覺得是薪水不夠，其實是缺少成就感；有人覺得要換工作，其實只是需要換部門。</p><h3>產品設計要求</h3><ul><li>Notion 風格簡約，不要太銳利，要有溫度柔和的感覺</li><li>填寫時要有互動感、動態感</li><li>如果惡意亂填或都不填，不產出報告，只給一個鼓勵</li><li>問卷涵蓋：工作意義感、薪酬滿意度、成長機會、人際關係、工作生活平衡、職涯方向清晰度</li></ul><div class='log-callout log-callout-green'>填了職涯健檢的人，如果是 HR，可能會對 Payband 感興趣。<br><strong>Career Health Check = 低門檻體驗，建立信任，引導進入產品漏斗。</strong></div><h2>Chapter 2｜漂島信箱（240 則對話）</h2><p><strong>靈感來源：</strong>讀了東野圭吾的《解憂雜貨舖》，想讓有煩惱的人也有一個地方可以寄信。</p><ul><li>最初想法：做「解憂雜貨舖」，讓有煩惱的人寄信過來</li><li>探索了多種形式：AI 自動回信、真人回信、混合型</li><li>決定用「角色 / 店名，保持神秘感」，不以真名出現</li><li>命名最終選定「漂島信箱」——有漂流感，有歸屬，也有「信」的意象</li></ul><h2>Chapter 3｜Claude 指南 HTML（405 則對話）</h2><p>這天也在打造 Claude Code 的個人使用指南，以 <code>ClaudeUserGuide_EllenChuang</code> 命名。405 則對話是這天對話數最多的一條線——每一頁都在修改、測試、反覆調整排版和內容。</p><div class='log-stats'><div class='log-stat'><span class='log-stat-n'>767+</span><span class='log-stat-l'>今日總對話</span></div><div class='log-stat'><span class='log-stat-n'>258</span><span class='log-stat-l'>優化次數</span></div><div class='log-stat'><span class='log-stat-n'>3</span><span class='log-stat-l'>平行專案</span></div><div class='log-stat'><span class='log-stat-n'>2</span><span class='log-stat-l'>同日部署</span></div></div><div class='log-quote'>「諮詢服務最難規模化，但如果能把邏輯數位化，就可以服務無限多人。」<br><em>— 把多年 HR 經驗壓縮成一份問卷的那一刻</em></div>",
@@ -1321,12 +1342,14 @@ const CHANGELOG = [
     "title": {
       "en": "Remote HRIS v10 — 9-Module HRIS Complete",
       "zh": "Remote HRIS v10 — 9 模組 HRIS 完成",
-      "sc": "Remote HRIS v10 — 9 模块 HRIS 完成"
+      "sc": "Remote HRIS v10 — 9 模块 HRIS 完成",
+      "ja": "Remote HRIS v10 — 9モジュールHRIS完成"
     },
     "subtitle": {
       "en": "Full payroll engine · Multi-currency · Labor law (TW/SG/PH/MY) · 3,447 lines in 2 days",
       "zh": "完整薪資引擎 · 多幣種 · 勞動法規（TW/SG/PH/MY）· 3,447 行 · 2 天完成",
-      "sc": "完整薪资引擎 · 多币种 · 劳动法规（TW/SG/PH/MY）· 3,447 行 · 2 天完成"
+      "sc": "完整薪资引擎 · 多币种 · 劳动法规（TW/SG/PH/MY）· 3,447 行 · 2 天完成",
+      "ja": "完全な給与エンジン · 多通貨 · 労働法（TW/SG/PH/MY） · 3,447行 · 2日完成"
     },
     "tags": [
       "v10",
@@ -1337,7 +1360,8 @@ const CHANGELOG = [
     "statsLine": {
       "en": "9 modules · 3,447 lines · 4-country compliance · 2 days",
       "zh": "9 模組 · 3,447 行 · 四國法規 · 2 天",
-      "sc": "9 模块 · 3,447 行 · 四国法规 · 2 天"
+      "sc": "9 模块 · 3,447 行 · 四国法规 · 2 天",
+      "ja": "9モジュール · 3,447行 · 4カ国対応 · 2日間"
     },
     "body": {
       "zh": "<div class='log-callout log-callout-blue'><strong>這天的核心：</strong>完全不會寫程式的 Ellen，在第一次用 Claude Code 的第一天，就做出了一個有 9 個模組、涵蓋完整薪資計算邏輯的 HRIS 系統。上線前已在本地迭代到 v10。</div><h2>一、為什麼要做 Remote HRIS</h2><p>台灣公司管理跨國遠端員工需要處理的問題：</p><ul><li>不同國家的勞動法規（菲律賓、馬來西亞、印尼等）</li><li>不同節假日的計算方式</li><li>不同幣別的薪資換算</li><li>薪資條的發送與記錄保存</li></ul><div class='log-callout log-callout-gray'><strong>設計原則：</strong>UI 使用 Notion 風格（大量留白、無襯線字體、灰色調邊框），因為這是 HR 人員日常要用的工具，要看起來清爽，不能花俏。</div><h2>二、280 則對話的迭代歷程</h2><h3>薪資計算邏輯</h3><ul><li><strong>加班時薪：</strong>用（月底薪 ÷ 22 ÷ 8）作為基數，欄位只填倍數</li><li><strong>KPI 績效獎金：</strong>設定獎金基數，輸入分數自動計算（例：基數 1000 × 90分% = 900）</li><li><strong>入職當月按比例計算</strong>，避免全月計算的錯誤</li><li><strong>補貼項目：</strong>餐補、房補、旅補、三節獎金、業績獎金</li></ul><h3>薪資鎖定機制</h3><div class='log-callout log-callout-yellow'>已確認發放的月份設為<strong>唯讀</strong>，防止意外修改。解鎖需要連續兩次確認視窗 + 填寫修改原因。「確認完成的就要唯讀。」</div><h2>三、九個模組</h2><table><tr><th>#</th><th>模組</th><th>核心功能</th></tr><tr><td>1</td><td>人事管理</td><td>員工清單、編號、入職日、狀態</td></tr><tr><td>2</td><td>薪資計算</td><td>底薪、加班、KPI、補貼、假別扣薪</td></tr><tr><td>3</td><td>節假日資料庫</td><td>多國節日、計算邏輯</td></tr><tr><td>4</td><td>勞動法規查詢</td><td>各國法規即時參考</td></tr><tr><td>5</td><td>幣別換算</td><td>每月匯率存檔、歷史報表準確</td></tr><tr><td>6</td><td>報表輸出</td><td>薪資報告、月對月比較</td></tr><tr><td>7</td><td>用戶設定</td><td>公司基本資料、幣別偏好</td></tr><tr><td>8</td><td>資料匯入匯出</td><td>CSV 匯入、PDF 薪資條</td></tr><tr><td>9</td><td>概覽儀表板</td><td>當月薪資總覽、發放狀態</td></tr></table><h2>四、v10 直接上線</h2><p>commit 訊息是 <code>init: remote-hris v10 (3448 lines, 9 modules)</code>。v1 到 v9 都在本地測試，直接上傳最終版，不等完美，先上線再說。</p><div class='log-callout log-callout-green'><strong>同天也建立了 CLAUDE.md：</strong>為 Remote HRIS 建立 Claude Code 的工作規則文件，明確禁止 AI 隨意部署。這是工程紀律的開始。</div><div class='log-stats'><div class='log-stat'><span class='log-stat-n'>280</span><span class='log-stat-l'>對話則數</span></div><div class='log-stat'><span class='log-stat-n'>136</span><span class='log-stat-l'>優化次數</span></div><div class='log-stat'><span class='log-stat-n'>9</span><span class='log-stat-l'>系統模組</span></div><div class='log-stat'><span class='log-stat-n'>3448</span><span class='log-stat-l'>程式碼行數</span></div></div><div class='log-quote'>「完全不會寫程式的人，第一天就做出 3448 行的系統。這就是 Claude Code 的能力邊界。」</div>",
@@ -1738,23 +1762,33 @@ function render() {
     '3つのフェーズ。その一つひとつが、すべてを変えるコラボレーションへと繋がっていきました。'
   );
   document.getElementById('ch1-num').textContent  = t('01 / Foundation','01 / 基礎','01 / 基础');
-  document.getElementById('ch1-title').textContent = t('Discipline at Scale','在規模中鍛鍊紀律','在规模中锻炼纪律','Disziplin im großen Maßstab','La discipline à grande échelle','วินัยภายใต้ความกดดันและขนาดองค์กร','규모 속에서 단련된 규율');
+  document.getElementById('ch1-title').textContent = t('Discipline at Scale','在規模中鍛鍊紀律','在规模中锻炼纪律','Disziplin im großen Maßstab','La discipline à grande échelle','วินัยภายใต้ความกดดันและขนาดองค์กร','규모 속에서 단련된 규율','規模の中で鍛えられた規律');
   document.getElementById('ch1-body').innerHTML   = t(
     'From managing HR for <strong>2,000 personnel</strong> in the military to becoming an <strong>Annual Sales Champion</strong> with 150 deals in year one — that\'s how I learned to build systems that hold under pressure.',
     '從軍中管理 <strong>2,000 名人員</strong>的行政事務，到成為第一年 <strong>150 台的銷售年度冠軍</strong>——我的基礎在容錯率極低、結果完全透明的環境中打造。',
-    '从军中管理 <strong>2,000 名人员</strong>的行政事务，到成为第一年 <strong>150 台的销售年度冠军</strong>——我的基础在容错率极低、结果完全透明的环境中打造。'
+    '从军中管理 <strong>2,000 名人员</strong>的行政事务，到成为第一年 <strong>150 台的销售年度冠军</strong>——我的基础在容错率极低、结果完全透明的环境中打造。',
+    'Von der Verwaltung von HR für <strong>2.000 Militärangehörige</strong> bis hin zur Auszeichnung als <strong>Jahresverkaufschampion</strong> mit 150 Abschlüssen im ersten Jahr — so lernte ich, Systeme zu bauen, die unter Druck standhalten.',
+    'De la gestion des RH pour <strong>2 000 militaires</strong> à l\'obtention du titre de <strong>champion annuel des ventes</strong> avec 150 contrats dès la première année — c\'est ainsi que j\'ai appris à bâtir des systèmes qui résistent à la pression.',
+    'จากการดูแล HR สำหรับ <strong>บุคลากร 2,000 คน</strong>ในกองทหาร จนก้าวสู่การเป็น<strong>แชมป์ยอดขายประจำปี</strong>ด้วยดีล 150 รายการในปีแรก — นั่นคือวิธีที่ฉันเรียนรู้การสร้างระบบที่ยืนหยัดได้ภายใต้แรงกดดัน',
+    '군대에서 <strong>2,000명의 인사</strong>를 관리한 경험부터 첫 해에 150건을 달성한 <strong>연간 판매 챔피언</strong>까지 — 그것이 압박 속에서도 작동하는 시스템을 구축하는 법을 배운 방법입니다.',
+    '軍での<strong>2,000名の人事管理</strong>から、入社1年目に150件の契約を達成した<strong>年間販売チャンピオン</strong>まで——プレッシャーの下でも機能するシステムの構築方法を学びました。'
   );
 
   document.getElementById('ch2-num').textContent  = t('02 / Expertise','02 / 深度專業','02 / 深度专业');
-  document.getElementById('ch2-title').textContent = t('Ten Years in the Engine Room','十年深耕薪酬核心','十年深耕薪酬核心','Zehn Jahre im Herzstück des Betriebs','Dix ans au cœur du moteur','10 ปีในหัวใจสำคัญของระบบ','엔진룸에서의 10년');
+  document.getElementById('ch2-title').textContent = t('Ten Years in the Engine Room','十年深耕薪酬核心','十年深耕薪酬核心','Zehn Jahre im Herzstück des Betriebs','Dix ans au cœur du moteur','10 ปีในหัวใจสำคัญของระบบ','엔진룸에서의 10년','エンジンルームでの10年');
   document.getElementById('ch2-body').innerHTML   = t(
     'As a C&amp;B Manager across <strong>5 countries</strong> — Taiwan, Philippines, Singapore, UAE, and Malaysia — I handled payroll for <strong>1,000+ employees</strong>, saved <strong>USD 35,000</strong> in cost corrections, and built compensation frameworks for industries from manufacturing to crypto exchanges. I can read your comp structure and spot the gaps in minutes.',
     '擔任跨越 <strong>5 個國家</strong>（台灣、菲律賓、新加坡、阿聯酋、馬來西亞）的 C&amp;B 主管，管理超過 <strong>1,000 名員工</strong>的薪資，透過稽核修正節省 <strong>USD 35,000</strong> 成本，為製造業至加密貨幣交易所設計薪酬架構。',
-    '担任跨越 <strong>5 个国家</strong>（台湾、菲律宾、新加坡、阿联酋、马来西亚）的 C&amp;B 主管，管理超过 <strong>1,000 名员工</strong>的薪资，通过稽核修正节省 <strong>USD 35,000</strong> 成本，为制造业至加密货币交易所设计薪酬架构。'
+    '担任跨越 <strong>5 个国家</strong>（台湾、菲律宾、新加坡、阿联酋、马来西亚）的 C&amp;B 主管，管理超过 <strong>1,000 名员工</strong>的薪资，通过稽核修正节省 <strong>USD 35,000</strong> 成本，为制造业至加密货币交易所设计薪酬架构。',
+    'Als C&amp;B-Manager in <strong>5 Ländern</strong> — Taiwan, Philippinen, Singapur, VAE und Malaysia — verwaltete ich die Gehaltsabrechnung für <strong>über 1.000 Mitarbeiter</strong>, sparte <strong>USD 35.000</strong> durch Korrekturen und entwickelte Vergütungsstrukturen von der Fertigung bis hin zu Kryptobörsen.',
+    'En tant que Responsable C&amp;B dans <strong>5 pays</strong> — Taiwan, Philippines, Singapour, EAU et Malaisie — j\'ai géré la paie de <strong>plus de 1 000 employés</strong>, économisé <strong>35 000 USD</strong> et conçu des structures de rémunération de l\'industrie manufacturière aux échanges de crypto-monnaies.',
+    'ในฐานะผู้จัดการ C&amp;B ใน <strong>5 ประเทศ</strong> — ไต้หวัน ฟิลิปปินส์ สิงคโปร์ UAE และมาเลเซีย — ดูแลเงินเดือนพนักงาน <strong>กว่า 1,000 คน</strong> ประหยัดได้ <strong>USD 35,000</strong> จากการแก้ไขข้อผิดพลาด และสร้างโครงสร้างค่าตอบแทนตั้งแต่การผลิตไปจนถึงการแลกเปลี่ยนสกุลเงินดิจิทัล',
+    '<strong>5개국</strong>(대만, 필리핀, 싱가포르, UAE, 말레이시아)의 C&amp;B 매니저로서 <strong>1,000명 이상</strong> 급여 관리, <strong>USD 35,000</strong> 비용 절감, 제조업부터 암호화폐 거래소까지 보상 체계를 설계했습니다.',
+    '<strong>5カ国</strong>（台湾、フィリピン、シンガポール、UAE、マレーシア）のC&amp;Bマネージャーとして<strong>1,000名以上</strong>の給与管理を担当し、<strong>USD 35,000</strong>のコスト削減を実現、製造業から仮想通貨取引所まで報酬体系を構築してきました。'
   );
 
   document.getElementById('ch3-num').textContent  = t('03 / The Partnership','03 / 找到夥伴','03 / 找到伙伴');
-  document.getElementById('ch3-title').textContent = t('AI: From Tool to Collaborative Partner','AI：從工具進化為合作夥伴','AI：从工具进化为合作伙伴','KI: Vom Werkzeug zum Partner','L\'IA : d\'outil à partenaire collaboratif','AI: จากเครื่องมือ สู่การเป็นพาร์ทเนอร์ผู้ร่วมสร้าง','AI: 단순한 도구에서 진정한 파트너로의 진화');
+  document.getElementById('ch3-title').textContent = t('AI: From Tool to Collaborative Partner','AI：從工具進化為合作夥伴','AI：从工具进化为合作伙伴','KI: Vom Werkzeug zum Partner','L\'IA : d\'outil à partenaire collaboratif','AI: จากเครื่องมือ สู่การเป็นพาร์ทเนอร์ผู้ร่วมสร้าง','AI: 단순한 도구에서 진정한 파트너로의 진화','AI：ツールから真の協力パートナーへ');
   document.getElementById('ch3-body').innerHTML   = t(
     "I don't write code — I give code its soul and purpose. My AI journey began in March 2023 with GPT, and in March 2026 I started building with Claude as a genuine co-builder. Not a shortcut, not a toy — a partner that executes while I think. <strong>6 products, 1235 optimizations</strong> — built together.",
     '我不寫程式，我賦予程式碼靈魂與價值。2023 年 3 月，我與 GPT 展開 AI 協作的第一步；2026 年 3 月，我開始以 Claude 為真正的共同建造者。不是走捷徑的工具，也不是玩具——而是我思考時負責執行的夥伴。<strong>6 個產品，1235 次優化</strong>——一起完成的。',
