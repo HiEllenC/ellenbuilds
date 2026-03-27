@@ -788,7 +788,7 @@ footer{
 <div id="contact-modal" onclick="if(event.target===this)closeModal()">
   <div class="modal-box">
     <button class="modal-close" onclick="closeModal()">✕</button>
-    <div class="modal-title" id="m-title">Get in Touch</div>
+    <div class="modal-title" id="m-title">Let's Work Together</div>
     <p class="modal-desc" id="m-desc">Whether it's a C&B question, collaboration, or exploring what HR looks like with AI — feel free to reach out.</p>
     <form id="contact-form" onsubmit="submitForm(event)">
       <div class="hp-field" aria-hidden="true">
@@ -1744,7 +1744,7 @@ function closeModal() {
   document.body.style.overflow = '';
 }
 function updateModalLang() {
-  document.getElementById('m-title').textContent    = t('Get in Touch','聯繫我','联系我','Kontakt aufnehmen','Contactez-moi','ติดต่อ','문의하기','お問い合わせ');
+  document.getElementById('m-title').textContent    = t('Let\'s Work Together','一起合作','一起合作','Lass uns zusammenarbeiten','Travaillons ensemble','มาทำงานร่วมกัน','함께 일해요','一緒に仕事しましょう');
   document.getElementById('m-desc').textContent     = t(
     "Whether it's a C&B question, collaboration, or exploring what HR looks like with AI — feel free to reach out.",
     '無論是薪酬問題、合作洽談，或想探索 AI 在 HR 的可能性，歡迎直接聯繫。',
@@ -1832,7 +1832,7 @@ function render() {
     '私の強みはコーディングの知識ではなく、専門領域への深い知見です。解決すべきHRの課題が何かを的確に把握しており、AIはこれまでで最も直感的なパートナーです。AIと共に、わずか1ヶ月で6つもの製品をリリースしました。'
   );
   document.getElementById('h-cta1').textContent = t('See My Projects ↓','看我做了什麼 ↓','看我做了什么 ↓','Meine Projekte ansehen ↓','Voir mes projets ↓','ดูโปรเจกต์ของฉัน ↓','내 프로젝트 보기 ↓','私のプロジェクトを見る ↓');
-  document.getElementById('h-cta2').textContent = t('Get in Touch →','聯繫我 →','联系我 →','Kontakt aufnehmen →','Contactez-moi →','ติดต่อ →','문의하기 →','お問い合わせ →');
+  document.getElementById('h-cta2').textContent = t('Let\'s Work Together →','一起合作 →','一起合作 →','Zusammenarbeiten →','Travaillons ensemble →','มาทำงานด้วยกัน →','함께 일해요 →','一緒に仕事しよう →');
 
   // Stats
   document.getElementById('s1').textContent = t('Years HR Experience','年 HR 經驗','年 HR 经验','Jahre HR-Erfahrung',"Années d'expérience RH",'ประสบการณ์สายงาน HR (ปี)','HR 실무 경력 (년)','年間のHR経験');
@@ -1933,7 +1933,7 @@ function render() {
   renderSkills();
 
   // Contact
-  document.getElementById('c-label').textContent    = t('Get in Touch','聯繫我','联系我','Kontakt aufnehmen','Contactez-moi','ติดต่อ','문의하기','お問い合わせ');
+  document.getElementById('c-label').textContent    = t('Let\'s Work Together','一起合作','一起合作','Lass uns zusammenarbeiten','Travaillons ensemble','มาทำงานร่วมกัน','함께 일해요','一緒に仕事しましょう');
   document.getElementById('c-btn-text').textContent = t('Contact Me →','聯絡我 →','联络我 →','Kontakt →','Me contacter →','ติดต่อฉัน →','연락하기 →','連絡する →');
   document.getElementById('c-headline').textContent = t(
     "Have an HR problem worth solving?",
