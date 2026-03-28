@@ -2539,6 +2539,56 @@
 
       const CHANGELOG = [
         {
+          date: "2026-03-27",
+          projects: [
+            {
+              emoji: "🌐",
+              label: "ellenbuilds",
+              color: "#1a5c40",
+            },
+            {
+              emoji: "💰",
+              label: "ipayband",
+              color: "#1a5c40",
+            },
+          ],
+          title: {
+            en: "ellenbuilds 8-Language Coverage + iPayband Full Rebrand",
+            zh: "ellenbuilds 8 語言全覆蓋 + iPayband 品牌全面翻新",
+            sc: "ellenbuilds 8语言全覆盖 + iPayband 品牌全面翻新",
+            ja: "ellenbuilds 8言語対応 + iPayband 全面リブランド",
+            de: "ellenbuilds 8-Sprachen-Abdeckung + iPayband komplettes Rebranding",
+            fr: "ellenbuilds couverture 8 langues + refonte complète iPayband",
+            th: "ellenbuilds ครอบคลุม 8 ภาษา + รีแบรนด์ iPayband เต็มรูปแบบ",
+            kr: "ellenbuilds 8개국어 완성 + iPayband 전면 리브랜딩",
+          },
+          subtitle: {
+            en: "8-language UI complete · iPayband renamed + world map hero · 10 AI agent audits · 14 labor law fixes",
+            zh: "8 語言 UI 補齊 · iPayband 改名 + 世界地圖 Hero · 10 個 AI agent 稽核 · 14 項勞動法規修正",
+            sc: "8语言UI补齐 · iPayband 改名 + 世界地图 Hero · 10个AI agent稽核 · 14项劳动法规修正",
+            ja: "8言語UI完成 · iPayband改名 + 世界地図Hero · AIエージェント10本監査 · 労働法14件修正",
+            de: "8-Sprachen-UI fertig · iPayband umbenannt + Weltkarte Hero · 10 KI-Agenten-Audits · 14 Arbeitsrechtkorrekturen",
+            fr: "UI 8 langues complète · iPayband renommé + carte du monde hero · 10 audits agents IA · 14 corrections droit du travail",
+            th: "UI 8 ภาษาครบ · เปลี่ยนชื่อ iPayband + World Map Hero · ตรวจสอบ AI agent 10 ตัว · แก้กฎหมายแรงงาน 14 รายการ",
+            kr: "8개국어 UI 완성 · iPayband 이름 변경 + 세계 지도 히어로 · AI 에이전트 10개 감사 · 노동법 14건 수정",
+          },
+          tags: ["ellenbuilds", "iPayband", "i18n", "Rebrand"],
+          statsLine: {
+            en: "~11 ellenbuilds commits · ~9 Payband commits · ~27 optimizations · 8 languages · 10 AI audits · 14 law fixes",
+            zh: "ellenbuilds ~11 commits · Payband ~9 commits · ~27 次優化 · 8 種語言 · 10 個 AI 稽核 · 14 項法規修正",
+            sc: "ellenbuilds ~11 commits · Payband ~9 commits · ~27次优化 · 8种语言 · 10个AI稽核 · 14项法规修正",
+            ja: "ellenbuilds ~11コミット · Payband ~9コミット · ~27回最適化 · 8言語 · AIエージェント10本 · 法律14件",
+            de: "ellenbuilds ~11 Commits · Payband ~9 Commits · ~27 Optimierungen · 8 Sprachen · 10 KI-Audits · 14 Gesetzesfixes",
+            fr: "ellenbuilds ~11 commits · Payband ~9 commits · ~27 optimisations · 8 langues · 10 audits IA · 14 corrections légales",
+            th: "ellenbuilds ~11 commits · Payband ~9 commits · ~27 การปรับแต่ง · 8 ภาษา · AI 10 ตัว · กฎหมาย 14 รายการ",
+            kr: "ellenbuilds ~11 커밋 · Payband ~9 커밋 · ~27회 최적화 · 8개 언어 · AI 감사 10개 · 법률 14건",
+          },
+          body: {
+            zh: "<div class='log-callout log-callout-green'><strong>這天的核心：</strong>把已有的做完整——語言覆蓋全補齊，品牌正式升級，資料品質全面稽核。</div><h2>一、ellenbuilds — 8 語言全覆蓋 + 聯絡區改造</h2><p>今天把 8 語言的 UI 字串全部補齊，之前一直有些角落沒翻到，今天算是正式收尾。</p><ul><li>AllPosts 到處貼正式上線，從 beta 狀態變成可點擊的 CTA</li><li>調換 AllPosts 和 BoostResume 的排列順序，讓優先順序看起來更對</li><li>聯絡區 CTA 經過多輪迭代定案：<em>Let's Make It Happen</em></li><li>修了泰文、韓文語言版本裡不自然的地方</li></ul><h2>二、iPayband — 品牌與資料全面翻新</h2><p><strong>品牌與視覺</strong></p><ul><li>正式改名為 <strong>iPayband</strong>，logo 跟著換</li><li>Hero 區換成互動式世界地圖 SVG（WorldMapHero），整個質感差很多</li><li>套用 Scheme B 設計系統：雙色調 palette、premium 卡片樣式</li></ul><p><strong>資料品質</strong></p><ul><li>跑了 10 個 AI agent 稽核，把找到的問題逐一修掉（data 錯誤、UX 問題、SEO）</li><li>補了 14 項勞動法規的正確數據（2025 年來源）</li><li>薪資矩陣換成真實市場數據，參考了 Coinbase、Kraken、Gemini、Ripple</li></ul><p><strong>技術面</strong></p><ul><li>code splitting + rate limiting</li></ul><div class='log-stats'><div class='log-stat'><span class='log-stat-n'>8</span><span class='log-stat-l'>語言版本</span></div><div class='log-stat'><span class='log-stat-n'>10</span><span class='log-stat-l'>AI agent 稽核</span></div><div class='log-stat'><span class='log-stat-n'>14</span><span class='log-stat-l'>法規修正</span></div><div class='log-stat'><span class='log-stat-n'>~27</span><span class='log-stat-l'>今日優化</span></div></div><div class='log-quote'>「好文案不是第一次就寫對的，是改到你不想再改為止。」<br><em>— Ellen，2026-03-27</em></div>",
+            en: "<div class='log-callout log-callout-green'><strong>Core of the day:</strong> Complete what already exists — full language coverage, official brand upgrade, thorough data quality audit.</div><h2>1. ellenbuilds — 8-Language Coverage + Contact Redesign</h2><p>Completed all 8 language UI strings that were previously missing. AllPosts officially launched from beta to live CTA. Contact section copy iterated to final: <em>Let's Make It Happen</em>. Fixed unnatural phrasing in Thai and Korean.</p><h2>2. iPayband — Full Brand & Data Overhaul</h2><p><strong>Brand & Visual</strong></p><ul><li>Officially renamed to <strong>iPayband</strong> with new logo</li><li>Hero replaced with interactive world map SVG (WorldMapHero)</li><li>Applied Scheme B design system: dual-tone palette, premium card style</li></ul><p><strong>Data Quality</strong></p><ul><li>10 AI agent audits — fixed data errors, UX issues, SEO gaps</li><li>14 labor law corrections from 2025 sources</li><li>Salary matrix updated with real market data: Coinbase, Kraken, Gemini, Ripple</li></ul><div class='log-stats'><div class='log-stat'><span class='log-stat-n'>8</span><span class='log-stat-l'>Languages</span></div><div class='log-stat'><span class='log-stat-n'>10</span><span class='log-stat-l'>AI Audits</span></div><div class='log-stat'><span class='log-stat-n'>14</span><span class='log-stat-l'>Law Fixes</span></div><div class='log-stat'><span class='log-stat-n'>~27</span><span class='log-stat-l'>Optimizations</span></div></div><div class='log-quote'>\"Good copy isn't written right the first time — it's rewritten until you can't improve it anymore.\"<br><em>— Ellen, 2026-03-27</em></div>",
+          },
+        },
+        {
           date: "2026-03-26",
           projects: [
             {
