@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>留言 · ellenbuilds</title>
+<link rel="icon" href="dino.jpg" type="image/jpeg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#f5f9f6;--card:#fff;--line:#d8e8de;
+  --ink:#0b1a12;--ink2:#2a4237;--ink3:#5e7a6c;--ink4:#a8c0b2;
+  --acc:#1a5c40;--acc-l:#e6f4ec;--acc-m:#a0cfb4;
+  --f:'Inter','Noto Sans TC',sans-serif;
+  --s1:0 1px 4px rgba(11,26,18,.06),0 1px 2px rgba(11,26,18,.04);
+  --s2:0 4px 20px rgba(11,26,18,.08),0 2px 8px rgba(11,26,18,.04);
+}
+body{font-family:var(--f);background:var(--bg);color:var(--ink);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;-webkit-font-smoothing:antialiased}
+.wrap{width:100%;max-width:480px}
+.back{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--ink3);text-decoration:none;margin-bottom:28px;transition:color .2s}
+.back:hover{color:var(--acc)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:32px;box-shadow:var(--s1)}
+.card-top{margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.ref-label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink4);margin-bottom:6px}
+.ref-title{font-size:15px;font-weight:600;color:var(--ink);line-height:1.4}
+.ref-date{font-size:12px;color:var(--ink3);margin-top:3px}
+h1{font-size:18px;font-weight:700;margin-bottom:6px}
+.sub{font-size:14px;color:var(--ink3);margin-bottom:24px;line-height:1.6}
+label{display:block;font-size:13px;font-weight:600;color:var(--ink2);margin-bottom:6px}
+.opt{font-weight:400;color:var(--ink4);font-size:12px}
+input,textarea{
+  width:100%;padding:10px 14px;border:1px solid var(--line);border-radius:8px;
+  font-family:var(--f);font-size:14px;color:var(--ink);background:#fff;
+  transition:border-color .2s,box-shadow .2s;outline:none;
+}
+input:focus,textarea:focus{border-color:var(--acc-m);box-shadow:0 0 0 3px rgba(26,92,64,.08)}
+textarea{resize:vertical;min-height:100px;line-height:1.6}
+.field{margin-bottom:16px}
+.btn{
+  width:100%;padding:12px;background:var(--acc);color:#fff;
+  border:none;border-radius:8px;font-family:var(--f);font-size:14px;font-weight:600;
+  cursor:pointer;transition:background .2s,transform .15s;margin-top:8px;
+}
+.btn:hover{background:#0f3d28;transform:translateY(-1px)}
+.btn:disabled{background:var(--acc-m);cursor:not-allowed;transform:none}
+.success{
+  display:none;text-align:center;padding:24px;
+  background:var(--acc-l);border:1px solid var(--acc-m);border-radius:12px;margin-top:20px;
+}
+.success .check{font-size:28px;margin-bottom:8px}
+.success p{font-size:14px;color:var(--ink2);line-height:1.6}
+.logo{display:flex;align-items:center;gap:8px;margin-top:24px;justify-content:center}
+.logo a{font-size:13px;color:var(--ink4);text-decoration:none}
+.logo a:hover{color:var(--acc)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a href="https://ellenbuilds.com/#updates" class="back">← 回到建造紀錄</a>
+  <div class="card">
+    <div class="card-top">
+      <div class="ref-label">留言給這篇日誌</div>
+      <div class="ref-title" id="entry-title">—</div>
+      <div class="ref-date" id="entry-date"></div>
+    </div>
+    <h1>留個訊息給 Ellen</h1>
+    <p class="sub">Ellen 會親自閱讀每則留言。</p>
+    <form id="comment-form">
+      <div class="field">
+        <label>名字 <span class="opt">（選填）</span></label>
+        <input type="text" id="f-name" placeholder="你的名字或暱稱">
+      </div>
+      <div class="field">
+        <label>留言內容</label>
+        <textarea id="f-msg" placeholder="寫下你的想法、問題、或鼓勵…" required></textarea>
+      </div>
+      <button type="submit" class="btn" id="f-btn">送出留言 →</button>
+    </form>
+    <div class="success" id="success-msg">
+      <div class="check">✓</div>
+      <p>留言已送出！<br>Ellen 收到後會親自閱讀。</p>
+    </div>
+  </div>
+  <div class="logo"><a href="https://ellenbuilds.com">ellenbuilds.com</a></div>
+</div>
+
+<script>
+const GSCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwg87UMUjoHHVhjXQfUM3zG8u5nhnFUq4yWX-aDCAulB_9Hpe5IgkXHV0XSGpBVyHa5/exec';
+
+const params = new URLSearchParams(window.location.search);
+const entryDate  = params.get('date')  || '';
+const entryTitle = params.get('title') || '建造紀錄';
+
+document.getElementById('entry-title').textContent = entryTitle;
+document.getElementById('entry-date').textContent  = entryDate
+  ? new Date(entryDate).toLocaleDateString('zh-TW',{year:'numeric',month:'long',day:'numeric'})
+  : '';
+
+document.getElementById('comment-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name    = document.getElementById('f-name').value.trim() || '匿名訪客';
+  const message = document.getElementById('f-msg').value.trim();
+  if (!message) return;
+
+  const btn = document.getElementById('f-btn');
+  btn.disabled = true;
+  btn.textContent = '送出中…';
+
+  const body = `[日誌留言｜${entryDate} ${entryTitle}]\n\n${message}`;
+  const p = new URLSearchParams({
+    source:  'build-comment',
+    name,
+    email:   'comment@ellenbuilds.com',
+    message: body
+  });
+
+  fetch(GSCRIPT_URL + '?' + p.toString(), { method: 'GET', mode: 'no-cors' })
+    .then(function() {
+      document.getElementById('comment-form').style.display = 'none';
+      document.getElementById('success-msg').style.display  = 'block';
+    })
+    .catch(function() {
+      btn.disabled = false;
+      btn.textContent = '送出留言 →';
+      alert('送出失敗，請稍後再試。');
+    });
+});
+</script>
+</body>
+</html>
