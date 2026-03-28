@@ -6,14 +6,19 @@
 <title>Ellen Chuang | HR &amp; AI Builder</title>
 <meta name="description" content="C&B Specialist & AI Builder. 10+ years HR expertise across 5 countries. Building HR tools with AI.">
 <link rel="icon" href="dino.jpg" type="image/jpeg">
-<meta property="og:title" content="Ellen Chuang · ellenbuilds">
+<meta property="og:title" content="Ellen Chuang | HR × AI Builder">
 <meta property="og:description" content="C&B Specialist who builds HR tools with AI. 1235 optimizations, 6 products, 10+ years domain expertise.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ellenbuilds.com">
 <meta property="og:image" content="https://ellenbuilds.com/dino.jpg">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ellen Chuang · ellenbuilds">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ellen Chuang - C&B Specialist & AI Builder">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ellen Chuang | HR × AI Builder">
 <meta name="twitter:description" content="C&B Specialist who builds HR tools with AI. 1235 optimizations, 6 products, 10+ years domain expertise.">
+<meta name="twitter:image" content="https://ellenbuilds.com/dino.jpg">
+<meta name="twitter:image:alt" content="Ellen Chuang - C&B Specialist & AI Builder">
 <link rel="canonical" href="https://ellenbuilds.com">
 <link rel="alternate" hreflang="x-default" href="https://ellenbuilds.com/">
 <link rel="alternate" hreflang="en"    href="https://ellenbuilds.com/">
@@ -557,6 +562,10 @@ footer{
   .proj-card{padding:24px}
   .proj-name{font-size:17px}
   .proj-desc{font-size:14px}
+  .proj-cta{min-height:44px;font-size:14px;display:inline-flex;align-items:center;justify-content:center}
+  /* Stats mobile */
+  .stat-label{font-size:11px;line-height:1.4}
+  .stat-updated{font-size:9px;margin-top:6px}
 
   /* Skills */
   .skill-group{padding:24px}
@@ -581,8 +590,9 @@ footer{
 .upd-expand-btn:hover{background:var(--acc-m)}
 .upd-comment-btn{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;color:var(--ink3);background:transparent;border:1px solid var(--line);border-radius:6px;padding:6px 12px;cursor:pointer;transition:all .2s;margin-top:4px;text-decoration:none}
 .upd-comment-btn:hover{border-color:var(--acc-m);color:var(--acc);background:var(--acc-l)}
-.upd-full{display:none;margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
+.upd-full{display:none;margin-top:18px;padding-top:18px;border-top:1px solid var(--line);animation:fadeSlideIn .25s ease}
 .upd-full.open{display:block}
+@keyframes fadeSlideIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
 .upd-full h2{font-size:15px;font-weight:700;color:var(--ink);margin:18px 0 7px}
 .upd-full h2:first-child{margin-top:0}
 .upd-full h3{font-size:13px;font-weight:600;color:var(--ink2);margin:12px 0 5px}
@@ -612,13 +622,23 @@ footer{
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Ellen Chuang",
-  "url": "https://ellenbuilds.com",
-  "jobTitle": "C&B Specialist & AI Builder",
-  "description": "10+ years HR expertise across 5 countries. Building HR tools with AI.",
-  "knowsAbout": ["Compensation & Benefits","Payroll","HR Technology","AI Co-building"],
-  "sameAs": ["https://www.linkedin.com/in/ellen-chuang-817178204"]
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "Ellen Chuang | HR × AI Builder",
+      "url": "https://ellenbuilds.com",
+      "description": "C&B Specialist & AI Builder. 10+ years HR expertise across 5 countries. Building HR tools with AI."
+    },
+    {
+      "@type": "Person",
+      "name": "Ellen Chuang",
+      "url": "https://ellenbuilds.com",
+      "jobTitle": "C&B Specialist & AI Builder",
+      "description": "10+ years HR expertise across 5 countries. Building HR tools with AI.",
+      "knowsAbout": ["Compensation & Benefits","Payroll","HR Technology","AI Co-building"],
+      "sameAs": ["https://www.linkedin.com/in/ellen-chuang-817178204"]
+    }
+  ]
 }
 </script>
 </head>
@@ -638,7 +658,7 @@ footer{
       <a href="https://www.linkedin.com/in/ellen-chuang-817178204" target="_blank" rel="noopener noreferrer" class="nav-linkedin" aria-label="LinkedIn">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
       </a>
-      <select class="lang-select" id="lang-select" onchange="setLang(this.value)">
+      <select class="lang-select" id="lang-select" onchange="setLang(this.value)" aria-label="Select language">
         <option value="en">English</option>
         <option value="zh">繁中</option>
         <option value="sc">简中</option>
@@ -661,7 +681,7 @@ footer{
     <div class="hero-inner">
       <div class="hero-left">
         <div class="identity-mark">
-          <img src="dino.jpg" alt="ellenbuilds">
+          <img src="dino.jpg" alt="Ellen Chuang - HR & AI Builder">
         </div>
         <div class="hero-eyebrow" id="h-eyebrow"></div>
         <h1 class="hero-name">Ellen Chuang</h1>
@@ -798,16 +818,16 @@ footer{
       <div class="m-form-row">
         <div class="m-form-group">
           <label class="m-form-label" id="m-label-name">Name</label>
-          <input class="m-form-input" type="text" id="f-name" required placeholder="Your name">
+          <input class="m-form-input" type="text" id="f-name" required placeholder="Your name" aria-labelledby="m-label-name">
         </div>
         <div class="m-form-group">
           <label class="m-form-label" id="m-label-email">Email</label>
-          <input class="m-form-input" type="email" id="f-email" required placeholder="your@email.com">
+          <input class="m-form-input" type="email" id="f-email" required placeholder="your@email.com" aria-labelledby="m-label-email">
         </div>
       </div>
       <div class="m-form-group">
         <label class="m-form-label" id="m-label-msg">Message</label>
-        <textarea class="m-form-textarea" id="f-msg" required placeholder="Describe your question or request…"></textarea>
+        <textarea class="m-form-textarea" id="f-msg" required placeholder="Describe your question or request…" aria-labelledby="m-label-msg"></textarea>
       </div>
       <button class="m-form-submit" type="submit" id="m-submit">Send →</button>
       <div class="m-form-success" id="m-success">✓ Message sent. I'll get back to you soon.</div>
@@ -819,9 +839,13 @@ footer{
 <footer>
   <div class="footer-inner">
     <div id="footer-text"></div>
+    <a href="https://www.linkedin.com/in/ellen-chuang-817178204" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;margin-top:8px;font-size:12px;color:var(--ink4);text-decoration:none;opacity:.7;" aria-label="Ellen Chuang on LinkedIn">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      LinkedIn
+    </a>
   </div>
   <div class="footer-dino-wrap">
-    <img src="dino.jpg" alt="" class="footer-dino">
+    <img src="dino.jpg" alt="Ellen's dino mascot" class="footer-dino">
   </div>
 </footer>
 
@@ -1831,7 +1855,7 @@ function render() {
     '저의 강점은 코드 문법이 아닌 도메인 통찰력에 있습니다. 어떤 HR 문제를 해결해야 하는지 정확히 알고 있으며, AI는 제가 만난 최고의 협업 파트너입니다. 우리는 한 달 만에 6개의 실제 제품을 함께 완성했습니다.',
     '私の強みはコーディングの知識ではなく、専門領域への深い知見です。解決すべきHRの課題が何かを的確に把握しており、AIはこれまでで最も直感的なパートナーです。AIと共に、わずか1ヶ月で6つもの製品をリリースしました。'
   );
-  document.getElementById('h-cta1').textContent = t('See My Projects ↓','看我做了什麼 ↓','看我做了什么 ↓','Meine Projekte ansehen ↓','Voir mes projets ↓','ดูโปรเจกต์ของฉัน ↓','내 프로젝트 보기 ↓','私のプロジェクトを見る ↓');
+  document.getElementById('h-cta1').textContent = t('Explore My Work ↓','看我用 AI 做了什麼 ↓','看我用 AI 做了什么 ↓','Meine Arbeit entdecken ↓','Découvrir mes projets ↓','ดูสิ่งที่ฉันสร้างด้วย AI ↓','AI로 만든 것들 보기 ↓','AIで作ったものを見る ↓');
   document.getElementById('h-cta2').textContent = t('Let\'s Make It Happen →','讓我們一起完成吧 →','让我们一起完成吧 →','Lass es uns angehen →','Faisons-le ensemble →','มาลงมือทำด้วยกัน →','같이 만들어봐요 →','一緒にやり遂げよう →');
 
   // Stats
@@ -1971,7 +1995,8 @@ function renderUpdates() {
     sel.innerHTML = `<option value="">${t('Select a date…','選擇日期…','选择日期…','Datum auswählen…','Sélectionner une date…','เลือกวันที่…','날짜 선택…','日付を選択…')}</option>` +
       CHANGELOG.map((u, i) => {
         const d = new Date(u.date);
-        const label = d.toLocaleDateString(lang==='zh'?'zh-TW':'en-US',{month:'short',day:'numeric',year:'numeric'});
+        const _localeMap={en:'en-US',zh:'zh-TW',sc:'zh-CN',ja:'ja-JP',de:'de-DE',fr:'fr-FR',th:'th-TH',kr:'ko-KR'};
+        const label = d.toLocaleDateString(_localeMap[lang]||'en-US',{month:'short',day:'numeric',year:'numeric'});
         const ttl = u.title[lang] || u.title.en;
         return `<option value="${i}">${label} — ${ttl}</option>`;
       }).join('');
@@ -1983,7 +2008,8 @@ function renderUpdates() {
     const statsLine = u.statsLine ? (u.statsLine[lang] || u.statsLine.en) : null;
     const body = u.body ? (u.body[lang] || u.body.zh || u.body.en) : null;
     const d = new Date(u.date);
-    const dateStr = d.toLocaleDateString(lang==='zh'?'zh-TW':'en-US', {month:'short', day:'numeric', year:'numeric'});
+    const _lm={en:'en-US',zh:'zh-TW',sc:'zh-CN',ja:'ja-JP',de:'de-DE',fr:'fr-FR',th:'th-TH',kr:'ko-KR'};
+    const dateStr = d.toLocaleDateString(_lm[lang]||'en-US', {month:'short', day:'numeric', year:'numeric'});
     const projBadges = u.projects.map(p =>
       `<span class="upd-proj" style="background:${p.color}18;color:${p.color}">${p.emoji} ${p.label}</span>`
     ).join('');
@@ -2100,7 +2126,7 @@ function renderProjects() {
         <div class="proj-header">
           <div style="display:flex;align-items:center;gap:10px">
             <span style="font-size:28px">${p.emoji}</span>
-            <div class="proj-name">${name}</div>
+            <h3 class="proj-name">${name}</h3>
           </div>
           <span class="proj-badge ${badgeCls}">${badgeTxt}</span>
         </div>
