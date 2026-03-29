@@ -2732,6 +2732,130 @@
 
       const CHANGELOG = [
   {
+    "date": "2026-03-28",
+    "projects": [
+      {
+        "emoji": "🌐",
+        "label": "ellenbuilds",
+        "color": "#4F46E5"
+      },
+      {
+        "emoji": "❤️",
+        "label": "career-health-check",
+        "color": "#EF4444"
+      },
+      {
+        "emoji": "🏢",
+        "label": "remote-hris",
+        "color": "#3B82F6"
+      },
+      {
+        "emoji": "💰",
+        "label": "payband",
+        "color": "#8B5CF6"
+      }
+    ],
+    "title": {
+      "en": "Form Migration + Build Log Automation: Infrastructure Day",
+      "zh": "表單大搬家 + Build Log 自動化上線，基礎建設日",
+      "sc": "表单大搬家 + Build Log 自动化上线，基础建设日",
+      "ja": "フォーム移行 + Build Log 自動化稼働 — インフラ整備の日",
+      "de": "Formular-Migration + Build Log-Automatisierung: Infrastruktur-Tag",
+      "fr": "Migration des formulaires + Automatisation du Build Log : Jour infrastructure",
+      "th": "ย้ายฟอร์ม + ระบบ Build Log อัตโนมัติ — วันพัฒนาโครงสร้างพื้นฐาน",
+      "kr": "폼 이전 + Build Log 자동화 출시 — 인프라 구축의 날"
+    },
+    "subtitle": {
+      "en": "Migrated 3 contact forms to Netlify, added List View to project listing, and integrated sync-buildlog.js into the nightly pipeline",
+      "zh": "三個站的表單遷移至 Netlify、新增 List View、sync-buildlog.js 整合進每晚自動化",
+      "sc": "三个站的表单迁移至 Netlify、新增 List View、sync-buildlog.js 整合进每晚自动化",
+      "ja": "3サイトのフォームをNetlifyへ移行、List View追加、sync-buildlog.jsを夜間パイプラインに統合",
+      "de": "3 Kontaktformulare zu Netlify migriert, List View hinzugefügt, sync-buildlog.js in die nächtliche Pipeline integriert",
+      "fr": "Migration de 3 formulaires vers Netlify, ajout de la vue liste, intégration de sync-buildlog.js dans le pipeline nocturne",
+      "th": "ย้ายฟอร์มติดต่อ 3 ไซต์ไปยัง Netlify เพิ่ม List View และรวม sync-buildlog.js เข้ากับ pipeline กลางคืน",
+      "kr": "3개 사이트 연락 폼을 Netlify로 이전, List View 추가, sync-buildlog.js를 야간 파이프라인에 통합"
+    },
+    "tags": [
+      "netlify-forms",
+      "automation",
+      "list-view",
+      "build-log",
+      "github-actions",
+      "infrastructure"
+    ],
+    "statsLine": {
+      "en": "14 commits · 3 projects · 3 forms migrated · 1 new script · ~15 optimizations",
+      "zh": "14 commits · 3 個專案 · 3 個表單遷移 · 1 支新腳本 · 約 15 次優化",
+      "sc": "14 commits · 3 个项目 · 3 个表单迁移 · 1 个新脚本 · 约 15 次优化",
+      "ja": "14コミット · 3プロジェクト · フォーム3件移行 · 新スクリプト1本 · 約15回の最適化",
+      "de": "14 Commits · 3 Projekte · 3 Formulare migriert · 1 neues Skript · ~15 Optimierungen",
+      "fr": "14 commits · 3 projets · 3 formulaires migrés · 1 nouveau script · ~15 optimisations",
+      "th": "14 commits · 3 โปรเจกต์ · ย้าย 3 ฟอร์ม · 1 สคริปต์ใหม่ · ~15 การปรับปรุง",
+      "kr": "14 커밋 · 3개 프로젝트 · 폼 3개 이전 · 새 스크립트 1개 · 약 15회 최적화"
+    },
+    "body": {
+      "zh": "<div class='log-callout log-callout-blue'>三件看起來「小」但其實超重要的基礎建設。沒有這些，之後的東西都會卡。</div><h2>表單從 Google Apps Script 搬到 Netlify Forms</h2><p>Google Apps Script 的表單方案太脆弱，依賴外部 API、維護麻煩。把 <strong>ellenbuilds</strong>、<strong>career-health-check</strong>、<strong>remote-hris</strong> 三個專案的聯絡表單全部遷移到 Netlify Forms。</p><ul><li>建了 <code>_forms.html</code> 當偵測檔，加了 <code>data-netlify=true</code></li><li>fix 兩個 commit 才讓 Netlify 認得表單</li><li>現在三個站的表單都走 Netlify，簡單多了</li></ul><h2>Ellenbuilds 新增 List / Grid 切換</h2><p>預設改成 <strong>List View</strong>，視覺上更清楚，專案多了之後 list 比較好掃描。搭配之前的 comprehensive audit fixes（SEO、a11y、UX、動畫），整體質感又上一層。</p><h2>sync-buildlog.js + nightly-diary.sh 整合</h2><p>建了 <code>sync-buildlog.js</code>，自動把每天的日記內容同步到 ellenbuilds 的 Build Log 頁面，整合進 <code>nightly-diary.sh</code>，現在每晚 23:55 跑完就自動更新 Build Log，完全不用手動。</p><p>順便幫 ellenbuilds、payband、career-health-check 都加了 <strong>Claude Code GitHub Actions workflow</strong>。</p><div class='log-stats'><div class='log-stat'><span class='log-stat-n'>14</span><span class='log-stat-l'>commits</span></div><div class='log-stat'><span class='log-stat-n'>3</span><span class='log-stat-l'>受影響專案</span></div><div class='log-stat'><span class='log-stat-n'>3</span><span class='log-stat-l'>遷移表單</span></div><div class='log-stat'><span class='log-stat-n'>1</span><span class='log-stat-l'>新自動化腳本</span></div><div class='log-stat'><span class='log-stat-n'>~15</span><span class='log-stat-l'>優化次數</span></div></div><div class='log-quote'>基礎建設不性感，但沒有它，所有閃亮的東西都會垮掉。</div>",
+      "en": "<div class='log-callout log-callout-blue'>Three changes that look small but are critically important infrastructure. Without them, everything else gets stuck.</div><h2>Form Migration: Google Apps Script → Netlify Forms</h2><p>The Google Apps Script approach was too fragile — relying on external APIs with high maintenance overhead. Migrated contact forms for <strong>ellenbuilds</strong>, <strong>career-health-check</strong>, and <strong>remote-hris</strong> to Netlify Forms.</p><ul><li>Created <code>_forms.html</code> as the detection file with <code>data-netlify=true</code></li><li>Took 2 fix commits before Netlify recognized the forms</li><li>All three sites now route through Netlify — much simpler</li></ul><h2>Ellenbuilds: List / Grid View Toggle</h2><p>Switched the default to <strong>List View</strong> — easier to scan as the project count grows. Combined with the previous comprehensive audit fixes (SEO, a11y, UX, animations), the overall polish is noticeably higher.</p><h2>sync-buildlog.js + nightly-diary.sh Integration</h2><p>Built <code>sync-buildlog.js</code> to automatically sync daily diary entries to the ellenbuilds Build Log page. Integrated into <code>nightly-diary.sh</code> — now runs every night at 23:55 with zero manual work required.</p><p>Also added <strong>Claude Code GitHub Actions workflows</strong> for ellenbuilds, payband, and career-health-check.</p><div class='log-stats'><div class='log-stat'><span class='log-stat-n'>14</span><span class='log-stat-l'>commits</span></div><div class='log-stat'><span class='log-stat-n'>3</span><span class='log-stat-l'>projects</span></div><div class='log-stat'><span class='log-stat-n'>3</span><span class='log-stat-l'>forms migrated</span></div><div class='log-stat'><span class='log-stat-n'>1</span><span class='log-stat-l'>new script</span></div><div class='log-stat'><span class='log-stat-n'>~15</span><span class='log-stat-l'>optimizations</span></div></div><div class='log-quote'>Infrastructure work isn't glamorous — but without it, everything shiny falls apart.</div>"
+    }
+  },
+  {
+    "date": "2026-03-27",
+    "projects": [
+      {
+        "emoji": "🌐",
+        "label": "ellenbuilds",
+        "color": "#6366F1"
+      },
+      {
+        "emoji": "💰",
+        "label": "ipayband",
+        "color": "#0D9488"
+      }
+    ],
+    "title": {
+      "en": "8 Languages Live & iPayband Reborn",
+      "zh": "8 語言全覆蓋，iPayband 全面翻新",
+      "sc": "8语言全覆盖，iPayband全面翻新",
+      "ja": "8言語完全対応 & iPayband 全面刷新",
+      "de": "8 Sprachen live & iPayband neu geboren",
+      "fr": "8 langues en ligne & iPayband réinventé",
+      "th": "8 ภาษาครบถ้วน & iPayband โฉมใหม่",
+      "kr": "8개 언어 완성 & iPayband 전면 개편"
+    },
+    "subtitle": {
+      "en": "Contact copy iterated to perfection, brand refresh, interactive world map hero, and a 10-agent data quality audit",
+      "zh": "聯絡區文案反覆打磨、品牌煥新、互動世界地圖 Hero、10 個 AI Agent 資料品質稽核",
+      "sc": "联络区文案反复打磨、品牌焕新、互动世界地图 Hero、10 个 AI Agent 数据品质审计",
+      "ja": "コンタクトコピーを磨き上げ、ブランドリニューアル、インタラクティブ地図 Hero、10 Agent によるデータ品質監査",
+      "de": "Kontaktbereich poliert, Marken-Refresh, interaktive Weltkarte als Hero, 10-Agent-Datenaudit",
+      "fr": "Copie contact peaufinée, refonte de marque, carte du monde interactive en hero, audit qualité données par 10 agents",
+      "th": "ปรับ copy ส่วนติดต่อ รีแบรนด์ใหม่ แผนที่โลกแบบ interactive และตรวจสอบข้อมูลด้วย AI 10 ตัว",
+      "kr": "연락 카피 반복 개선, 브랜드 리프레시, 인터랙티브 세계지도 히어로, 10개 에이전트 데이터 품질 감사"
+    },
+    "tags": [
+      "i18n",
+      "branding",
+      "copywriting",
+      "data-quality",
+      "ux",
+      "svg"
+    ],
+    "statsLine": {
+      "en": "~27 optimizations · 8 languages · 10 AI agents · 14 labor law fixes · 20 commits",
+      "zh": "約 27 次優化 · 8 種語言 · 10 個 AI Agent · 14 項法規修正 · 20 條 commit",
+      "sc": "约 27 次优化 · 8 种语言 · 10 个 AI Agent · 14 项法规修正 · 20 条 commit",
+      "ja": "約 27 件の改善 · 8 言語 · AI エージェント 10 体 · 労働法規 14 件修正 · コミット 20 件",
+      "de": "~27 Optimierungen · 8 Sprachen · 10 KI-Agents · 14 Rechtsvorschriften · 20 Commits",
+      "fr": "~27 optimisations · 8 langues · 10 agents IA · 14 corrections légales · 20 commits",
+      "th": "ปรับปรุง ~27 ครั้ง · 8 ภาษา · AI 10 ตัว · แก้กฎหมาย 14 ข้อ · 20 commits",
+      "kr": "최적화 ~27회 · 언어 8종 · AI 에이전트 10개 · 노동법 수정 14건 · 커밋 20개"
+    },
+    "body": {
+      "zh": "<div class='log-callout log-callout-blue'>8 語言 UI 終於全部補齊，ellenbuilds.com 聯絡區文案反覆打磨定案；Payband 正式改名 iPayband，Hero 換成互動世界地圖，品牌到資料品質全面升級。</div><h2>Ellenbuilds — 8 語言全覆蓋 + 聯絡區大改造</h2><p><strong>多語言完整度</strong></p><ul><li>8 語言 UI 字串全部補齊，正式收尾</li><li>Content Distributor 從 beta 升為正式上線，補上正確網址</li><li>調換 Content Distributor 與 Resume AI 排列順序，讓優先順序更直觀</li></ul><p><strong>聯絡區 copy 迭代（改最多次 😅）</strong></p><ul><li>「聯絡我」按鈕換成更口語的中文</li><li>副標題從官方語氣改成更像真人說話的感覺</li><li>CTA 文案三連跳：<em>Get in Touch</em> → <em>Let's Work Together</em> → <em>Let's Make It Happen</em></li><li>修正泰文、韓文版本的不自然用語</li><li>加換行讓版面不擠在一起</li></ul><h2>Payband → iPayband — 品牌到內容全面翻新</h2><p><strong>品牌與視覺</strong></p><ul><li>正式改名 <strong>iPayband</strong>，logo 同步更換</li><li>Hero 區換成互動式世界地圖 SVG（<code>WorldMapHero</code>），質感大幅提升</li><li>清掉 arc lines 和 country dots，保持簡潔</li><li>套用 Scheme B 設計系統：雙色調 palette、premium 卡片樣式</li></ul><p><strong>資料品質</strong></p><ul><li>跑了 10 個 AI agent 稽核，逐一修掉 data 錯誤、UX 問題、SEO</li><li>補上 14 項勞動法規正確數據（2025 年來源）</li><li>薪資矩陣換成真實市場數據，參考 Coinbase、Kraken、Gemini、Ripple</li></ul><p><strong>技術面</strong>：code splitting、rate limiting、UX 細節打磨。</p><div class='log-stats'><div class='log-stat'><span class='log-stat-n'>~27</span><span class='log-stat-l'>優化次數</span></div><div class='log-stat'><span class='log-stat-n'>8</span><span class='log-stat-l'>語言版本</span></div><div class='log-stat'><span class='log-stat-n'>10</span><span class='log-stat-l'>AI 稽核</span></div><div class='log-stat'><span class='log-stat-n'>14</span><span class='log-stat-l'>法規修正</span></div><div class='log-stat'><span class='log-stat-n'>20</span><span class='log-stat-l'>Commits</span></div></div><div class='log-quote'>好文案不是第一次就寫對的，是改到你不想再改為止。</div>",
+      "en": "<div class='log-callout log-callout-blue'>Completed 8-language UI coverage for ellenbuilds.com and iterated heavily on contact copy; Payband officially rebranded to iPayband with an interactive world map hero and a full data quality overhaul.</div><h2>Ellenbuilds — 8-Language Coverage & Contact Section Overhaul</h2><p><strong>Multilingual Completeness</strong></p><ul><li>All 8 language UI strings finalized — no more missing corners</li><li>Content Distributor promoted from beta to live with correct URL added</li><li>Reordered Content Distributor and Resume AI for better priority flow</li></ul><p><strong>Contact Copy Iteration (most rewrites of the day 😅)</strong></p><ul><li>Contact button rewritten in more natural, conversational Chinese</li><li>Subtitle shifted from formal tone to a more human voice</li><li>CTA evolved through three rounds: <em>Get in Touch</em> → <em>Let's Work Together</em> → <em>Let's Make It Happen</em></li><li>Fixed unnatural phrasing in Thai and Korean versions</li><li>Added line breaks to give the section more breathing room</li></ul><h2>Payband → iPayband — Full Brand & Content Overhaul</h2><p><strong>Brand & Visual</strong></p><ul><li>Officially rebranded to <strong>iPayband</strong> with updated logo</li><li>Hero replaced with interactive SVG world map (<code>WorldMapHero</code>) — massive quality upgrade</li><li>Removed arc lines and country dots for a cleaner look</li><li>Applied Scheme B design system: dual-tone palette, premium card styles</li></ul><p><strong>Data Quality</strong></p><ul><li>10 AI agents audited and fixed data errors, UX issues, and SEO gaps</li><li>Added 14 correct labor law data points (2025 sources)</li><li>Salary matrix updated to real market data from Coinbase, Kraken, Gemini, and Ripple</li></ul><p><strong>Tech:</strong> code splitting, rate limiting, and UX polish throughout.</p><div class='log-stats'><div class='log-stat'><span class='log-stat-n'>~27</span><span class='log-stat-l'>optimizations</span></div><div class='log-stat'><span class='log-stat-n'>8</span><span class='log-stat-l'>languages</span></div><div class='log-stat'><span class='log-stat-n'>10</span><span class='log-stat-l'>AI audits</span></div><div class='log-stat'><span class='log-stat-n'>14</span><span class='log-stat-l'>law fixes</span></div><div class='log-stat'><span class='log-stat-n'>20</span><span class='log-stat-l'>commits</span></div></div><div class='log-quote'>Good copy isn't written right the first time — it's rewritten until you can't stand to change it anymore.</div>"
+    }
+  },
+  {
     "date": "2026-03-26",
     "projects": [
       {
