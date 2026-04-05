@@ -2765,6 +2765,76 @@
 
       const CHANGELOG = [
   {
+    "date": "2026-04-04",
+    "projects": [
+      {
+        "emoji": "📊",
+        "label": "dashboard",
+        "color": "#4F86F7"
+      },
+      {
+        "emoji": "🐝",
+        "label": "busybee",
+        "color": "#FFD700"
+      },
+      {
+        "emoji": "🚀",
+        "label": "supabase",
+        "color": "#3ECF8E"
+      },
+      {
+        "emoji": "🌙",
+        "label": "telegram_report",
+        "color": "#0088CC"
+      }
+    ],
+    "title": {
+      "en": "Dashboard Overhaul × Busybee Full Repositioning",
+      "zh": "Dashboard 大修 × Busybee 全面重定位",
+      "sc": "Dashboard 大修 × Busybee 全面重定位",
+      "ja": "ダッシュボード大規模改修 × Busybee 全面的な再ポジショニング",
+      "de": "Dashboard-Überarbeitung × Busybee vollständige Neupositionierung",
+      "fr": "Refonte du tableau de bord × Repositionnement complet de Busybee",
+      "th": "การปรับปรุง Dashboard ครั้งใหญ่ × การจัดตำแหน่ง Busybee ใหม่ทั้งหมด",
+      "kr": "대시보드 대대적인 개편 × Busybee 전면적인 재배치"
+    },
+    "subtitle": {
+      "en": "Fixed several long-standing hidden bugs and upgraded the community strategy from vague positioning to a C&B professional focus.",
+      "zh": "解掉幾個存在已久的隱藏 bug，同時把社群策略從模糊定位升級成 C&B 專業切入。",
+      "sc": "解决了几个长期存在的隐藏 bug，同时将社区策略从模糊定位升级为 C&B 专业切入。",
+      "ja": "長年存在していたいくつかの隠れたバグを修正し、コミュニティ戦略を曖昧な位置付けからC&B専門的アプローチへとアップグレードしました。",
+      "de": "Mehrere lange bestehende versteckte Fehler behoben und die Community-Strategie von einer vagen Positionierung zu einem C&B-spezifischen Fokus aufgewertet.",
+      "fr": "Correction de plusieurs bugs cachés de longue date et amélioration de la stratégie communautaire, passant d'un positionnement vague à une approche professionnelle C&B.",
+      "th": "แก้ไขบั๊กที่ซ่��นอยู่หลายตัวที่คงอยู่มานาน พร้อมปรับกลยุทธ์ชุมชนจากการวางตำแหน่งที่คลุมเครือเป็นการมุ่งเน้น C&B โดยเฉพาะ",
+      "kr": "오랫동안 존재했던 숨겨진 버그 몇 가지를 해결하고, 커뮤니티 전략을 모호한 포지셔닝에서 C&B 전문성 강조로 격상시켰습니다."
+    },
+    "tags": [
+      "bugfix",
+      "strategy",
+      "automation",
+      "community",
+      "C&B",
+      "Supabase",
+      "Dashboard",
+      "Busybee",
+      "Telegram"
+    ],
+    "statsLine": {
+      "en": "6 commits, 374 new optimizations, 5,046 total optimizations.",
+      "zh": "6 次提交，374 項新增優化，累計優化總次數 5,046。",
+      "sc": "6 次提交，374 项新增优化，累计优化总次数 5,046。",
+      "ja": "6回のコミット、374件の新規最適化、累計最適化総数5,046件。",
+      "de": "6 Commits, 374 neue Optimierungen, insgesamt 5.046 Optimierungen.",
+      "fr": "6 commits, 374 nouvelles optimisations, 5 046 optimisations totales.",
+      "th": "6 คอมมิต, 374 การปรับปรุงใหม่, รวมการปรับปรุงทั้��หมด 5,046 ครั้ง",
+      "kr": "6회 커밋, 374건의 새로운 최적화, 총 최적화 횟수 5,046회."
+    },
+    "body": {
+      "zh": "<div class='log-callout log-callout-blue'><strong>今天最重要的事：</strong> 解掉幾個存在已久的隱藏 bug，同時把社群策略從模糊定位升級成 C&B 專業切入。</div><h2>Bug 修復：累計優化次數顯示 「—」</h2><p>發現 Dashboard header 的「累計優化」一直顯示破折號。追查後找到原因：<code>REAL_SNAPS</code> 用 <code>const</code> 宣告在 <code>initDailyLog()</code> IIFE 內部，<code>renderTodayOverview()</code> 根本拿不到它。解法是改從 <code>localStorage.getItem(\"snap_\" + today)</code> 讀取。這個 scope 陷阱很隱蔽——用的人看起來都對，只有執行時才發現跨不過去。</p><h2>Supabase 保活自動化</h2><p>收到 Supabase 的免費方案警告信：career-health-check 的 DB 快因閒置被暫停。升級要等 4/10 發薪，所以先寫了一支 <code>supabase-ping.js</code> 每天 10:00 自動 ping REST API，確保在這段空窗期不會斷線。順便把環境變數加進 <code>.zshrc</code>，cron 也設好了。</p><h2>Busybee 社群策略重定位</h2><p>跟 AI 團隊開了一場完整的策略討論。原本的定位太模糊，這次重新確立：</p><ul><li><strong>LinkedIn</strong>（EN）：C&B 實戰者的 AI 建構日誌，用真實薪酬場景解釋 AI</li><li><strong>Facebook</strong>（ZH）：台灣、新加坡、馬來西亞 HR 的「有人懂我」據點</li><li><strong>Instagram + Threads</strong>（ZH）：IG 和 Threads 帳號連動，合成一張卡片</li><li><strong>X</strong>（EN）：AI 工具即時評測</li></ul><p>發文節奏改成平日發、假日不發。<code>generate-busybee-week.js</code> 也更新了內容比例：60% C&B insight + 40% Build in Public。週日 12:00 自動生成下週草稿。</p><h2>夜間報告修復</h2><p>發現 TG 夜間報告取錯日記——腳本的 regex 只認 5 位數 ID（舊格式），但新日記 ID 是 6 位數（d260404）。修成 <code>d\\\\d{5,6}</code> 解決，同時加�� <code>argv[3]</code> 支援手動指定日記 ID 補發。</p><h2>今日數字</h2><div class='log-stats'><div class='log-stat'><span class='log-stat-n'>6</span><span class='log-stat-l'>Commits 數</span></div><div class='log-stat'><span class='log-stat-n'>374</span><span class='log-stat-l'>今日新增優化</span></div><div class='log-stat'><span class='log-stat-n'>5,046</span><span class='log-stat-l'>累積優化總次數</span></div></div>",
+      "en": "<div class='log-callout log-callout-blue'><strong>Most important thing today:</strong> Fixed several long-standing hidden bugs and upgraded the community strategy from vague positioning to a C&B professional focus.</div><h2>Bug Fix: Cumulative Optimization Count Shows \"—\"</h2><p>Discovered that the \"Cumulative Optimizations\" in the Dashboard header always displayed a dash. Traced the cause: <code>REAL_SNAPS</code> was declared with <code>const</code> inside the <code>initDailyLog()</code> IIFE, making it inaccessible to <code>renderTodayOverview()</code>. The solution was to read it from <code>localStorage.getItem(\"snap_\" + today)</code> instead. This scope trap was very subtle—it looked correct to developers, but only failed at runtime due to cross-scope access issues.</p><h2>Supabase Keep-Alive Automation</h2><p>Received a warning email from Supabase's free tier: the career-health-check DB was about to be suspended due to inactivity. Upgrading has to wait until payday on April 10th, so I wrote a <code>supabase-ping.js</code> script to automatically ping the REST API daily at 10:00, ensuring the connection stays alive during this interim period. Also added environment variables to <code>.zshrc</code> and set up cron.</p><h2>Busybee Community Strategy Repositioning</h2><p>Had a comprehensive strategy discussion with the AI team. The previous positioning was too vague, so we re-established it:</p><ul><li><strong>LinkedIn</strong> (EN): AI build log for C&B practitioners, explaining AI with real compensation scenarios</li><li><strong>Facebook</strong> (ZH): A \"someone understands me\" hub for HR professionals in Taiwan, Singapore, and Malaysia</li><li><strong>Instagram + Threads</strong> (ZH): Linked IG and Threads accounts, synthesizing into one card</li><li><strong>X</strong> (EN): Real-time AI tool reviews</li></ul><p>The posting rhythm was changed to weekdays only, no posting on weekends. <code>generate-busybee-week.js</code> also updated the content ratio: 60% C&B insight + 40% Build in Public. Drafts for the next week are automatically generated every Sunday at 12:00.</p><h2>Night Report Fix</h2><p>Discovered that the TG night report was fetching the wrong log entry—the script's regex only recognized 5-digit IDs (old format), but new log IDs are 6 digits (d260404). Fixed by changing it to <code>d\\\\d{5,6}</code>, and also added <code>argv[3]</code> support for manually specifying a log ID for re-sending.</p><h2>Today's Numbers</h2><div class='log-stats'><div class='log-stat'><span class='log-stat-n'>6</span><span class='log-stat-l'>Commits</span></div><div class='log-stat'><span class='log-stat-n'>374</span><span class='log-stat-l'>New Optimizations Today</span></div><div class='log-stat'><span class='log-stat-n'>5,046</span><span class='log-stat-l'>Total Cumulative Optimizations</span></div></div>"
+    }
+  },
+  {
     "date": "2026-04-05",
     "projects": [
       {
