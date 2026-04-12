@@ -813,32 +813,153 @@
         align-self: flex-start;
       }
       .proj-cta.live {
-        color: var(--acc);
-        border: 1.5px solid var(--acc-m);
-        background: var(--acc-l);
-      }
-      .proj-cta.live:hover {
         background: var(--acc);
         color: #fff;
-        border-color: var(--acc);
+        border: 1.5px solid var(--acc);
+      }
+      .proj-cta.live:hover {
+        background: var(--acc2);
+        border-color: var(--acc2);
         transform: translateX(2px);
       }
       .proj-cta.beta {
-        color: #92400e;
-        border: 1.5px solid #fde68a;
-        background: #fef9c3;
+        color: #6b7280;
+        border: 1.5px solid #e5e7eb;
+        background: #f9fafb;
       }
       .proj-cta.beta:hover {
-        background: #f59e0b;
-        color: #fff;
-        border-color: #f59e0b;
+        background: #f3f4f6;
+        color: #374151;
+        border-color: #d1d5db;
         transform: translateX(2px);
       }
       .proj-cta-soon {
+        font-size: 12px;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 8px 16px;
+        border-radius: 7px;
+        border: 1.5px solid #e2e8f0;
+        background: #f8fafc;
+        color: #94a3b8;
+        cursor: default;
+        white-space: nowrap;
+        align-self: flex-start;
+        letter-spacing: 0.01em;
+      }
+      /* ── COMING SOON SECTION ─────────────────────────────────────── */
+      .coming-soon-section {
+        margin-top: 48px;
+      }
+      .coming-soon-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 16px;
+        color: #9ca3af;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .coming-soon-header::before,
+      .coming-soon-header::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: #e5e7eb;
+      }
+      .coming-soon-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+        gap: 10px;
+      }
+      .soon-card {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 14px;
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+        background: #fafafa;
+        position: relative;
+        cursor: default;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+      }
+      .soon-card:hover {
+        border-color: #d1d5db;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      }
+      .soon-card-info {
+        flex: 1;
+        min-width: 0;
+      }
+      .soon-card-name {
+        font-size: 13px;
+        font-weight: 500;
+        color: #374151;
+        line-height: 1.4;
+      }
+      .soon-card-cat {
         font-size: 11px;
-        color: var(--ink4);
-        font-family: var(--fm);
-        letter-spacing: 0.04em;
+        color: #9ca3af;
+        margin-top: 2px;
+      }
+      .soon-tag {
+        font-size: 11px;
+        color: #94a3b8;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+      /* ── TYPEWRITER OVERLAY (floats above footer, no layout push) ───── */
+      .proj-tw-area {
+        position: absolute;
+        bottom: 100px;
+        left: 28px;
+        right: 28px;
+        padding: 12px 14px;
+        border-radius: 10px;
+        background: rgba(247, 248, 250, 0.97);
+        border: 1px solid var(--line);
+        font-size: 13px;
+        color: var(--ink3);
+        line-height: 1.6;
+        opacity: 0;
+        transform: translateY(4px);
+        transition:
+          opacity 0.22s ease,
+          transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+        pointer-events: none;
+      }
+      .proj-card:hover .proj-tw-area {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /* ── SOON-CARD typewriter: tooltip floating above card ─────────── */
+      .soon-card .proj-tw-area {
+        bottom: calc(100% + 8px);
+        top: auto;
+        left: -1px;
+        right: -1px;
+        padding: 12px 14px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.98);
+        border: 1px solid #e5e7eb;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        transform: translateY(6px);
+        opacity: 0;
+        transition:
+          opacity 0.22s ease,
+          transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+        z-index: 10;
+      }
+      .soon-card:hover .proj-tw-area {
+        opacity: 1;
+        transform: translateY(0);
       }
       /* ── VIEW TOGGLE ──────────────────────────────────────────────── */
       .proj-toolbar {
@@ -975,10 +1096,32 @@
         color: #1e40af;
         border: 1px solid #bfdbfe;
       }
+      .proj-hl-tag.neutral-tag {
+        background: #f3f4f6;
+        color: #6b7280;
+        border: 1px solid #e5e7eb;
+      }
       .proj-hl-text {
         font-size: 12px;
         color: var(--ink3);
         line-height: 1.5;
+      }
+      .proj-hl-left {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        flex-shrink: 0;
+      }
+      .proj-hl-date {
+        font-size: 9px;
+        color: var(--ink4);
+        font-family: var(--fm);
+        letter-spacing: 0.02em;
+      }
+      .proj-hl-date-only {
+        font-size: 11px;
+        color: var(--ink4);
+        font-family: var(--fm);
       }
 
       /* Featured project (first, full width) */
@@ -2154,7 +2297,7 @@
           <div class="proj-filters" id="proj-filters"></div>
           <div class="view-toggle">
             <button
-              class="view-btn"
+              class="view-btn active"
               id="view-grid"
               onclick="setView('grid')"
               title="Grid view"
@@ -2195,7 +2338,7 @@
               </svg>
             </button>
             <button
-              class="view-btn active"
+              class="view-btn"
               id="view-list"
               onclick="setView('list')"
               title="List view"
@@ -2230,6 +2373,7 @@
           </div>
         </div>
         <div id="projects-grid"></div>
+        <div id="coming-soon-section"></div>
       </div>
     </section>
 
@@ -2502,6 +2646,11 @@
         render();
       }
 
+      // ── Auto-generated highlights (sync-stats.js 每晚更新，勿手改) ──
+      // PROJ_HIGHLIGHTS_START
+      const PROJ_HIGHLIGHTS = {};
+      // PROJ_HIGHLIGHTS_END
+
       // ── Data ──────────────────────────────────────────────────────────
       const PROJECTS = [
         {
@@ -2510,7 +2659,7 @@
           emoji: "💰",
           color: "#7c3aed",
           status: "beta",
-          name: { en: "iPayband", zh: "iPayband", sc: "iPayband" },
+          name: { en: "iPayband", zh: "多國薪酬平台", sc: "多国薪酬平台" },
           desc: {
             en: "Making comp decisions without real market data? iPayband covers P25/P50/P75 salary bands across multiple countries with built-in labor law context — giving HR teams the data backbone for fair, defensible offers.",
             zh: "跨國薪酬分析工具，涵蓋多國勞動法規與 P25/P50/P75 薪資帶，讓 HR 團隊的薪酬決策有紮實的數據依據。",
@@ -2526,9 +2675,9 @@
           updatedAt: "2026-04-05",
           url: "https://ipayband.netlify.app",
           highlight: {
-            en: "Salary bands across 12 countries — P25/P50/P75 with labor law context",
-            zh: "12 國薪資帶，P25/P50/P75，內建勞動法規情境",
-            sc: "12 国薪资带，P25/P50/P75，内建劳动法规情境",
+            en: "Stop guessing salaries across borders — fair bands, 12 countries, instant labor law checks",
+            zh: "薪酬談判沒數據？12 國薪資帶給你說話的底氣",
+            sc: "薪酬谈判没数据？12国薪资带给你说话的底气",
           },
           featured: false,
         },
@@ -2538,7 +2687,7 @@
           emoji: "🗂️",
           color: "#0d9488",
           status: "beta",
-          name: { en: "Remote HRIS", zh: "Remote HRIS", sc: "Remote HRIS" },
+          name: { en: "Remote HRIS", zh: "多國人資系統", sc: "多国人资系统" },
           desc: {
             en: "Managing payroll across multiple countries still in spreadsheets? Remote HRIS handles custom compensation rules, mixed contract types, and multi-currency disbursement — built from real operational pain, covering the full cycle from attendance to payout.",
             zh: "多國 HR 薪資管理系統，支援自訂薪酬規則、混合合約類型管理，以及多幣種實際發放。涵蓋從考勤到發薪的完整流程，從真實工作痛點出發設計。",
@@ -2554,9 +2703,9 @@
           updatedAt: "2026-04-05",
           url: "https://remote-hris.netlify.app",
           highlight: {
-            en: "Full payroll cycle from attendance to payout — multi-currency, 4-country compliant",
-            zh: "考勤到發薪完整流程，多幣種，四國合規",
-            sc: "考勤到发薪完整流程，多币种，四国合规",
+            en: "Attendance to payday, one system — multicurrency, fully compliant, no spreadsheets",
+            zh: "還在用表單管理四國薪資？從考勤到發薪一個系統搞定",
+            sc: "还在用表单管理四国薪资？从考勤到发薪一个系统搞定",
           },
           featured: false,
         },
@@ -2565,7 +2714,7 @@
           category: "hr",
           emoji: "🩺",
           color: "#2563eb",
-          status: "beta",
+          status: "live",
           name: {
             en: "Career Health Check",
             zh: "職涯健康檢查",
@@ -2584,17 +2733,17 @@
           stack: ["React", "Vite", "GA4", "Netlify Functions"],
           iterations: 313,
           updatedAt: "2026-04-09",
-          url: "",
+          url: "https://career-health-check.netlify.app",
           highlight: {
-            en: "Free assessment → personalized AI report as PDF in minutes",
-            zh: "免費評估 → 個人化 AI 報告，幾分鐘輸出 PDF",
-            sc: "免费评估 → 个人化 AI 报告，几分钟输出 PDF",
+            en: "Eight-question career snapshot → personalized AI PDF report in minutes, free",
+            zh: "不知道自己的職涯怎麼走？跑個檢查，8 分鐘出結果",
+            sc: "不知道自己的职涯怎么走？跑个检查，8分钟出结果",
           },
           featured: false,
         },
         {
           id: "claude-guide",
-          category: "ai",
+          category: "personal",
           emoji: "🤖",
           color: "#ea580c",
           status: "live",
@@ -2618,9 +2767,9 @@
           updatedAt: "2026-04-05",
           url: "https://claude-guide.netlify.app",
           highlight: {
-            en: "Real use cases + prompt techniques — bilingual & searchable",
-            zh: "真實場景 + 提示詞技巧，雙語可搜尋",
-            sc: "真实场景 + 提示词技巧，双语可搜索",
+            en: "Learn Claude from someone who actually uses it daily — prompts, patterns, searchable",
+            zh: "Claude 文件一堆，但什麼最實用？這裡有人幫你篩過",
+            sc: "Claude文件一堆，但什么最实用？这里有人帮你筛过",
           },
           featured: false,
         },
@@ -2646,15 +2795,15 @@
           updatedAt: "2026-04-06",
           url: "https://drift-island.netlify.app",
           highlight: {
-            en: "AI that delivers warmth, not productivity — anonymous letters personally answered",
-            zh: "AI 傳遞溫度，不只是生產力 — 匿名信件親情回覆",
-            sc: "AI 传递温度，不只是生产力 — 匿名信件亲情回复",
+            en: "Write your burden anonymously, get warmth back — not productivity, just comfort",
+            zh: "有悶話想說卻沒地方說？匿名寫信，有人會認真回你",
+            sc: "有闷话想说却没地方说？匿名写信，有人会认真回你",
           },
           featured: false,
         },
         {
           id: "allposts",
-          category: "ai",
+          category: "personal",
           emoji: "📡",
           color: "#d97706",
           status: "beta",
@@ -2684,15 +2833,15 @@
           startedAt: "2026-03-27",
           url: "https://allposts.netlify.app",
           highlight: {
-            en: "One idea → LinkedIn, Twitter/X, Instagram — tone & format auto-matched",
-            zh: "一個想法，多平台語氣自動調整",
-            sc: "一个想法，多平台语气自动调整",
+            en: "Write once, auto-format for every platform — LinkedIn, X, Instagram, all at once",
+            zh: "改稿 6 遍才能 6 個平台都貼對？一次搞定算了",
+            sc: "改稿6遍才能6个平台都贴对？一次搞定算了",
           },
           featured: false,
         },
         {
           id: "boostresume",
-          category: "ai",
+          category: "personal",
           emoji: "📄",
           color: "#db2777",
           status: "live",
@@ -2722,18 +2871,284 @@
           startedAt: "2026-03-27",
           url: "https://boostresume.netlify.app",
           highlight: {
-            en: "AI scores your resume in seconds — structure, keywords, and impact — free to try",
-            zh: "AI 秒速評分你的履歷——結構、關鍵字、成果數字一次到位，免費試用",
-            sc: "AI 秒速评分你的简历——结构、关键字、成果数字一次到位，免费试用",
+            en: "Get scored honestly, improve fast — bilingual PDF, real feedback, free to start",
+            zh: "履歷剛寫好就被 AI 刷掉？先讓我幫你過兩關",
+            sc: "履历刚写好就被 AI 刷掉？先让我帮你过两关",
+          },
+          featured: false,
+        },
+        {
+          id: "pay-equity-report",
+          category: "hr",
+          emoji: "⚖️",
+          color: "#7c3aed",
+          status: "building",
+          name: {
+            en: "Pay Equity Report",
+            zh: "薪酬公平性報告",
+            sc: "薪酬公平性报告",
+            de: "Pay Equity Report",
+            fr: "Rapport d'Équité Salariale",
+            th: "รายงานความเป็นธรรมด้านค่าตอบแทน",
+            kr: "급여 형평성 보고서",
+            ja: "給与公平性レポート",
+          },
+          desc: {
+            en: "Identify and close pay gaps before they become a legal or talent risk. Runs regression analysis across your workforce, flags statistical outliers, and generates a compliance-ready report — designed for C&B directors in Singapore and Hong Kong.",
+            zh: "用數據找出薪酬差距，在它成為法律或人才風險前先處理。對全員薪酬執行回歸分析，標記統計異常值，生成合規報告，專為新加坡與香港的 C&B 主管設計。",
+            sc: "用数据找出薪酬差距，在它成为法律或人才风险前先处理。对全员薪酬执行回归分析，标记统计异常值，生成合规报告，专为新加坡与香港的 C&B 主管设计。",
+            de: "Identifizieren und schließen Sie Lohnlücken, bevor sie zum rechtlichen oder Talentrisiko werden. Regressionsanalyse, statistische Ausreißer und ein compliance-fähiger Bericht für C&B-Direktoren.",
+            fr: "Identifiez et comblez les écarts de rémunération avant qu'ils deviennent un risque légal ou RH. Analyse de régression, détection des anomalies, rapport prêt pour la conformité.",
+            th: "ระบุและปิดช่องว่างด้านค่าตอบแทนก่อนที่จะกลายเป็นความเสี่ยงทางกฎหมายหรือด้านบุคลากร วิเคราะห์การถดถอยทั่วทั้งองค์กร สร้างรายงานที่พร้อมสำหรับการปฏิบัติตามกฎระเบียบ",
+            kr: "법적 리스크나 인재 이탈로 이어지기 전에 급여 격차를 발견하고 해소하세요. 회귀 분석, 통계적 이상값 감지, 컴플라이언스 준비 보고서 — C&B 디렉터를 위해 설계되었습니다.",
+            ja: "法的リスクや人材リスクになる前に、給与格差を特定・解消。回帰分析、統計的外れ値の検出、コンプライアンス対応レポートを、シンガポール・香港のC&Dディレクター向けに設計。",
+          },
+          stack: ["Claude API", "Vanilla JS", "Netlify Functions"],
+          iterations: 66,
+          updatedAt: "2026-04-06",
+          startedAt: "2026-04-06",
+          url: "",
+          highlight: {
+            en: "Find pay gaps fast, defend with data — regression analysis + SG/HK compliance ready",
+            zh: "薪酬為什麼差這麼多？回歸分析告訴你，還帶合規證明",
+            sc: "薪酬为什么差这么多？回归分析告诉你，还带合规证明",
+          },
+          featured: false,
+        },
+        {
+          id: "recruitment-analytics",
+          category: "hr",
+          emoji: "📊",
+          color: "#0d9488",
+          status: "building",
+          name: {
+            en: "Recruitment Analytics",
+            zh: "招聘效益分析",
+            sc: "招聘效益分析",
+            de: "Recruitment Analytics",
+            fr: "Analytique de Recrutement",
+            th: "การวิเคราะห์การสรรหาบุคลากร",
+            kr: "채용 효율성 분석",
+            ja: "採用効果分析",
+          },
+          desc: {
+            en: "Know your real cost-per-hire, time-to-fill, and source effectiveness — without manual spreadsheet math. Connects your hiring data to give TA managers clear ROI metrics and channel performance benchmarks.",
+            zh: "了解真實的每次招聘成本、到職時間與渠道效益，不需要手動計算試算表。連結你的招聘數據，給 TA 主管清楚的 ROI 指標與渠道績效基準。",
+            sc: "了解真实的每次招聘成本、到职时间与渠道效益，不需要手动计算试算表。连结你的招聘数据，给 TA 主管清楚的 ROI 指标与渠道绩效基准。",
+            de: "Erfahren Sie Ihre tatsächlichen Kosten pro Einstellung, die Zeit bis zur Besetzung und die Effektivität der Quellen — ohne manuelle Tabellenkalkulationen.",
+            fr: "Connaissez votre coût-par-embauche réel, le délai de pourvoi et l'efficacité des sources — sans calculs manuels sur tableur.",
+            th: "รู้ต้นทุนต่อการจ้างงาน ระยะเวลาบรรจุ และประสิทธิภาพแหล่งสรรหาที่แท้จริง โดยไม่ต้องคำนวณด้วยตนเอง",
+            kr: "스프레드시트 계산 없이 실제 채용 비용, 채용 소요 시간, 소스 효율성을 파악하세요. TA 매니저를 위한 명확한 ROI 지표와 채널 성과 벤치마크를 제공합니다.",
+            ja: "手動の表計算なしに、採用コスト・充足期間・ソース効果を把握。TAマネージャーに明確なROI指標とチャネルパフォーマンスを提供します。",
+          },
+          stack: ["Claude API", "Vanilla JS", "Netlify Functions"],
+          iterations: 153,
+          updatedAt: "2026-04-06",
+          startedAt: "2026-04-06",
+          url: "",
+          highlight: {
+            en: "See what actually works — cost-per-hire, time-to-fill, source ROI crystal clear",
+            zh: "招聘預算燒了多少？ROI 在哪？數字會說話",
+            sc: "招聘预算烧了多少？ROI在哪？数字会说话",
+          },
+          featured: false,
+        },
+        {
+          id: "turnover-analysis",
+          category: "hr",
+          emoji: "🔍",
+          color: "#dc2626",
+          status: "building",
+          name: {
+            en: "Turnover Analysis",
+            zh: "離職分析報告",
+            sc: "离职分析报告",
+            de: "Fluktuation Analyse",
+            fr: "Analyse du Turnover",
+            th: "การวิเคราะห์การลาออก",
+            kr: "이직 분석 보고서",
+            ja: "離職分析レポート",
+          },
+          desc: {
+            en: "Which employees are most likely to leave next quarter — and why? Builds flight risk scores from compensation, performance, and tenure data, so HRBPs can act before the resignation letter arrives.",
+            zh: "哪些員工下季度可能離職？原因是什麼？從薪酬、績效與年資數據建立留任風險分數，讓 HRBP 在離職信到來前先行動。",
+            sc: "哪些员工下季度可能离职？原因是什么？从薪酬、绩效与年资数据建立留任风险分数，让 HRBP 在离职信到来前先行动。",
+            de: "Welche Mitarbeiter werden das Unternehmen wahrscheinlich verlassen — und warum? Flight-Risk-Scores aus Vergütungs-, Leistungs- und Betriebszugehörigkeitsdaten.",
+            fr: "Quels employés risquent de partir le prochain trimestre ? Scores de risque de départ basés sur les données de rémunération, performance et ancienneté.",
+            th: "พนักงานคนใดมีแนวโน้มลาออกในไตรมาสหน้าและทำไม? สร้างคะแนนความเสี่ยงจากข้อมูลค่าตอบแทน ผลงาน และอายุงาน",
+            kr: "다음 분기에 어떤 직원이 퇴사할 가능성이 높은지, 그 이유는 무엇인지 파악하세요. 보상, 성과, 재직 데이터 기반의 이탈 위험 점수로 HRBP가 미리 대응할 수 있습니다.",
+            ja: "来四半期に退職しそうな従業員はどの人で、その理由は何か？報酬・パフォーマンス・在籍データからフライトリスクスコアを算出し、HRBPが辞表が届く前に行動できるようにします。",
+          },
+          stack: ["Claude API", "Vanilla JS", "Netlify Functions"],
+          iterations: 128,
+          updatedAt: "2026-04-06",
+          startedAt: "2026-04-06",
+          url: "",
+          highlight: {
+            en: "Know who's at risk before they do — flight score + real cost impact, act fast",
+            zh: "最好的員工下月要離職，數據早告訴了你卻沒看到",
+            sc: "最好的员工下月要离职，数据早告诉了你却没看到",
+          },
+          featured: false,
+        },
+        {
+          id: "hr-budget-planner",
+          category: "hr",
+          emoji: "💼",
+          color: "#1d4ed8",
+          status: "building",
+          name: {
+            en: "HR Budget Planner",
+            zh: "人力預算規劃",
+            sc: "人力预算规划",
+            de: "HR-Budgetplanung",
+            fr: "Planification Budget RH",
+            th: "การวางแผนงบประมาณ HR",
+            kr: "HR 예산 계획",
+            ja: "HR予算プランナー",
+          },
+          desc: {
+            en: "Stop building headcount plans in spreadsheets that break every time a formula changes. Runs scenario modeling, cost projections, and variance analysis — exports a CFO-ready report in one click.",
+            zh: "停止用一改就壞的 Excel 規劃人力預算。執行情境模擬、成本預測與差異分析，一鍵匯出 CFO 看得懂的報告。",
+            sc: "停止用一改就坏的 Excel 规划人力预算。执行情境模拟、成本预测与差异分析，一键导出 CFO 看得懂的报告。",
+            de: "Hören Sie auf, Headcount-Pläne in Tabellen zu bauen, die bei jeder Formeländerung brechen. Szenariomodellierung, Kostenprognosen und Varianzanalyse — CFO-fähiger Bericht per Knopfdruck.",
+            fr: "Arrêtez de planifier vos effectifs dans des tableurs qui se cassent à chaque changement de formule. Modélisation de scénarios, projections de coûts, et rapport prêt pour le CFO en un clic.",
+            th: "หยุดสร้างแผนอัตรากำลังในสเปรดชีตที่พังทุกครั้งที่สูตรเปลี่ยน รันการจำลองสถานการณ์ การพยากรณ์ต้นทุน และวิเคราะห์ความแปรปรวน ส่งออกรายงานสำหรับ CFO ในคลิกเดียว",
+            kr: "수식이 바뀔 때마다 망가지는 스프레드시트로 헤드카운트 계획을 세우는 것을 그만하세요. 시나리오 모델링, 비용 예측, 분산 분석 — CFO 보고서를 클릭 한 번으로 내보냅니다.",
+            ja: "数式を変えるたびに壊れるスプレッドシートでヘッドカウント計画を立てるのはもうやめましょう。シナリオモデリング、コスト予測、差異分析を実行し、CFO向けレポートをワンクリックでエクスポート。",
+          },
+          stack: ["Claude API", "Vanilla JS", "Netlify Functions"],
+          iterations: 213,
+          updatedAt: "2026-04-06",
+          startedAt: "2026-04-06",
+          url: "",
+          highlight: {
+            en: "Model any headcount scenario, show CFO the math — exportable, bulletproof",
+            zh: "明年招多少人、怎麼分配薪資？模擬一下再決定",
+            sc: "明年招多少人、怎么分配薪资？模拟一下再决定",
+          },
+          featured: false,
+        },
+        {
+          id: "cryptomind",
+          category: "personal",
+          emoji: "🪙",
+          color: "#1e3a5f",
+          status: "building",
+          name: {
+            en: "CryptoMind",
+            zh: "CryptoMind",
+            sc: "CryptoMind",
+            de: "CryptoMind",
+            fr: "CryptoMind",
+            th: "CryptoMind",
+            kr: "CryptoMind",
+            ja: "CryptoMind",
+          },
+          desc: {
+            en: "A crypto trading assistant that combines technical analysis with AI-powered insights. Monitors key indicators, flags market signals, and helps you make faster, more informed trading decisions.",
+            zh: "結合技術分析與 AI 洞察的加密交易助手。監控關鍵指標、標記市場信號，協助你做出更快、更有依據的交易決策。",
+            sc: "结合技术分析与 AI 洞察的加密交易助手。监控关键指标、标记市场信号，协助你做出更快、更有依据的交易决策。",
+            de: "Ein Krypto-Handelsassistent, der technische Analyse mit KI-Insights kombiniert. Überwacht Schlüsselindikatoren und markiert Marktsignale.",
+            fr: "Un assistant de trading crypto combinant analyse technique et insights IA. Surveille les indicateurs clés et signale les mouvements de marché.",
+            th: "ผู้ช่วยซื้อขายคริปโตที่ผสมผสานการวิเคราะห์เทคนิคกับ AI ติดตามตัวชี้วัดสำคัญและสัญญาณตลาด",
+            kr: "기술 분석과 AI 인사이트를 결합한 암호화폐 트레이딩 어시스턴트. 핵심 지표를 모니터링하고 시장 신호를 감지합니다.",
+            ja: "テクニカル分析とAIインサイトを組み合わせた仮想通貨トレーディングアシスタント。主要指標の監視と市場シグナルの検出を行います。",
+          },
+          stack: ["React", "Vite", "Supabase", "Fastify"],
+          iterations: 320,
+          updatedAt: "2026-04-12",
+          startedAt: "2026-03-15",
+          url: "",
+          highlight: {
+            en: "Technical analysis + AI reasoning for crypto trades — built for real decisions",
+            zh: "沒時間看盤但想看懂市場？AI 幫你整理技術面和情報",
+            sc: "没时间看盘但想看懂市场？AI帮你整理技术面和情报",
+          },
+          featured: false,
+        },
+        {
+          id: "pet-world",
+          category: "creative",
+          emoji: "🐾",
+          color: "#16a34a",
+          status: "beta",
+          name: {
+            en: "Pet World",
+            zh: "寵物世界",
+            sc: "宠物世界",
+            de: "Pet World",
+            fr: "Pet World",
+            th: "Pet World",
+            kr: "Pet World",
+            ja: "ペットワールド",
+          },
+          desc: {
+            en: "A tiny world to keep a digital pet — three character slots, quests, battles, and achievements. Pet World is a reminder that making things for fun is reason enough.",
+            zh: "養一個數位寵物的小世界——三個角色欄位、任務、打架、成就系統。Pet World 提醒我們：為了好玩而做，就是最好的理由。",
+            sc: "养一个数位宠物的小世界——三个角色栏位、任务、打架、成就系统。Pet World 提醒我们：为了好玩而做，就是最好的理由。",
+            de: "Eine kleine Welt zum Aufziehen eines digitalen Haustiers — drei Charakterslots, Quests, Kämpfe und Erfolge. Manchmal ist Spaß Grund genug.",
+            fr: "Un petit monde pour élever un animal numérique — trois emplacements, quêtes, batailles et succès. Pet World nous rappelle que créer pour s'amuser est une raison suffisante.",
+            th: "โลกเล็กๆ สำหรับเลี้ยงสัตว์เลี้ยงดิจิทัล สามช่องตัวละคร ภารกิจ การต่อสู้ และความสำเร็จ เตือนใจว่าการสร้างเพื่อความสนุกก็เป็นเหตุผลที่ดีพอ",
+            kr: "디지털 펫을 키울 수 있는 작은 세계 — 세 개의 캐릭터 슬롯, 퀘스트, 배틀, 업적. Pet World는 재미를 위해 만드는 것만으로도 충분한 이유가 된다는 것을 상기시켜 줍니다.",
+            ja: "デジタルペットを育てる小さな世界 — 3つのキャラクタースロット、クエスト、バトル、実績。楽しいから作る、それだけで十分な理由だと気づかせてくれます。",
+          },
+          stack: ["Single-file HTML", "Vanilla JS"],
+          iterations: 134,
+          updatedAt: "2026-04-11",
+          startedAt: "2026-04-10",
+          url: "https://ellen-pet-game.netlify.app",
+          highlight: {
+            en: "Three character slots, quests, battles — zero agenda, pure joy",
+            zh: "玩膩了生產力工具？來養隻數位寵物，純粹為了爽",
+            sc: "玩腻了生产力工具？来养只数位宠物，纯粹为了爽",
+          },
+          featured: false,
+        },
+        {
+          id: "ai-island",
+          category: "creative",
+          emoji: "🗺️",
+          color: "#0891b2",
+          status: "building",
+          name: {
+            en: "Ellen's AI Island",
+            zh: "AI 島",
+            sc: "AI 岛",
+            de: "Ellen's AI Island",
+            fr: "L'Île IA d'Ellen",
+            th: "เกาะ AI ของ Ellen",
+            kr: "Ellen의 AI 섬",
+            ja: "Ellen's AI アイランド",
+          },
+          desc: {
+            en: "A visual map of Ellen's AI team — 99 agents organized by role, task phase, and project. Built to stay orientated inside a 100-person AI organization where the entire workforce is code.",
+            zh: "Ellen AI 團隊的視覺地圖——99 位 agent 按角色、任務階段與專案分類。為了在一個全員都是程式碼的百人 AI 組織中保持方向感而建。",
+            sc: "Ellen AI 团队的视觉地图——99 位 agent 按角色、任务阶段与专案分类。为了在一个全员都是程序的百人 AI 组织中保持方向感而建。",
+            de: "Eine visuelle Karte von Ellens KI-Team — 99 Agenten nach Rolle, Aufgabenphase und Projekt geordnet. Gebaut, um in einer 100-Personen-KI-Organisation den Überblick zu behalten.",
+            fr: "Une carte visuelle de l'équipe IA d'Ellen — 99 agents organisés par rôle, phase de tâche et projet. Construite pour rester orientée dans une organisation IA de 100 personnes.",
+            th: "แผนที่ภาพของทีม AI ของ Ellen — 99 agents จัดตามบทบาท ขั้นตอนงาน และโปรเจกต์ สร้างขึ้นเพื่อรักษาทิศทางในองค์กร AI 100 คนที่ทั้งหมดเป็นโค้ด",
+            kr: "Ellen의 AI 팀 시각적 지도 — 99명의 에이전트를 역할, 작업 단계, 프로젝트별로 정리. 모든 인력이 코드인 100인 AI 조직에서 방향을 잡기 위해 만들었습니다.",
+            ja: "Ellenのチームビジュアルマップ — 役割・タスク段階・プロジェクト別に整理された99のエージェント。全員がコードである100人AI組織の中で方向感覚を保つために構築。",
+          },
+          stack: ["Single-file HTML", "Vanilla JS"],
+          iterations: 204,
+          updatedAt: "2026-04-12",
+          startedAt: "2026-04-10",
+          url: "",
+          highlight: {
+            en: "Navigate 99 AI agents as one visual map — sorted by role, task, and project",
+            zh: "99 個 AI Agent 在幹什麼？一張圖看懂整間虛擬公司",
+            sc: "99个AI Agent在干什么？一张图看懂整间虚拟公司",
           },
           featured: false,
         },
         {
           id: "ai-intel",
-          category: "ai",
+          category: "personal",
           emoji: "📰",
           color: "#6b2410",
-          status: "beta",
+          status: "building",
           name: {
             en: "The AI Weekly",
             zh: "AI 情報週報",
@@ -2755,8 +3170,8 @@
           startedAt: "2026-04-01",
           url: "",
           highlight: {
-            en: "Weekly AI briefing — bilingual, plain language, zero jargon",
-            zh: "每週 AI 週報，中英雙語，說人話",
+            en: "Weekly AI briefing that makes sense — bilingual, plain English, actual insights",
+            zh: "AI 新聞一周份，中英都有，廢話不多、收穫卻不少",
             sc: "每周 AI 周报，中英双语，说人话",
           },
           featured: false,
@@ -5417,7 +5832,7 @@
       };
 
       let activeFilter = "all";
-      let viewMode = "list";
+      let viewMode = "grid";
 
       window.setView = function (mode) {
         viewMode = mode;
@@ -5445,29 +5860,41 @@
               "すべて",
             ),
           },
-          { key: "hr", label: "C&B" },
           {
-            key: "ai",
+            key: "hr",
             label: t(
-              "AI Tools",
-              "AI 工具",
-              "AI 工具",
-              "KI-Tools",
-              "Outils d'IA",
-              "เครื่องมือ AI",
-              "AI 도구",
-              "AIツール",
+              "C&B",
+              "薪酬福利",
+              "薪酬福利",
+              "C&B",
+              "Rémunération & Avantages",
+              "ค่าตอบแทนและสวัสดิการ",
+              "보상 및 복리후생",
+              "報酬・福利厚生",
+            ),
+          },
+          {
+            key: "personal",
+            label: t(
+              "Personal",
+              "個人應用",
+              "个人应用",
+              "Persönliche Tools",
+              "Outils Personnels",
+              "เครื่องมือส่วนบุคคล",
+              "개인용 툴",
+              "個人向けツール",
             ),
           },
           {
             key: "creative",
             label: t(
               "Creative",
-              "創意",
-              "创意",
-              "Kreativ",
-              "Créatif",
-              "สร้างสรรค์",
+              "創意實驗",
+              "创意实验",
+              "Kreatives",
+              "Projets Créatifs",
+              "โปรเจกต์สร้างสรรค์",
               "크리에이티브",
               "クリエイティブ",
             ),
@@ -5488,11 +5915,43 @@
         renderProjects();
       };
 
+      // ── Typewriter ────────────────────────────────────────────────
+      const _twTimers = {};
+      window.startTw = function (card) {
+        const area = card.querySelector(".proj-tw-area");
+        if (!area) return;
+        const text = card.dataset.tw || "";
+        const id = card.dataset.pid;
+        clearTimeout(_twTimers[id]);
+        area.textContent = "";
+        let i = 0;
+        function tick() {
+          if (i < text.length) {
+            area.textContent = text.slice(0, ++i) + "▍";
+            _twTimers[id] = setTimeout(tick, 22);
+          } else {
+            area.textContent = text;
+          }
+        }
+        tick();
+      };
+      window.stopTw = function (card) {
+        const area = card.querySelector(".proj-tw-area");
+        if (!area) return;
+        clearTimeout(_twTimers[card.dataset.pid]);
+        area.textContent = "";
+      };
+
       function renderProjects() {
-        const list =
+        const allList =
           activeFilter === "all"
             ? PROJECTS
             : PROJECTS.filter((p) => p.category === activeFilter);
+        // Split: "active" = has clickable CTA; "soon" = 快好了
+        const isActive = (p) =>
+          p.status === "live" || (p.status === "beta" && p.url);
+        const list = allList.filter(isActive);
+        const soonList = allList.filter((p) => !isActive(p));
         const el = document.getElementById("projects-grid");
 
         const getBadge = (st) => {
@@ -5521,12 +5980,14 @@
         };
         const getCta = (p) => {
           const st = p.status;
+          // State 3: live — fully usable
           if (st === "live")
-            return `<a href="${p.url}" target="_blank" rel="noopener noreferrer" class="proj-cta live">${t("Use Now", "立即使用", "立即使用", "Jetzt verwenden", "Utiliser maintenant", "ใช้เลย", "지금 사용하기", "今すぐ利用")} →</a>`;
+            return `<a href="${p.url}" target="_blank" rel="noopener noreferrer" class="proj-cta live">${t("Give it a try", "用起來", "开玩", "Tob dich aus", "Vas-y, teste !", "ลุยเลย!", "찍먹 ㄱㄱ", "遊んでみる")} →</a>`;
+          // State 2: beta with URL — preview but still adjusting
           if (st === "beta" && p.url)
-            return `<a href="${p.url}" target="_blank" rel="noopener noreferrer" class="proj-cta beta">${t("In Progress", "進行中", "进行中", "In Bearbeitung", "En cours", "กำลังดำเนินการ", "진행 중", "進行中")} →</a>`;
-          if (st === "beta") return `<span class="proj-cta-soon">Beta</span>`;
-          return `<span class="proj-cta-soon">${t("Building...", "建置中…", "建置中…", "Wird erstellt…", "Développement…", "กำลังสร้าง…", "구축 중…", "構築中…")}</span>`;
+            return `<a href="${p.url}" target="_blank" rel="noopener noreferrer" class="proj-cta beta">${t("Getting ready", "還在調", "缝缝补补中", "Noch am Basteln", "Je bricole encore", "แวะได้ กำลังจูน", "뚝딱뚝딱 만지는 중", "まだこねこね中")} →</a>`;
+          // State 1: no URL yet — coming soon
+          return `<span class="proj-cta-soon">${t("Thousands years later", "快好了", "在做了在做了", "Morgen, schwöre!", "C'est dans le four", "รอแป๊บ กำลังปั่น", "곧... 아마도?", "今やってるってば！")} →</span>`;
         };
         const getUpdStr = (p) =>
           p.updatedAt
@@ -5557,7 +6018,6 @@
           el.innerHTML = list
             .map((p, i) => {
               const name = p.name[lang] || p.name.en;
-              const desc = p.desc[lang] || p.desc.en;
               const { cls, txt } = getBadge(p.status);
               const updStr = getUpdStr(p);
               const now = new Date();
@@ -5571,22 +6031,100 @@
                 !isNewProj &&
                 updDate &&
                 now - updDate < 7 * 24 * 60 * 60 * 1000;
-              const hlData = p.highlight;
+              const hlData = PROJ_HIGHLIGHTS[p.id] || p.highlight;
+              const dateStr = p.updatedAt ? p.updatedAt.slice(0, 10) : "";
               const hlEl =
                 hlData && (isNewProj || isUpdated)
-                  ? `<div class="proj-highlight"><span class="proj-hl-tag ${isNewProj ? "new-tag" : "upd-tag"}">${isNewProj ? t("New", "新上架", "新上架", "Neu", "Nouveau", "ใหม่", "신규", "新着") : "Updated"}</span><span class="proj-hl-text">${hlData[lang] || hlData.en}</span></div>`
-                  : "";
+                  ? `<div class="proj-highlight"><div class="proj-hl-left"><span class="proj-hl-tag ${isNewProj ? "new-tag" : "upd-tag"}">${isNewProj ? t("New", "新上架", "新上架", "Neu", "Nouveau", "ใหม่", "신규", "新着") : "Updated"}</span>${dateStr ? `<span class="proj-hl-date">${dateStr}</span>` : ""}</div><span class="proj-hl-text">${hlData[lang] || hlData.en}</span></div>`
+                  : dateStr
+                    ? `<div class="proj-highlight"><div class="proj-hl-left"><span class="proj-hl-tag neutral-tag">Updated</span><span class="proj-hl-date">${dateStr}</span></div><span class="proj-hl-text">${p.desc[lang] || p.desc.en}</span></div>`
+                    : "";
               const reveal = `reveal reveal-d${Math.min((i % 3) + 1, 4)}`;
-              return `<div class="proj-card ${p.featured ? "featured" : ""} ${reveal}" style="--ac:${p.color}">
+              const twText = (p.desc[lang] || p.desc.en || "")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#39;");
+              return `<div class="proj-card ${p.featured ? "featured" : ""} ${reveal}" style="--ac:${p.color}" data-pid="${p.id}" data-tw="${twText}" onmouseenter="startTw(this)" onmouseleave="stopTw(this)">
         <div class="proj-header"><div style="display:flex;align-items:center;gap:10px"><span style="font-size:28px">${p.emoji}</span><h3 class="proj-name">${name}</h3></div><span class="proj-badge ${cls}">${txt}</span></div>
         ${hlEl}
-        <p class="proj-desc">${desc}</p>
         <div class="proj-stack">${p.stack.map((s) => `<span class="stack-chip">${s}</span>`).join("")}</div>
         <div class="proj-footer"><div class="proj-meta">✏️ <strong>${p.iterations}</strong> ${t("optimizations", "次優化", "次优化", "Optimierungen", "Optimisations", "การเพิ่มประสิทธิภาพ", "최적화", "最適化")}${updStr ? `<span class="proj-meta-sep">·</span> ${t("Updated", "更新", "更新", "Aktualisiert", "Mis à jour", "อัปเดตแล้ว", "업데이트됨", "更新済み")} ${updStr}` : ""}</div>${getCta(p)}</div>
+        <div class="proj-tw-area"></div>
       </div>`;
             })
             .join("");
           el.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+        }
+
+        // ── Coming soon compact section ──────────────────────────────
+        const soonEl = document.getElementById("coming-soon-section");
+        if (soonList.length > 0) {
+          const catLabel = {
+            hr: t(
+              "C&B",
+              "薪酬福利",
+              "薪酬福利",
+              "C&B",
+              "Rémunération",
+              "ค่าตอบแทนฯ",
+              "보상",
+              "報酬",
+            ),
+            personal: t(
+              "Personal",
+              "個人應用",
+              "个人应用",
+              "Persönlich",
+              "Personnel",
+              "ส่วนบุคคล",
+              "개인용",
+              "個人向け",
+            ),
+            creative: t(
+              "Creative",
+              "創意實驗",
+              "创意实验",
+              "Kreativ",
+              "Créatif",
+              "สร้างสรรค์",
+              "크리에이티브",
+              "クリエイティブ",
+            ),
+          };
+          const soonLabel = t(
+            "Coming up",
+            "醞釀中",
+            "醞酿中",
+            "In Kürze",
+            "À venir",
+            "กำลังมา",
+            "곧 출시",
+            "もうすぐ",
+          );
+          const soonTagText = t(
+            "Soon",
+            "快好了",
+            "在做了",
+            "Bald!",
+            "Bientôt",
+            "รอแป๊บ",
+            "곧...",
+            "もうすぐ!",
+          );
+          const soonCards = soonList
+            .map((p) => {
+              const name = p.name[lang] || p.name.en;
+              const cat = catLabel[p.category] || p.category;
+              const twText = (p.desc[lang] || p.desc.en || "")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#39;");
+              return `<div class="soon-card" data-pid="s-${p.id}" data-tw="${twText}" onmouseenter="startTw(this)" onmouseleave="stopTw(this)"><span style="font-size:20px;flex-shrink:0">${p.emoji}</span><div class="soon-card-info"><div class="soon-card-name">${name}</div><div class="soon-card-cat">${cat}</div></div><span class="soon-tag">${soonTagText}</span><div class="proj-tw-area"></div></div>`;
+            })
+            .join("");
+          soonEl.className = "coming-soon-section";
+          soonEl.innerHTML = `<div class="coming-soon-header">${soonLabel}</div><div class="coming-soon-grid">${soonCards}</div>`;
+        } else {
+          soonEl.className = "";
+          soonEl.innerHTML = "";
         }
       }
 
