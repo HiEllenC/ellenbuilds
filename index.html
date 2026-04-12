@@ -6106,7 +6106,7 @@
                 : "";
               const reveal = `reveal reveal-d${Math.min((i % 3) + 1, 4)}`;
               const twRaw = hlData
-                ? hlData[lang] || hlData.en
+                ? hlData[lang] || p.highlight?.[lang] || hlData.en
                 : p.desc[lang] || p.desc.en || "";
               const twText = twRaw
                 .replace(/"/g, "&quot;")
@@ -6185,6 +6185,7 @@
               const twRawSoon =
                 PROJ_HIGHLIGHTS[p.id] || p.highlight
                   ? (PROJ_HIGHLIGHTS[p.id] || p.highlight)[lang] ||
+                    p.highlight?.[lang] ||
                     (PROJ_HIGHLIGHTS[p.id] || p.highlight).en
                   : p.desc[lang] || p.desc.en || "";
               const twText = twRawSoon
