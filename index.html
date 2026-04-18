@@ -3371,6 +3371,80 @@
 
       const CHANGELOG = [
   {
+    "date": "2026-04-17",
+    "projects": [
+      {
+        "emoji": "🤖",
+        "label": "opus-upgrade",
+        "color": "#4a90e2"
+      },
+      {
+        "emoji": "💬",
+        "label": "telegram-notify",
+        "color": "#800080"
+      },
+      {
+        "emoji": "⚙️",
+        "label": "agent-config",
+        "color": "#4682B4"
+      },
+      {
+        "emoji": "📚",
+        "label": "daily-learning",
+        "color": "#FFD700"
+      },
+      {
+        "emoji": "✨",
+        "label": "multi-agent",
+        "color": "#9370DB"
+      }
+    ],
+    "title": {
+      "en": "Embracing the New Era of Opus 4.7",
+      "zh": "全面擁抱 Opus 4.7 新紀元",
+      "sc": "全面拥抱 Opus 4.7 新纪元",
+      "ja": "Opus 4.7 新紀元の全面的な採用",
+      "de": "Eine neue Ära mit Opus 4.7 einläuten",
+      "fr": "Embrasser la nouvelle ère d'Opus 4.7",
+      "th": "เปิดรับยุคใหม่ของ Opus 4.7 อย่างเต็มที่",
+      "kr": "Opus 4.7의 새로운 시대를 전면 수용"
+    },
+    "subtitle": {
+      "en": "Model evaluation, upgrade planning for Opus 4.7, and Telegram notification mechanism development.",
+      "zh": "圍繞 Opus 4.7 的模型評估、升級規劃，以及 Telegram 通知機制開發",
+      "sc": "围绕 Opus 4.7 的模型评估、升级规划，以及 Telegram 通知机制开发",
+      "ja": "Opus 4.7のモデル評価、アップグレード計画、およびTelegram通知メカニズムの開発",
+      "de": "Modellbewertung, Upgrade-Planung für Opus 4.7 und Entwicklung des Telegram-Benachrichtigungsmechanismus.",
+      "fr": "Évaluation du modèle, planification de la mise à niveau pour Opus 4.7 et développement du mécanisme de notification Telegram.",
+      "th": "การประเมินโมเดล การวางแผนการอัปเกรดสำหรับ Opus 4.7 และการพัฒนาตัวแจ้งเตือน Telegram",
+      "kr": "Opus 4.7 모델 평가, 업그레이드 계획 및 텔레그램 알림 메커니즘 개발"
+    },
+    "tags": [
+      "Opus 4.7",
+      "model upgrade",
+      "API migration",
+      "Telegram notifications",
+      "agent development",
+      "daily learning",
+      "optimization",
+      "multitasking"
+    ],
+    "statsLine": {
+      "en": "2 Commits, 290 New Optimizations Today, 8628 Total Optimizations.",
+      "zh": "2 次 Commit，今日新增優化 290 次，累積優化總次數 8628 次。",
+      "sc": "2 次 Commit，今日新增优化 290 次，累计优化总次数 8628 次。",
+      "ja": "コミット数 2、本日の新規最適化 290 回、累積最適化総回数 8628 回。",
+      "de": "2 Commits, 290 neue Optimierungen heute, 8628 Optimierungen insgesamt.",
+      "fr": "2 Commits, 290 nouvelles optimisations aujourd'hui, 8628 optimisations totales.",
+      "th": "2 คอมมิต, เพิ่มประสิทธิภาพใหม่ 290 ครั้งวันนี้, รวมการเพิ่มประสิทธิภาพทั้งหมด 8628 ครั้ง.",
+      "kr": "커밋 2회, 오늘 290회 신규 최적화, 총 8628회 누적 최적화."
+    },
+    "body": {
+      "zh": "<div class='log-callout log-callout-blue'>今天最重要的事：圍繞 Opus 4.7 的模型評估、升級規劃，以及 Telegram 通知機制開發</div><h2>Opus 4.7 大換血評估</h2><p>今天的重頭戲絕對是 Opus 4.7！跟 Claude Code ���回確認了很多細節，聽說它在 coding、agents、vision、multi-step tasks 方面都比 Opus 4.6 更強，但定價不變，這太有吸引力了。主要麻煩是 API 有 breaking changes，升級前要仔細看 migration guide。</p><ul><li>我請 Code 幫我對比新舊模型差異，也掃描了我們現有的 agents，確認哪些適合換成 Opus 4.7。</li><li>為了這個，我手動寫了 <code>opus-compare.js</code> 來做模型比較。</li><li>很多 agent 的配置檔都動了，像 <code>team-trainer.md</code>, <code>portfolio-strategist.md</code>, <code>product-manager.md</code> 等，都是為了確保它們能順利銜接新模型。</li></ul><h2>Telegram 審批通知機制搞定</h2><p>今天還發現一個小狀況，就是如果終端機需要我審批，但超過幾分鐘我就收不到 Telegram 通知了。這不行啊，很多時候我人不在電腦前，錯過通知就耽誤事了。</p><ul><li>我跟 Code 反覆測試，確認現在有收到通知了，但我也馬上跟他說，我需要一個可以直接在手機上按「批准」的按鈕，這樣才方便我快速處理。</li><li>為了這個新功能，我們也寫了 <code>tg-approval-notify.py</code> 這個檔案。這樣我就能隨時隨地批准了，效率直接拉滿！</li></ul><h2>日常學習與流程固化</h2><ul><li>Code 今天又問我「你有執行學習了嗎？」、「你沒有去看 Claude GPT Gemini 的官網嗎,每天必做」，真是時時刻刻督促我，其實我都有在看啦！</li><li>這些日常檢查和學習真的必須排進每日流程裡，所以我也更新了 <code>project_daily_learning.md</code> 和 <code>CLAUDE.md</code>，把這些必做事項規範得更清楚。</li><li>今天執行了 290 次優化。</li></ul><h2>Agent 協作多工處理</h2><ul><li>今天很多 agents 都跑起來了，像 Team-trainer 管理部門日審、每日深度學習、CryptoMind 狀態評估、Day 1 全面掃描 128 agents，還有 Day 2 的工程群、創意增長群、產品策略群深審。</li><li>另外，也讓 Art director 處理了 3 個 B2B HR 產品的藝術方向，UI designer 則負責重寫 Pay Equity 的登陸頁。這些專案也都穩步推進中。</li></ul><div class='log-quote'>保持靈活，擁抱變化，因為效率就在每一次優化和升級的縫隙中。</div><h2>今日數字</h2><div class='log-stats'><div class='log-stat'><span class='log-stat-n'>2</span><span class='log-stat-l'>Commits 數</span></div><div class='log-stat'><span class='log-stat-n'>290</span><span class='log-stat-l'>今日新增優化</span></div><div class='log-stat'><span class='log-stat-n'>8628</span><span class='log-stat-l'>累積優化總次數</span></div></div>",
+      "en": "<div class='log-callout log-callout-blue'>Today's most important task: Model evaluation, upgrade planning for Opus 4.7, and Telegram notification mechanism development.</div><h2>Opus 4.7 Major Overhaul Evaluation</h2><p>Today's main event was definitely Opus 4.7! I confirmed many details back and forth with Claude Code. I heard it's stronger than Opus 4.6 in coding, agents, vision, and multi-step tasks, but the pricing remains unchanged, which is very attractive. The main trouble is that the API has breaking changes, so I need to carefully read the migration guide before upgrading.</p><ul><li>I asked Code to help me compare the differences between the new and old models, and also scanned our existing agents to confirm which ones are suitable for switching to Opus 4.7.</li><li>For this, I manually wrote <code>opus-compare.js</code> to perform the model comparison.</li><li>Many agent configuration files have been modified, such as <code>team-trainer.md</code>, <code>portfolio-strategist.md</code>, <code>product-manager.md</code>, etc., all to ensure they can smoothly integrate with the new model.</li></ul><h2>Telegram Approval Notification Mechanism Completed</h2><p>Today, I also discovered a minor issue: if the terminal required my approval but I didn't receive a Telegram notification after a few minutes. This is unacceptable; often I'm not at my computer, and missing notifications delays things.</p><ul><li>I tested repeatedly with Code and confirmed that I now receive notifications. However, I immediately told him that I need an \"Approve\" button directly on my phone, which would make it convenient for me to process quickly.</li><li>For this new feature, we also wrote the <code>tg-approval-notify.py</code> file. This way, I can approve anytime, anywhere, maximizing efficiency!</li></ul><h2>Daily Learning and Process Solidification</h2><ul><li>Code asked me again today, \"Have you performed learning yet?\" and \"Haven't you checked the official websites of Claude, GPT, Gemini? It's a daily must-do.\" He's always pushing me, but I actually do check them!</li><li>These daily checks and learning truly must be incorporated into the daily routine, so I updated <code>project_daily_learning.md</code> and <code>CLAUDE.md</code> to standardize these essential tasks more clearly.</li><li>Today, 290 optimizations were performed.</li></ul><h2>Agent Collaborative Multitasking</h2><ul><li>Today, many agents were running, such as Team-trainer managing department daily reviews, daily deep learning, CryptoMind status evaluation, Day 1 comprehensive scan of 128 agents, and Day 2 deep reviews for the engineering group, creative growth group, and product strategy group.</li><li>Additionally, the Art director handled the artistic direction for 3 B2B HR products, and the UI designer was responsible for rewriting the Pay Equity landing page. These projects are also progressing steadily.</li></ul><div class='log-quote'>Stay flexible, embrace change, because efficiency lies in the gaps of every optimization and upgrade.</div><h2>Today's Numbers</h2><div class='log-stats'><div class='log-stat'><span class='log-stat-n'>2</span><span class='log-stat-l'>Commits</span></div><div class='log-stat'><span class='log-stat-n'>290</span><span class='log-stat-l'>New Optimizations Today</span></div><div class='log-stat'><span class='log-stat-n'>8628</span><span class='log-stat-l'>Total Optimizations</span></div></div>"
+    }
+  },
+  {
     "date": "2026-04-18",
     "projects": [
       {
